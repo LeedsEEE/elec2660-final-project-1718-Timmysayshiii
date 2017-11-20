@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5Ur-Mw-ZFH">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stock-vector-cartoon-fairy-tale-landscape-candy-land-illustration-for-game-design-285700961.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0QI-iy-dSE"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0QI-iy-dSE"/>
                             <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progressViewStyle="bar" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="zuf-Gh-d28">
                                 <frame key="frameInset" minX="20" minY="39" width="215" height="3"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -31,7 +31,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Health:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfh-B6-vbq">
                                 <frame key="frameInset" minX="20" minY="10" width="55" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.36962076418091705" blue="1" alpha="0.30403048547400613" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39302608944954126" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.21174644475929938" blue="0.1031048535425102" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -41,24 +41,51 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ls-B7-1e9">
                                 <frame key="frameInset" minX="529" minY="10" width="118" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.17106894841269837" green="0.1579582606621637" blue="0.1635460132356174" alpha="0.65786267201834858" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.35927554270126394" green="1" blue="0.15418328526063663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="0.058006305244511447" blue="0.2152802198349888" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13H-cJ-fxN">
                                 <frame key="frameInset" minX="294" minY="134" width="126" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.43936388288253336" green="1" blue="0.99160671972587366" alpha="0.44240969036697247" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.15306712962962965" green="0.031826723122316207" blue="0.15038426323592169" alpha="0.44240969036697247" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start Game">
-                                    <color key="titleColor" red="0.97168771476879456" green="1" blue="0.0002984386300304287" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.57808367417475037" green="0.93230531495440605" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="StartGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hgR-eo-q0L"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uN6-Cg-8Hx">
+                                <frame key="frameInset" minX="294" minY="190" width="126" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.15306712959999999" green="0.031826723119999997" blue="0.15038426320000001" alpha="0.4424096904" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Instructions">
+                                    <color key="titleColor" red="0.57808367419999995" green="0.93230531500000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="StartGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9a1-Q1-vqe"/>
+                                    <segue destination="HFC-Zc-YxI" kind="show" id="a9G-qd-Sh8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whc-P8-KnQ">
+                                <frame key="frameInset" minX="294" minY="244" width="126" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.15306712959999999" green="0.031826723119999997" blue="0.15038426320000001" alpha="0.4424096904" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" red="0.57808367419999995" green="0.93230531500000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="StartGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v2E-BJ-Ws1"/>
+                                    <segue destination="ygB-DK-ean" kind="show" id="RtT-gh-6lO"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8v-kz-P6R">
-                                <frame key="frameInset" minX="591" minY="325" width="56" height="30"/>
+                                <frame key="frameInset" minX="591" minY="337" width="56" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.65128996222944435" green="0.63020898683373816" blue="0.65384217923280419" alpha="0.6308295107033639" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="ATTACK">
@@ -76,6 +103,10 @@
                                 <frame key="frameInset" minX="614" minY="224" width="43" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fist_outline_lineart_clip_art_18637.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1fZ-9F-lxh">
+                                <frame key="frameInset" minX="110" minY="204" width="43" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -85,6 +116,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="0QI-iy-dSE" secondAttribute="trailing" constant="-26" id="kYS-Ox-Axx"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="2g5-FZ-cn2"/>
                     <connections>
                         <outlet property="AttackbuttonX" destination="y8v-kz-P6R" id="1Aw-ci-u36"/>
                         <outlet property="HealthBar" destination="zuf-Gh-d28" id="l7s-Rf-gXA"/>
@@ -97,10 +129,72 @@
             </objects>
             <point key="canvasLocation" x="117.39130434782609" y="122.40000000000001"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="XwV-M3-Eb7">
+            <objects>
+                <viewController id="ygB-DK-ean" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4YO-gn-SbM"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hya-er-NfH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5O9-cf-pvm">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M9F-eg-JkR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112.89355322338831" y="836"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Baw-tc-rl0">
+            <objects>
+                <navigationController id="5Ur-Mw-ZFH" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="whu-Fz-Uib">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Bmr-Ud-u4V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P1C-sk-S9x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113" y="-782"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="15o-q0-9by">
+            <objects>
+                <viewController id="HFC-Zc-YxI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oIW-Z5-Wfx"/>
+                        <viewControllerLayoutGuide type="bottom" id="1jx-96-lzU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jgj-h7-vgV">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aLT-Uh-Jly"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1jx-96-lzU" firstAttribute="top" secondItem="aLT-Uh-Jly" secondAttribute="bottom" constant="-31" id="5bF-qR-l4J"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aLT-Uh-Jly" secondAttribute="trailing" constant="-20" id="L7L-2f-AWd"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="aLT-Uh-Jly" secondAttribute="leading" constant="20" id="rzS-UE-a2y"/>
+                            <constraint firstItem="aLT-Uh-Jly" firstAttribute="top" secondItem="oIW-Z5-Wfx" secondAttribute="bottom" constant="-20" id="wlJ-hs-Zf5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wx8-iB-2mN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="745.27736131934034" y="120.8"/>
+        </scene>
     </scenes>
     <resources>
         <image name="875575-mkdd_fireball_mario.jpg" width="640" height="640"/>
-        <image name="stock-vector-cartoon-fairy-tale-landscape-candy-land-illustration-for-game-design-285700961.jpg" width="450" height="301"/>
+        <image name="fist_outline_lineart_clip_art_18637.jpg" width="600" height="425"/>
+        <image name="stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.jpg" width="450" height="279"/>
         <image name="sub-buzz-29381-1508166343-1.jpg" width="683" height="1024"/>
     </resources>
 </document>

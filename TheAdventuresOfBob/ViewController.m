@@ -39,8 +39,8 @@
 
 /* References
 
- Original Background Image
-https://www.shutterstock.com/image-vector/cartoon-fairy-tale-landscape-candy-land-285700961?src=aRWJoC8zBWet2x-B58pOkQ-1-97
+ Background Image
+ https://www.shutterstock.com/image-vector/high-quality-horizontal-seamless-background-landscape-555408847?src=aRWJoC8zBWet2x-B58pOkQ-1-19
  
  Fist Attack Pickture
  http://all-free-download.com/free-vector/download/fist-outline-lineart-clip-art_18637.html
@@ -48,5 +48,8 @@ https://www.shutterstock.com/image-vector/cartoon-fairy-tale-landscape-candy-lan
  Fireball Picture
  https://www.giantbomb.com/fireball/3055-120/
  
-
+ Roadman Shaq
+ https://img.buzzfeed.com/buzzfeed-static/static/2017-10/16/11/asset/buzzfeed-prod-fastlane-01/sub-buzz-29381-1508166343-1.jpg?downsize=715:*&output-format=auto&output-quality=auto
+ (Copy paste as the star within the link interupts)
+ 
 */

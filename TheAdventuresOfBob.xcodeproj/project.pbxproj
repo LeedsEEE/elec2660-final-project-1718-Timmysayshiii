@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CFC462481FC2E760009C4A77 /* stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFC462471FC2E760009C4A77 /* stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.jpg */; };
+		CFC4624A1FC2E768009C4A77 /* fist_outline_lineart_clip_art_18637.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFC462491FC2E768009C4A77 /* fist_outline_lineart_clip_art_18637.jpg */; };
 		CFE350F11FB9A60900EA8EFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE350F01FB9A60900EA8EFB /* main.m */; };
 		CFE350F41FB9A60900EA8EFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE350F31FB9A60900EA8EFB /* AppDelegate.m */; };
 		CFE350F71FB9A60900EA8EFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE350F61FB9A60900EA8EFB /* ViewController.m */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CFC462471FC2E760009C4A77 /* stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.jpg"; sourceTree = "<group>"; };
+		CFC462491FC2E768009C4A77 /* fist_outline_lineart_clip_art_18637.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fist_outline_lineart_clip_art_18637.jpg; sourceTree = "<group>"; };
 		CFE350EC1FB9A60900EA8EFB /* TheAdventuresOfBob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheAdventuresOfBob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFE350F01FB9A60900EA8EFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CFE350F21FB9A60900EA8EFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -124,7 +128,9 @@
 			isa = PBXGroup;
 			children = (
 				CFE350F01FB9A60900EA8EFB /* main.m */,
+				CFC462471FC2E760009C4A77 /* stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.jpg */,
 				CFE351261FB9BB7B00EA8EFB /* 875575-mkdd_fireball_mario.jpg */,
+				CFC462491FC2E768009C4A77 /* fist_outline_lineart_clip_art_18637.jpg */,
 				CFE351241FB9BA3800EA8EFB /* sub-buzz-29381-1508166343-1.jpg */,
 				CFE351221FB9AD8000EA8EFB /* stock-vector-cartoon-fairy-tale-landscape-candy-land-illustration-for-game-design-285700961.jpg */,
 			);
@@ -260,6 +266,8 @@
 				CFE350FF1FB9A60900EA8EFB /* LaunchScreen.storyboard in Resources */,
 				CFE350FC1FB9A60900EA8EFB /* Assets.xcassets in Resources */,
 				CFE351271FB9BB7B00EA8EFB /* 875575-mkdd_fireball_mario.jpg in Resources */,
+				CFC462481FC2E760009C4A77 /* stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.jpg in Resources */,
+				CFC4624A1FC2E768009C4A77 /* fist_outline_lineart_clip_art_18637.jpg in Resources */,
 				CFE350FA1FB9A60900EA8EFB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,6 +527,7 @@
 				CFE3511B1FB9A60900EA8EFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CFE3511C1FB9A60900EA8EFB /* Build configuration list for PBXNativeTarget "TheAdventuresOfBobTests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +536,7 @@
 				CFE3511E1FB9A60900EA8EFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CFE3511F1FB9A60900EA8EFB /* Build configuration list for PBXNativeTarget "TheAdventuresOfBobUITests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +545,7 @@
 				CFE351211FB9A60900EA8EFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
