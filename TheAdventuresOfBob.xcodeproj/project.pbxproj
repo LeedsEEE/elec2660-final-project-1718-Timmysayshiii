@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF8870581FC31CB900AEFB94 /* cyborg_bunny_by_crowsrock-d50l4tg.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8870571FC31CB900AEFB94 /* cyborg_bunny_by_crowsrock-d50l4tg.png */; };
 		CFC462481FC2E760009C4A77 /* stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFC462471FC2E760009C4A77 /* stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.jpg */; };
 		CFC4624A1FC2E768009C4A77 /* fist_outline_lineart_clip_art_18637.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFC462491FC2E768009C4A77 /* fist_outline_lineart_clip_art_18637.jpg */; };
 		CFE350F11FB9A60900EA8EFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE350F01FB9A60900EA8EFB /* main.m */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF8870571FC31CB900AEFB94 /* cyborg_bunny_by_crowsrock-d50l4tg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cyborg_bunny_by_crowsrock-d50l4tg.png"; sourceTree = "<group>"; };
 		CFC462471FC2E760009C4A77 /* stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.jpg"; sourceTree = "<group>"; };
 		CFC462491FC2E768009C4A77 /* fist_outline_lineart_clip_art_18637.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fist_outline_lineart_clip_art_18637.jpg; sourceTree = "<group>"; };
 		CFE350EC1FB9A60900EA8EFB /* TheAdventuresOfBob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheAdventuresOfBob.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +131,7 @@
 			children = (
 				CFE350F01FB9A60900EA8EFB /* main.m */,
 				CFC462471FC2E760009C4A77 /* stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.jpg */,
+				CF8870571FC31CB900AEFB94 /* cyborg_bunny_by_crowsrock-d50l4tg.png */,
 				CFE351261FB9BB7B00EA8EFB /* 875575-mkdd_fireball_mario.jpg */,
 				CFC462491FC2E768009C4A77 /* fist_outline_lineart_clip_art_18637.jpg */,
 				CFE351241FB9BA3800EA8EFB /* sub-buzz-29381-1508166343-1.jpg */,
@@ -269,6 +272,7 @@
 				CFC462481FC2E760009C4A77 /* stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.jpg in Resources */,
 				CFC4624A1FC2E768009C4A77 /* fist_outline_lineart_clip_art_18637.jpg in Resources */,
 				CFE350FA1FB9A60900EA8EFB /* Main.storyboard in Resources */,
+				CF8870581FC31CB900AEFB94 /* cyborg_bunny_by_crowsrock-d50l4tg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
