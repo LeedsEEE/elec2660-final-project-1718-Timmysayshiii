@@ -96,11 +96,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sub-buzz-29381-1508166343-1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="J0Z-h0-4tT">
-                                <frame key="frameInset" minX="20" minY="213" width="55" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fist_outline_lineart_clip_art_18637.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1fZ-9F-lxh">
-                                <frame key="frameInset" minX="75" minY="224" width="43" height="20"/>
+                                <frame key="frameInset" minX="14" minY="213" width="66" height="119"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cyborg_bunny_by_crowsrock-d50l4tg.png" translatesAutoresizingMaskIntoConstraints="NO" id="v1h-q4-8FT">
@@ -109,6 +105,10 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="875575-mkdd_fireball_mario.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5CT-G9-pPC">
                                 <frame key="frameInset" minX="530" minY="256" width="43" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fist_outline_lineart_clip_art_18637.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1fZ-9F-lxh">
+                                <frame key="frameInset" minX="79" minY="234" width="43" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -164,8 +164,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aLT-Uh-Jly"/>
+                            <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progressViewStyle="bar" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="CPS-y4-l3i">
+                                <frame key="frameInset" minX="20" minY="40" width="215" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.65993173630000002" blue="0.72688806979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="progressTintColor" red="1" green="0.041241485729999999" blue="0.049459679700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="trackTintColor" red="0.96903284570000003" green="1" blue="0.98259574289999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Apg-Rf-NgH">
-                                <frame key="frameInset" minX="265" minY="317" width="80" height="38"/>
+                                <frame key="frameInset" minX="293" minY="317" width="80" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.17583604251158039" green="0.17266175190128383" blue="0.17750702711640209" alpha="0.65083858944954132" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -174,6 +182,51 @@
                                 </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="8hg-Of-873"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sub-buzz-29381-1508166343-1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="eWf-Ea-qIY">
+                                <frame key="frameInset" minX="14" minY="175" width="66" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fist_outline_lineart_clip_art_18637.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="eZf-uv-YjP">
+                                <frame key="frameInset" minX="88" minY="198" width="43" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cyborg_bunny_by_crowsrock-d50l4tg.png" translatesAutoresizingMaskIntoConstraints="NO" id="sAG-bo-fuk">
+                                <frame key="frameInset" minX="568" minY="175" width="79" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Health:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spP-1u-w0g">
+                                <frame key="frameInset" minX="20" minY="12" width="55" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.3930260894" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.21174644479999999" blue="0.1031048535" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="0.65993173630000002" blue="0.72688806979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oG-RR-r9H">
+                                <frame key="frameInset" minX="537" minY="11" width="118" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1710689484" green="0.15795826069999999" blue="0.16354601320000001" alpha="0.65786267200000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.05800630524" blue="0.21528021980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="875575-mkdd_fireball_mario.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="95v-ow-wju">
+                                <frame key="frameInset" minX="530" minY="198" width="43" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWl-pT-2fU">
+                                <frame key="frameInset" minX="599" minY="337" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.65128996220000002" green="0.63020898680000004" blue="0.65384217919999998" alpha="0.63082951070000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="ATTACK">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="AttackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TWH-dX-iFo"/>
                                 </connections>
                             </button>
                         </subviews>
