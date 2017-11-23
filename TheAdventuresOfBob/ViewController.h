@@ -19,8 +19,10 @@
 @property (weak, nonatomic) IBOutlet UIImageView *BorgBunnySprite;
 @property (weak, nonatomic) IBOutlet UIImageView *Fireball;
 @property (weak, nonatomic) IBOutlet UIImageView *FistAttack;
-
-
+@property (weak, nonatomic) IBOutlet UIButton *Settingsbutton;
+@property (weak, nonatomic) IBOutlet UIButton *instructionsbutton;
+@property (weak, nonatomic) IBOutlet UIButton *startgamebutton;
+@property (strong ,nonatomic) UITouch *touch;
 
 
 - (IBAction)StartGame:(UIButton *)sender;

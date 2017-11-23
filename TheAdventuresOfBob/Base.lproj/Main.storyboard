@@ -130,7 +130,10 @@
                         <outlet property="Healthlabel" destination="kfh-B6-vbq" id="Wlu-ZL-ClH"/>
                         <outlet property="RoadmanShaq" destination="J0Z-h0-4tT" id="YHX-3u-9rv"/>
                         <outlet property="Score" destination="0Ls-B7-1e9" id="jy2-Sp-yQd"/>
+                        <outlet property="Settingsbutton" destination="Whc-P8-KnQ" id="lFE-hv-ZmC"/>
                         <outlet property="StartGameX" destination="13H-cJ-fxN" id="xhW-1L-WvF"/>
+                        <outlet property="instructionsbutton" destination="uN6-Cg-8Hx" id="1lR-9t-Rx6"/>
+                        <outlet property="startgamebutton" destination="13H-cJ-fxN" id="FC9-mO-baK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    // Hiding all elements other than the menu in the start up screen of the game.
+    
     self.HealthBar.hidden = true;
     self.Score.hidden = true;
     self.Healthlabel.hidden = true;
@@ -25,6 +28,18 @@
     self.RoadmanShaq.hidden = true;
     self.FistAttack.hidden = true;
     self.AttackbuttonX.hidden = true;
+    
+    // Set the original value for score and using a string to display this.
+    
+    NSInteger score = 0;
+    self.Score.text = [NSString stringWithFormat:@"Score:   %ld", score];
+    
+    // Setting the original positions for the sprites for when the game will load.
+    
+    self.RoadmanShaq.center = CGPointMake(50, 350);
+    self.BorgBunnySprite.center = CGPointMake(350, 350);
+    self.FistAttack.center = CGPointMake(_RoadmanShaq.center.x, _RoadmanShaq.center.y);
+    self.Fireball.center = CGPointMake(_BorgBunnySprite.center.x, _BorgBunnySprite.center.y);
     
 }
 
@@ -37,11 +52,38 @@
 
 - (IBAction)StartGame:(UIButton *)sender {
     
+    // Displays the elements needed for the game when we press start. In turn the menu will be hidden.
+    
+    self.instructionsbutton.hidden = true;
+    self.Settingsbutton.hidden = true;
+    self.startgamebutton.hidden = true;
+    self.HealthBar.hidden = false;
+    self.Score.hidden = false;
+    self.Healthlabel.hidden = false;
+    self.BorgBunnySprite.hidden = false;
+    self.Fireball.hidden = false;
+    self.RoadmanShaq.hidden = false;
+    self.AttackbuttonX.hidden = false;
+    
 }
 
 - (IBAction)AttackButton:(UIButton *)sender {
     
 }
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    
+}
+
+// Implementing the method of touchesMoved to move my sprite in the direction we tap the screen.
+
+-(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    self.touch= [touches anyObject];
+    CGPoint point = [_touch locationInView:self.view];
+    _RoadmanShaq.center = CGPointMake(point.x, _RoadmanShaq.center.y);
+}
+
 @end
 
 
