@@ -38,7 +38,7 @@
                                 <color key="shadowColor" red="1" green="0.65993173630000002" blue="0.72688806979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ls-B7-1e9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:          0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ls-B7-1e9">
                                 <frame key="frameInset" minX="529" minY="10" width="118" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.17106894841269837" green="0.1579582606621637" blue="0.1635460132356174" alpha="0.65786267201834858" colorSpace="custom" customColorSpace="sRGB"/>
@@ -123,7 +123,11 @@
                     <navigationItem key="navigationItem" id="2g5-FZ-cn2"/>
                     <connections>
                         <outlet property="AttackbuttonX" destination="y8v-kz-P6R" id="1Aw-ci-u36"/>
+                        <outlet property="BorgBunnySprite" destination="v1h-q4-8FT" id="YPf-EJ-jDy"/>
+                        <outlet property="Fireball" destination="5CT-G9-pPC" id="svf-9H-SAw"/>
+                        <outlet property="FistAttack" destination="1fZ-9F-lxh" id="wub-ap-dot"/>
                         <outlet property="HealthBar" destination="zuf-Gh-d28" id="l7s-Rf-gXA"/>
+                        <outlet property="Healthlabel" destination="kfh-B6-vbq" id="Wlu-ZL-ClH"/>
                         <outlet property="RoadmanShaq" destination="J0Z-h0-4tT" id="YHX-3u-9rv"/>
                         <outlet property="Score" destination="0Ls-B7-1e9" id="jy2-Sp-yQd"/>
                         <outlet property="StartGameX" destination="13H-cJ-fxN" id="xhW-1L-WvF"/>
@@ -144,6 +148,20 @@
                     <view key="view" contentMode="scaleToFill" id="5O9-cf-pvm">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fG2-dw-zqF">
+                                <frame key="frameInset" minX="293" minY="329" width="80" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.17583604250000001" green="0.17266175189999999" blue="0.17750702709999999" alpha="0.65083858939999994" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="1" green="0.19421109710000001" blue="0.17207960820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="ZwL-D6-xWn"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -163,7 +181,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="aLT-Uh-Jly"/>
                             <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progressViewStyle="bar" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="CPS-y4-l3i">
                                 <frame key="frameInset" minX="20" minY="40" width="215" height="3"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -231,12 +248,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="1jx-96-lzU" firstAttribute="top" secondItem="aLT-Uh-Jly" secondAttribute="bottom" constant="-31" id="5bF-qR-l4J"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="aLT-Uh-Jly" secondAttribute="trailing" constant="-20" id="L7L-2f-AWd"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="aLT-Uh-Jly" secondAttribute="leading" constant="20" id="rzS-UE-a2y"/>
-                            <constraint firstItem="aLT-Uh-Jly" firstAttribute="top" secondItem="oIW-Z5-Wfx" secondAttribute="bottom" constant="-20" id="wlJ-hs-Zf5"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wx8-iB-2mN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -251,4 +262,7 @@
         <image name="stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.jpg" width="450" height="279"/>
         <image name="sub-buzz-29381-1508166343-1.jpg" width="683" height="1024"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZwL-D6-xWn"/>
+    </inferredMetricsTieBreakers>
 </document>

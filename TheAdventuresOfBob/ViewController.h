@@ -15,6 +15,11 @@
 @property (weak, nonatomic) IBOutlet UIProgressView *HealthBar;
 @property (weak, nonatomic) IBOutlet UIButton *AttackbuttonX;
 @property (weak, nonatomic) IBOutlet UIButton *StartGameX;
+@property (weak, nonatomic) IBOutlet UILabel *Healthlabel;
+@property (weak, nonatomic) IBOutlet UIImageView *BorgBunnySprite;
+@property (weak, nonatomic) IBOutlet UIImageView *Fireball;
+@property (weak, nonatomic) IBOutlet UIImageView *FistAttack;
+
 
 
 

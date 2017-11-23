@@ -17,6 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.HealthBar.hidden = true;
+    self.Score.hidden = true;
+    self.Healthlabel.hidden = true;
+    self.BorgBunnySprite.hidden = true;
+    self.Fireball.hidden = true;
+    self.RoadmanShaq.hidden = true;
+    self.FistAttack.hidden = true;
+    self.AttackbuttonX.hidden = true;
     
 }
 
@@ -55,6 +63,15 @@
  Evil Bunny
  https://img00.deviantart.net/4733/i/2012/141/d/5/cyborg_bunny_by_crowsrock-d50l4tg.png
  
+ VS image
+ https://pre00.deviantart.net/e95c/th/pre/f/2017/183/7/f/yu_gi_oh__vrains__vs_screen__by_yugiohdragon999-dbet005.png
  
+ Res/Blue colour background
+ http://www.wallpapersxl.com/wallpaper/1920x1200/baground-wall-paper-hd-color-2066432.html?from=wallp
  
+ Settings Background
+ https://openclipart.org/image/2400px/svg_to_png/271573/ColourfulBackgroundColour2.png
+ 
+ Instructions stage
+ https://www.artstation.com/artwork/0knXw
 */
