@@ -29,10 +29,11 @@
     self.FistAttack.hidden = true;
     self.AttackbuttonX.hidden = true;
     
-    // Set the original value for score and using a string to display this.
+    // Set the original value for score/health and using a string to display this.
     
     NSInteger score = 0;
     self.Score.text = [NSString stringWithFormat:@"Score:   %ld", score];
+    self.HealthBar.progress = 1;
     
     // Setting the original positions for the sprites for when the game will load.
     
@@ -40,6 +41,9 @@
     self.BorgBunnySprite.center = CGPointMake(350, 350);
     self.FistAttack.center = CGPointMake(_RoadmanShaq.center.x, _RoadmanShaq.center.y);
     self.Fireball.center = CGPointMake(_BorgBunnySprite.center.x, _BorgBunnySprite.center.y);
+    
+   
+    
     
 }
 
@@ -61,25 +65,43 @@
     self.Score.hidden = false;
     self.Healthlabel.hidden = false;
     self.BorgBunnySprite.hidden = false;
-    self.Fireball.hidden = true;
     self.RoadmanShaq.hidden = false;
     self.AttackbuttonX.hidden = false;
-    
+    [self bunnyPosition];
 }
 
 // Method for the attack button to launch a projectile attack.
 
 - (IBAction)AttackButton:(UIButton *)sender {
-    [_fireballMovementTimer invalidate];
-    self.Fireball.hidden = false;
-    self.Fireball.center = CGPointMake(_RoadmanShaq.center.x, _RoadmanShaq.center.y);
+    [_fistattackMovementTimer invalidate];
+    self.FistAttack.hidden = false;
+    self.FistAttack.center = CGPointMake(_RoadmanShaq.center.x, _RoadmanShaq.center.y);
     
-    _fireballMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(fireballMovementTimer) userInfo:nil repeats:YES];
+    _fistattackMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(fistattackMovement) userInfo:nil repeats:YES];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
     
+}
+
+-(void)fistattackMovement {
+    NSInteger score=0;
+    self.FistAttack.hidden = false;
+    self.FistAttack.center = CGPointMake(_FistAttack.center.x, _FistAttack.center.y);
+    
+    if (CGRectIntersectsRect(_FistAttack.frame, _BorgBunnySprite.frame)) {
+        score = score + 1;
+        self.Score.text = [NSString stringWithFormat:@"Score:   %ld", score];
+        
+        [_fistattackMovementTimer invalidate];
+        
+        self.FistAttack.center = CGPointMake(_RoadmanShaq.center.x, _RoadmanShaq.center.y);
+        self.FistAttack.hidden = true;
+        
+        [_bunnyMovementTimer invalidate];
+        [self bunnyPosition];
+    }
 }
 
 // Implementing the method of touchesMoved to move my sprite in the direction we tap the screen.
@@ -90,6 +112,110 @@
     
     CGPoint point = [_touch locationInView:self.view];
     _RoadmanShaq.center = CGPointMake(point.x, _RoadmanShaq.center.y);
+}
+
+-(void)bunnyPosition {
+    // Randomises a position for the enemy
+    /*NSInteger enemyPosition=0;
+    NSInteger bunnyPosition=0;
+    
+    enemyPosition = arc4random() % 249;
+    bunnyPosition = enemyPosition +20;*/
+    
+    // Sets the position for the enemy sprite
+    _BorgBunnySprite.center = CGPointMake(750, 50);
+    
+    // Sets the speed that the bunny will attack
+    NSInteger randomSpeed = 0;
+    NSInteger bunnySpeed = 0;
+    randomSpeed = arc4random() % 3;
+    switch (arc4random()) {
+        case 0:
+            bunnySpeed = 0.03;
+            break;
+        case 1:
+            bunnySpeed = 0.02;
+        case 2:
+            bunnySpeed = 0.01;
+        default:
+            break;
+    }
+    
+    // Sets how quick new attacks will occur
+    NSInteger Chanceofattack = 0;
+    Chanceofattack = arc4random() % 5;
+    [self performSelector:@selector(bunnyMovementTimerx) withObject:nil afterDelay:Chanceofattack];
+    
+}
+
+-(void)bunnyMovementTimerx {
+    
+    NSInteger randomSpeed;
+    NSInteger bunnySpeed;
+    randomSpeed = arc4random() % 3;
+    switch (arc4random()) {
+        case 0:
+            bunnySpeed = 0.03;
+            break;
+        case 1:
+            bunnySpeed = 0.02;
+        case 2:
+            bunnySpeed = 0.01;
+        default:
+            break;
+    }
+    
+    
+    _bunnyMovementTimer = [NSTimer scheduledTimerWithTimeInterval:bunnySpeed target:self selector:@selector(bunnyMovement) userInfo:nil repeats:YES];
+}
+
+-(void)bunnyMovement {
+    _BorgBunnySprite.center = CGPointMake(_BorgBunnySprite.center.x, _BorgBunnySprite.center.y);
+    
+    if (CGRectIntersectsRect(_BorgBunnySprite.frame, _RoadmanShaq.frame)) {
+        self.HealthBar.progress = self.HealthBar.progress - 0.2;
+        [_bunnyMovementTimer invalidate];
+    }
+    if (_HealthBar > 0) {
+        [self bunnyPosition];
+    }
+    if (_HealthBar == 0) {
+        [self GameOver];
+    }
+}
+
+-(void)GameOver {
+    [_bunnyMovementTimer invalidate];
+    [_fistattackMovementTimer invalidate];
+    [self performSelector:@selector(ReplayGame) withObject:nil afterDelay:7];
+}
+
+-(void)ReplayGame {
+    
+    // Hiding all elements other than the menu in the start up screen of the game.
+    
+    self.HealthBar.hidden = true;
+    self.Score.hidden = true;
+    self.Healthlabel.hidden = true;
+    self.BorgBunnySprite.hidden = true;
+    self.Fireball.hidden = true;
+    self.RoadmanShaq.hidden = true;
+    self.FistAttack.hidden = true;
+    self.AttackbuttonX.hidden = true;
+    
+    // Set the original value for score/health and using a string to display this.
+    
+    NSInteger score = 0;
+    self.Score.text = [NSString stringWithFormat:@"Score:   %ld", score];
+    self.HealthBar.progress = 1;
+    
+    // Setting the original positions for the sprites for when the game will load.
+    
+    self.RoadmanShaq.center = CGPointMake(50, 350);
+    self.BorgBunnySprite.center = CGPointMake(350, 350);
+    self.FistAttack.center = CGPointMake(_RoadmanShaq.center.x, _RoadmanShaq.center.y);
+    self.Fireball.center = CGPointMake(_BorgBunnySprite.center.x, _BorgBunnySprite.center.y);
+    
 }
 
 @end

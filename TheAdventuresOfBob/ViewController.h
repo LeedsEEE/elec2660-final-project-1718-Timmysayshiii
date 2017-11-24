@@ -22,8 +22,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *Settingsbutton;
 @property (weak, nonatomic) IBOutlet UIButton *instructionsbutton;
 @property (weak, nonatomic) IBOutlet UIButton *startgamebutton;
+
 @property (strong ,nonatomic) UITouch *touch;
 @property (strong, nonatomic) NSTimer *fireballMovementTimer;
+@property (strong, nonatomic) NSTimer *fistattackMovementTimer;
 @property (strong, nonatomic) NSTimer *bunnyMovementTimer;
 
 - (IBAction)StartGame:(UIButton *)sender;
