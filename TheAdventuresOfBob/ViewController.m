@@ -61,14 +61,20 @@
     self.Score.hidden = false;
     self.Healthlabel.hidden = false;
     self.BorgBunnySprite.hidden = false;
-    self.Fireball.hidden = false;
+    self.Fireball.hidden = true;
     self.RoadmanShaq.hidden = false;
     self.AttackbuttonX.hidden = false;
     
 }
 
+// Method for the attack button to launch a projectile attack.
+
 - (IBAction)AttackButton:(UIButton *)sender {
+    [_fireballMovementTimer invalidate];
+    self.Fireball.hidden = false;
+    self.Fireball.center = CGPointMake(_RoadmanShaq.center.x, _RoadmanShaq.center.y);
     
+    _fireballMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(fireballMovementTimer) userInfo:nil repeats:YES];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -80,6 +86,8 @@
 
 -(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     self.touch= [touches anyObject];
+    // Can implement If statements for better control
+    
     CGPoint point = [_touch locationInView:self.view];
     _RoadmanShaq.center = CGPointMake(point.x, _RoadmanShaq.center.y);
 }
