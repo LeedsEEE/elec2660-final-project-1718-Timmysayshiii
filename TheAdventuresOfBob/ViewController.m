@@ -90,15 +90,19 @@
     self.FistAttack.hidden = false;
     self.FistAttack.center = CGPointMake(_FistAttack.center.x, _FistAttack.center.y);
     
+    // If the two sprites collide, the user will gain score
     if (CGRectIntersectsRect(_FistAttack.frame, _BorgBunnySprite.frame)) {
         score = score + 1;
         self.Score.text = [NSString stringWithFormat:@"Score:   %ld", score];
         
+        // Stops the movement of the projectile
         [_fistattackMovementTimer invalidate];
         
+        // Recenters the attack projectile back to the users sprite
         self.FistAttack.center = CGPointMake(_RoadmanShaq.center.x, _RoadmanShaq.center.y);
         self.FistAttack.hidden = true;
         
+        //Stops the bunny from moving and then recenters for another attack
         [_bunnyMovementTimer invalidate];
         [self bunnyPosition];
     }
@@ -149,7 +153,7 @@
 }
 
 -(void)bunnyMovementTimerx {
-    
+     // Creating random speeds for the bunny to move at
     NSInteger randomSpeed;
     NSInteger bunnySpeed;
     randomSpeed = arc4random() % 3;
@@ -172,26 +176,34 @@
 -(void)bunnyMovement {
     _BorgBunnySprite.center = CGPointMake(_BorgBunnySprite.center.x, _BorgBunnySprite.center.y);
     
+    // If a collision between the two sprites occur, health will be deducted.
     if (CGRectIntersectsRect(_BorgBunnySprite.frame, _RoadmanShaq.frame)) {
         self.HealthBar.progress = self.HealthBar.progress - 0.2;
         [_bunnyMovementTimer invalidate];
     }
+    
+    // If the user still has health left, the sprite will relocate for another attack and game will stillbe active
     if (_HealthBar > 0) {
         [self bunnyPosition];
     }
+    
+    // If the user has no health, the game will be over
     if (_HealthBar == 0) {
         [self GameOver];
     }
 }
 
 -(void)GameOver {
+    // stops the movement for projectiles and enemies
     [_bunnyMovementTimer invalidate];
     [_fistattackMovementTimer invalidate];
+    
+    // Waits for roughly 7 seconds before the game will initilise replay
     [self performSelector:@selector(ReplayGame) withObject:nil afterDelay:7];
 }
 
 -(void)ReplayGame {
-    
+    // Restarts the game code
     // Hiding all elements other than the menu in the start up screen of the game.
     
     self.HealthBar.hidden = true;
