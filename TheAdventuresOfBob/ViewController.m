@@ -14,6 +14,8 @@
 
 @implementation ViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -39,8 +41,8 @@
     
     self.RoadmanShaq.center = CGPointMake(50, 350);
     self.BorgBunnySprite.center = CGPointMake(350, 350);
-    self.FistAttack.center = CGPointMake(_RoadmanShaq.center.x, _RoadmanShaq.center.y);
-    self.Fireball.center = CGPointMake(_BorgBunnySprite.center.x, _BorgBunnySprite.center.y);
+    self.FistAttack.center = CGPointMake(self.RoadmanShaq.center.x, self.RoadmanShaq.center.y);
+    self.Fireball.center = CGPointMake(self.BorgBunnySprite.center.x, self.BorgBunnySprite.center.y);
     
    
     
@@ -67,17 +69,18 @@
     self.BorgBunnySprite.hidden = false;
     self.RoadmanShaq.hidden = false;
     self.AttackbuttonX.hidden = false;
+    
     [self bunnyPosition];
 }
 
 // Method for the attack button to launch a projectile attack.
 
 - (IBAction)AttackButton:(UIButton *)sender {
-    [_fistattackMovementTimer invalidate];
+    [self.fistattackMovementTimer invalidate];
     self.FistAttack.hidden = false;
-    self.FistAttack.center = CGPointMake(_RoadmanShaq.center.x, _RoadmanShaq.center.y);
+    self.FistAttack.center = CGPointMake(self.RoadmanShaq.center.x, self.RoadmanShaq.center.y);
     
-    _fistattackMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(fistattackMovement) userInfo:nil repeats:YES];
+    self.fistattackMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(fistattackMovement) userInfo:nil repeats:NO];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -88,22 +91,33 @@
 -(void)fistattackMovement {
     NSInteger score=0;
     self.FistAttack.hidden = false;
-    self.FistAttack.center = CGPointMake(_FistAttack.center.x, _FistAttack.center.y);
+    self.FistAttack.center = CGPointMake(self.FistAttack.center.x, self.FistAttack.center.y);
+    //int width = (int)self.view.frame.size.width;
+    
+    [UIView animateWithDuration:0.4
+                     animations:^{
+                         
+    
+    self.FistAttack.center = CGPointMake(self.FistAttack.center.x + 600, self.FistAttack.center.y);
+                         
+    } completion:^(BOOL finished){
+        self.FistAttack.hidden = true;
+    }];
     
     // If the two sprites collide, the user will gain score
-    if (CGRectIntersectsRect(_FistAttack.frame, _BorgBunnySprite.frame)) {
+    if (CGRectIntersectsRect(self.FistAttack.frame, self.BorgBunnySprite.frame)) {
         score = score + 1;
         self.Score.text = [NSString stringWithFormat:@"Score:   %ld", score];
         
         // Stops the movement of the projectile
-        [_fistattackMovementTimer invalidate];
+        [self.fistattackMovementTimer invalidate];
         
         // Recenters the attack projectile back to the users sprite
-        self.FistAttack.center = CGPointMake(_RoadmanShaq.center.x, _RoadmanShaq.center.y);
-        self.FistAttack.hidden = true;
+        self.FistAttack.center = CGPointMake(self.RoadmanShaq.center.x, self.RoadmanShaq.center.y);
+        //self.FistAttack.hidden = true;
         
         //Stops the bunny from moving and then recenters for another attack
-        [_bunnyMovementTimer invalidate];
+        [self.bunnyMovementTimer invalidate];
         [self bunnyPosition];
     }
 }
@@ -114,12 +128,12 @@
     self.touch= [touches anyObject];
     // Can implement If statements for better control
     
-    CGPoint point = [_touch locationInView:self.view];
-    _RoadmanShaq.center = CGPointMake(point.x, _RoadmanShaq.center.y);
+    CGPoint point = [self.touch locationInView:self.view];
+    self.RoadmanShaq.center = CGPointMake(point.x, self.RoadmanShaq.center.y);
 }
 
 -(void)bunnyPosition {
-    // Randomises a position for the enemy
+    //Randomises a position for the enemy
     /*NSInteger enemyPosition=0;
     NSInteger bunnyPosition=0;
     
@@ -127,7 +141,7 @@
     bunnyPosition = enemyPosition +20;*/
     
     // Sets the position for the enemy sprite
-    _BorgBunnySprite.center = CGPointMake(750, 50);
+    self.BorgBunnySprite.center = CGPointMake(770, 350);
     
     // Sets the speed that the bunny will attack
     NSInteger randomSpeed = 0;
@@ -136,7 +150,7 @@
     switch (arc4random()) {
         case 0:
             bunnySpeed = 0.03;
-            break;
+            
         case 1:
             bunnySpeed = 0.02;
         case 2:
@@ -146,7 +160,7 @@
     }
     
     // Sets how quick new attacks will occur
-    NSInteger Chanceofattack = 0;
+    NSInteger Chanceofattack;
     Chanceofattack = arc4random() % 5;
     [self performSelector:@selector(bunnyMovementTimerx) withObject:nil afterDelay:Chanceofattack];
     
@@ -154,49 +168,42 @@
 
 -(void)bunnyMovementTimerx {
      // Creating random speeds for the bunny to move at
-    NSInteger randomSpeed;
-    NSInteger bunnySpeed;
-    randomSpeed = arc4random() % 3;
-    switch (arc4random()) {
-        case 0:
-            bunnySpeed = 0.03;
-            break;
-        case 1:
-            bunnySpeed = 0.02;
-        case 2:
-            bunnySpeed = 0.01;
-        default:
-            break;
-    }
-    
-    
-    _bunnyMovementTimer = [NSTimer scheduledTimerWithTimeInterval:bunnySpeed target:self selector:@selector(bunnyMovement) userInfo:nil repeats:YES];
+   
+    self.bunnyMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(bunnyMovement) userInfo:nil repeats:YES];
 }
 
 -(void)bunnyMovement {
-    _BorgBunnySprite.center = CGPointMake(_BorgBunnySprite.center.x, _BorgBunnySprite.center.y);
-    
+    self.BorgBunnySprite.center = CGPointMake(self.BorgBunnySprite.center.x, self.BorgBunnySprite.center.y);
+    [UIView animateWithDuration:0.4
+                     animations:^{
+                         
+                         
+                         self.BorgBunnySprite.center = CGPointMake(self.BorgBunnySprite.center.x + 600, self.BorgBunnySprite.center.y);
+                         
+                     } completion:^(BOOL finished){
+                         
+                     }];
     // If a collision between the two sprites occur, health will be deducted.
-    if (CGRectIntersectsRect(_BorgBunnySprite.frame, _RoadmanShaq.frame)) {
+    if (CGRectIntersectsRect(self.BorgBunnySprite.frame, self.RoadmanShaq.frame)) {
         self.HealthBar.progress = self.HealthBar.progress - 0.2;
-        [_bunnyMovementTimer invalidate];
+        [self.bunnyMovementTimer invalidate];
     }
     
     // If the user still has health left, the sprite will relocate for another attack and game will stillbe active
-    if (_HealthBar > 0) {
+    if (self.HealthBar > 0) {
         [self bunnyPosition];
     }
     
     // If the user has no health, the game will be over
-    if (_HealthBar == 0) {
+    if (self.HealthBar == 0) {
         [self GameOver];
     }
 }
 
 -(void)GameOver {
     // stops the movement for projectiles and enemies
-    [_bunnyMovementTimer invalidate];
-    [_fistattackMovementTimer invalidate];
+    [self.bunnyMovementTimer invalidate];
+    [self.fistattackMovementTimer invalidate];
     
     // Waits for roughly 7 seconds before the game will initilise replay
     [self performSelector:@selector(ReplayGame) withObject:nil afterDelay:7];

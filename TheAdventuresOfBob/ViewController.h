@@ -31,5 +31,11 @@
 - (IBAction)StartGame:(UIButton *)sender;
 - (IBAction)AttackButton:(UIButton *)sender;
 
+-(void)fistattackMovement;
+-(void)bunnyPosition;
+-(void)bunnyMovementTimerx;
+-(void)bunnyMovement;
+-(void)GameOver;
+-(void)ReplayGame;
 @end
 
