@@ -73,6 +73,23 @@
     [self bunnyPosition];
 }
 
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    
+}
+
+
+// Implementing the method of touchesMoved to move my sprite in the direction we tap the screen.
+
+-(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    self.touch= [touches anyObject];
+    // Can implement If statements for better control
+    
+    CGPoint point = [self.touch locationInView:self.view];
+    self.RoadmanShaq.center = CGPointMake(point.x, self.RoadmanShaq.center.y);
+}
+
 // Method for the attack button to launch a projectile attack.
 
 - (IBAction)AttackButton:(UIButton *)sender {
@@ -80,13 +97,10 @@
     self.FistAttack.hidden = false;
     self.FistAttack.center = CGPointMake(self.RoadmanShaq.center.x, self.RoadmanShaq.center.y);
     
-    self.fistattackMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(fistattackMovement) userInfo:nil repeats:NO];
+    self.fistattackMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(fistattackMovement) userInfo:nil repeats:YES];
 }
 
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    
-    
-}
+// ENDED HERE
 
 -(void)fistattackMovement {
     NSInteger score=0;
@@ -94,15 +108,12 @@
     self.FistAttack.center = CGPointMake(self.FistAttack.center.x, self.FistAttack.center.y);
     //int width = (int)self.view.frame.size.width;
     
-    [UIView animateWithDuration:0.4
-                     animations:^{
-                         
-    
-    self.FistAttack.center = CGPointMake(self.FistAttack.center.x + 600, self.FistAttack.center.y);
-                         
-    } completion:^(BOOL finished){
+    /*[UIView animateWithDuration:0.4 animations:^{
+       self.FistAttack.center = CGPointMake(self.FistAttack.center.x + 600, self.FistAttack.center.y);
+    }
+    completion:^(BOOL finished){
         self.FistAttack.hidden = true;
-    }];
+    }];*/
     
     // If the two sprites collide, the user will gain score
     if (CGRectIntersectsRect(self.FistAttack.frame, self.BorgBunnySprite.frame)) {
@@ -114,7 +125,7 @@
         
         // Recenters the attack projectile back to the users sprite
         self.FistAttack.center = CGPointMake(self.RoadmanShaq.center.x, self.RoadmanShaq.center.y);
-        //self.FistAttack.hidden = true;
+        self.FistAttack.hidden = true;
         
         //Stops the bunny from moving and then recenters for another attack
         [self.bunnyMovementTimer invalidate];
@@ -122,15 +133,6 @@
     }
 }
 
-// Implementing the method of touchesMoved to move my sprite in the direction we tap the screen.
-
--(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    self.touch= [touches anyObject];
-    // Can implement If statements for better control
-    
-    CGPoint point = [self.touch locationInView:self.view];
-    self.RoadmanShaq.center = CGPointMake(point.x, self.RoadmanShaq.center.y);
-}
 
 -(void)bunnyPosition {
     //Randomises a position for the enemy
@@ -143,7 +145,7 @@
     // Sets the position for the enemy sprite
     self.BorgBunnySprite.center = CGPointMake(770, 350);
     
-    // Sets the speed that the bunny will attack
+    /* Sets the speed that the bunny will attack
     NSInteger randomSpeed = 0;
     NSInteger bunnySpeed = 0;
     randomSpeed = arc4random() % 3;
@@ -157,7 +159,7 @@
             bunnySpeed = 0.01;
         default:
             break;
-    }
+    }*/
     
     // Sets how quick new attacks will occur
     NSInteger Chanceofattack;
@@ -169,20 +171,14 @@
 -(void)bunnyMovementTimerx {
      // Creating random speeds for the bunny to move at
    
-    self.bunnyMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(bunnyMovement) userInfo:nil repeats:YES];
+    _bunnyMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(bunnyMovement) userInfo:nil repeats:YES];
 }
 
 -(void)bunnyMovement {
-    self.BorgBunnySprite.center = CGPointMake(self.BorgBunnySprite.center.x, self.BorgBunnySprite.center.y);
-    [UIView animateWithDuration:0.4
-                     animations:^{
-                         
-                         
-                         self.BorgBunnySprite.center = CGPointMake(self.BorgBunnySprite.center.x + 600, self.BorgBunnySprite.center.y);
-                         
-                     } completion:^(BOOL finished){
-                         
-                     }];
+    self.BorgBunnySprite.center = CGPointMake(self.BorgBunnySprite.center.x-3, self.BorgBunnySprite.center.y);
+    /*[UIView animateWithDuration:0.4 animations:^{
+        self.BorgBunnySprite.center = CGPointMake(self.BorgBunnySprite.center.x+10, self.BorgBunnySprite.center.y);} completion:^(BOOL finished){
+        }];*/
     // If a collision between the two sprites occur, health will be deducted.
     if (CGRectIntersectsRect(self.BorgBunnySprite.frame, self.RoadmanShaq.frame)) {
         self.HealthBar.progress = self.HealthBar.progress - 0.2;

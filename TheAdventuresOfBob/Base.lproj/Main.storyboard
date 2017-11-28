@@ -100,7 +100,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cyborg_bunny_by_crowsrock-d50l4tg.png" translatesAutoresizingMaskIntoConstraints="NO" id="v1h-q4-8FT">
-                                <frame key="frameInset" minX="581" minY="213" width="79" height="119"/>
+                                <frame key="frameInset" minX="582" minY="213" width="79" height="119"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="875575-mkdd_fireball_mario.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5CT-G9-pPC">
