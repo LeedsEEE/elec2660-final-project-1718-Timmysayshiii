@@ -12,6 +12,11 @@
 
 @end
 
+int Chanceofattack;
+float bunnySpeed;
+int randomSpeed;
+int score;
+
 @implementation ViewController
 
 
@@ -40,7 +45,7 @@
     // Setting the original positions for the sprites for when the game will load.
     
     self.RoadmanShaq.center = CGPointMake(50, 350);
-    self.BorgBunnySprite.center = CGPointMake(350, 350);
+    self.BorgBunnySprite.center = CGPointMake(770, 350);
     self.FistAttack.center = CGPointMake(self.RoadmanShaq.center.x, self.RoadmanShaq.center.y);
     self.Fireball.center = CGPointMake(self.BorgBunnySprite.center.x, self.BorgBunnySprite.center.y);
     
@@ -103,9 +108,9 @@
 // ENDED HERE
 
 -(void)fistattackMovement {
-    NSInteger score=0;
-    self.FistAttack.hidden = false;
-    self.FistAttack.center = CGPointMake(self.FistAttack.center.x, self.FistAttack.center.y);
+  
+    self.FistAttack.hidden = NO;
+    self.FistAttack.center = CGPointMake(self.FistAttack.center.x + 1, self.FistAttack.center.y);
     //int width = (int)self.view.frame.size.width;
     
     /*[UIView animateWithDuration:0.4 animations:^{
@@ -118,7 +123,7 @@
     // If the two sprites collide, the user will gain score
     if (CGRectIntersectsRect(self.FistAttack.frame, self.BorgBunnySprite.frame)) {
         score = score + 1;
-        self.Score.text = [NSString stringWithFormat:@"Score:   %ld", score];
+        self.Score.text = [NSString stringWithFormat:@"Score:   %d", score];
         
         // Stops the movement of the projectile
         [self.fistattackMovementTimer invalidate];
@@ -145,24 +150,22 @@
     // Sets the position for the enemy sprite
     self.BorgBunnySprite.center = CGPointMake(770, 350);
     
-    /* Sets the speed that the bunny will attack
-    NSInteger randomSpeed = 0;
-    NSInteger bunnySpeed = 0;
+    //Sets the speed that the bunny will attack
     randomSpeed = arc4random() % 3;
-    switch (arc4random()) {
+    switch (randomSpeed) {
         case 0:
-            bunnySpeed = 0.03;
-            
+            bunnySpeed = 0.003;
+            break;
         case 1:
-            bunnySpeed = 0.02;
+            bunnySpeed = 0.002;
+            break;
         case 2:
-            bunnySpeed = 0.01;
+            bunnySpeed = 0.001;
         default:
             break;
-    }*/
+    }
     
     // Sets how quick new attacks will occur
-    NSInteger Chanceofattack;
     Chanceofattack = arc4random() % 5;
     [self performSelector:@selector(bunnyMovementTimerx) withObject:nil afterDelay:Chanceofattack];
     
@@ -171,21 +174,23 @@
 -(void)bunnyMovementTimerx {
      // Creating random speeds for the bunny to move at
    
-    _bunnyMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(bunnyMovement) userInfo:nil repeats:YES];
+    
+    self.bunnyMovementTimer = [NSTimer scheduledTimerWithTimeInterval:bunnySpeed target:self selector:@selector(bunnyMovement) userInfo:nil repeats:YES];
 }
 
 -(void)bunnyMovement {
-    self.BorgBunnySprite.center = CGPointMake(self.BorgBunnySprite.center.x-3, self.BorgBunnySprite.center.y);
+    self.BorgBunnySprite.center = CGPointMake(self.BorgBunnySprite.center.x - 10, self.BorgBunnySprite.center.y);
     /*[UIView animateWithDuration:0.4 animations:^{
         self.BorgBunnySprite.center = CGPointMake(self.BorgBunnySprite.center.x+10, self.BorgBunnySprite.center.y);} completion:^(BOOL finished){
         }];*/
+    
     // If a collision between the two sprites occur, health will be deducted.
     if (CGRectIntersectsRect(self.BorgBunnySprite.frame, self.RoadmanShaq.frame)) {
         self.HealthBar.progress = self.HealthBar.progress - 0.2;
         [self.bunnyMovementTimer invalidate];
     }
     
-    // If the user still has health left, the sprite will relocate for another attack and game will stillbe active
+    // If the user still has health left, the sprite will relocate for another attack and game will still be active
     if (self.HealthBar > 0) {
         [self bunnyPosition];
     }
@@ -227,7 +232,7 @@
     // Setting the original positions for the sprites for when the game will load.
     
     self.RoadmanShaq.center = CGPointMake(50, 350);
-    self.BorgBunnySprite.center = CGPointMake(350, 350);
+    self.BorgBunnySprite.center = CGPointMake(770, 350);
     self.FistAttack.center = CGPointMake(_RoadmanShaq.center.x, _RoadmanShaq.center.y);
     self.Fireball.center = CGPointMake(_BorgBunnySprite.center.x, _BorgBunnySprite.center.y);
     
