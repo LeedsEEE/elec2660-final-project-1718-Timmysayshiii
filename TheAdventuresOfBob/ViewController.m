@@ -23,23 +23,20 @@ int score;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
-    // Hiding all elements other than the menu in the start up screen of the game.
+    // Displays the elements needed for the game when we press start. In turn the menu will be hidden.
     
-    self.HealthBar.hidden = true;
-    self.Score.hidden = true;
-    self.Healthlabel.hidden = true;
-    self.BorgBunnySprite.hidden = true;
-    self.Fireball.hidden = true;
-    self.RoadmanShaq.hidden = true;
     self.FistAttack.hidden = true;
-    self.AttackbuttonX.hidden = true;
+    self.HealthBar.hidden = false;
+    self.Score.hidden = false;
+    self.Healthlabel.hidden = false;
+    self.BorgBunnySprite.hidden = false;
+    self.RoadmanShaq.hidden = false;
+    self.AttackbuttonX.hidden = false;
     
     // Set the original value for score/health and using a string to display this.
     
-    NSInteger score = 0;
-    self.Score.text = [NSString stringWithFormat:@"Score:   %ld", score];
+    self.Score.text = [NSString stringWithFormat:@"Score:   %d", score];
     self.HealthBar.progress = 1;
     
     // Setting the original positions for the sprites for when the game will load.
@@ -49,7 +46,7 @@ int score;
     self.FistAttack.center = CGPointMake(self.RoadmanShaq.center.x, self.RoadmanShaq.center.y);
     self.Fireball.center = CGPointMake(self.BorgBunnySprite.center.x, self.BorgBunnySprite.center.y);
     
-   
+   [self bunnyPosition];
     
     
 }
@@ -63,19 +60,6 @@ int score;
 
 - (IBAction)StartGame:(UIButton *)sender {
     
-    // Displays the elements needed for the game when we press start. In turn the menu will be hidden.
-    
-    self.instructionsbutton.hidden = true;
-    self.Settingsbutton.hidden = true;
-    self.startgamebutton.hidden = true;
-    self.HealthBar.hidden = false;
-    self.Score.hidden = false;
-    self.Healthlabel.hidden = false;
-    self.BorgBunnySprite.hidden = false;
-    self.RoadmanShaq.hidden = false;
-    self.AttackbuttonX.hidden = false;
-    
-    [self bunnyPosition];
 }
 
 
@@ -138,6 +122,12 @@ int score;
     }
 }
 
+-(void)bunnyMovementTimerx {
+    // Creating random speeds for the bunny to move at
+    
+    
+    self.bunnyMovementTimer = [NSTimer scheduledTimerWithTimeInterval:bunnySpeed target:self selector:@selector(bunnyMovement) userInfo:nil repeats:YES];
+}
 
 -(void)bunnyPosition {
     //Randomises a position for the enemy
@@ -169,13 +159,6 @@ int score;
     Chanceofattack = arc4random() % 5;
     [self performSelector:@selector(bunnyMovementTimerx) withObject:nil afterDelay:Chanceofattack];
     
-}
-
--(void)bunnyMovementTimerx {
-     // Creating random speeds for the bunny to move at
-   
-    
-    self.bunnyMovementTimer = [NSTimer scheduledTimerWithTimeInterval:bunnySpeed target:self selector:@selector(bunnyMovement) userInfo:nil repeats:YES];
 }
 
 -(void)bunnyMovement {
