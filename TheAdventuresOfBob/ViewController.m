@@ -33,7 +33,14 @@ int score;
     self.BorgBunnySprite.hidden = false;
     self.RoadmanShaq.hidden = false;
     self.AttackbuttonX.hidden = false;
-    
+    self.egg1.hidden = false;
+    self.egg2.hidden = false;
+    self.egg3.hidden = false;
+    self.egg4.hidden = false;
+    self.gameover.hidden = true;
+    self.endgameQuit.hidden = true;
+    self.endgameScore.hidden = true;
+    self.endgameReplay.hidden = true;
     // Set the original value for score/health and using a string to display this.
     
     self.Score.text = [NSString stringWithFormat:@"Score:   %d", score];
@@ -46,6 +53,9 @@ int score;
     self.FistAttack.center = CGPointMake(self.RoadmanShaq.center.x, self.RoadmanShaq.center.y);
     self.Fireball.center = CGPointMake(self.BorgBunnySprite.center.x, self.BorgBunnySprite.center.y);
     self.egg1.center = CGPointMake(200, -20);
+    self.egg2.center = CGPointMake(300, -20);
+    self.egg3.center = CGPointMake(400, -20);
+    self.egg4.center = CGPointMake(500, -20);
    
     [self bunnyPosition];
    
@@ -92,6 +102,9 @@ int score;
 }
 
 // ENDED HERE
+
+- (IBAction)endgameReplayc:(UIButton *)sender {
+}
 
 -(void)fistattackMovement {
   
@@ -192,43 +205,83 @@ int score;
     self.egg3.center = CGPointMake(self.egg3.center.x, self.egg3.center.y +3);
     self.egg4.center = CGPointMake(self.egg4.center.x, self.egg4.center.y +3);
     
-    
+    if (CGRectIntersectsRect(self.egg1.frame, self.bottomBorder.frame)){
+        self.egg1.center = CGPointMake(200, -20);
+    }
+    if (CGRectIntersectsRect(self.egg2.frame, self.bottomBorder.frame)){
+        self.egg2.center = CGPointMake(300, -20);
+    }
+    if (CGRectIntersectsRect(self.egg3.frame, self.bottomBorder.frame)){
+        self.egg3.center = CGPointMake(400, -20);
+    }
+    if (CGRectIntersectsRect(self.egg4.frame, self.bottomBorder.frame)){
+        self.egg4.center = CGPointMake(500, -20);
+    }
 }
 
 -(void)GameOver {
     // stops the movement for projectiles and enemies
     [self.bunnyMovementTimer invalidate];
     [self.fistattackMovementTimer invalidate];
-    
+    [self.eggMovementTimer invalidate];
+    self.FistAttack.hidden = true;
+    self.HealthBar.hidden = true;
+    self.Score.hidden = true;
+    self.Healthlabel.hidden = true;
+    self.BorgBunnySprite.hidden = true;
+    self.RoadmanShaq.hidden = true;
+    self.AttackbuttonX.hidden = true;
+    self.egg1.hidden = true;
+    self.egg2.hidden = true;
+    self.egg3.hidden = true;
+    self.egg4.hidden = true;
+    self.gameover.hidden = false;
+    self.endgameQuit.hidden = false;
+    self.endgameScore.hidden = false;
+    self.endgameReplay.hidden = false;
     // Waits for roughly 7 seconds before the game will initilise replay
     [self performSelector:@selector(ReplayGame) withObject:nil afterDelay:7];
 }
 
 -(void)ReplayGame {
     // Restarts the game code
-    // Hiding all elements other than the menu in the start up screen of the game.
     
-    self.HealthBar.hidden = true;
-    self.Score.hidden = true;
-    self.Healthlabel.hidden = true;
-    self.BorgBunnySprite.hidden = true;
-    self.Fireball.hidden = true;
-    self.RoadmanShaq.hidden = true;
+    // Displays the elements needed for the game when we press start. In turn the menu will be hidden.
+    
     self.FistAttack.hidden = true;
-    self.AttackbuttonX.hidden = true;
-    
+    self.HealthBar.hidden = false;
+    self.Score.hidden = false;
+    self.Healthlabel.hidden = false;
+    self.BorgBunnySprite.hidden = false;
+    self.RoadmanShaq.hidden = false;
+    self.AttackbuttonX.hidden = false;
+    self.egg1.hidden = false;
+    self.egg2.hidden = false;
+    self.egg3.hidden = false;
+    self.egg4.hidden = false;
+    self.gameover.hidden = true;
+    self.endgameQuit.hidden = true;
+    self.endgameScore.hidden = true;
+    self.endgameReplay.hidden = true;
     // Set the original value for score/health and using a string to display this.
     
-    NSInteger score = 0;
-    self.Score.text = [NSString stringWithFormat:@"Score:   %ld", score];
+    self.Score.text = [NSString stringWithFormat:@"Score:   %d", score];
     self.HealthBar.progress = 1;
     
     // Setting the original positions for the sprites for when the game will load.
     
     self.RoadmanShaq.center = CGPointMake(50, 350);
     self.BorgBunnySprite.center = CGPointMake(770, 350);
-    self.FistAttack.center = CGPointMake(_RoadmanShaq.center.x, _RoadmanShaq.center.y);
-    self.Fireball.center = CGPointMake(_BorgBunnySprite.center.x, _BorgBunnySprite.center.y);
+    self.FistAttack.center = CGPointMake(self.RoadmanShaq.center.x, self.RoadmanShaq.center.y);
+    self.Fireball.center = CGPointMake(self.BorgBunnySprite.center.x, self.BorgBunnySprite.center.y);
+    self.egg1.center = CGPointMake(200, -20);
+    self.egg2.center = CGPointMake(300, -20);
+    self.egg3.center = CGPointMake(400, -20);
+    self.egg4.center = CGPointMake(500, -20);
+    
+    [self bunnyPosition];
+    
+    self.eggMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(eggMovement) userInfo:nil repeats:YES];
     
 }
 

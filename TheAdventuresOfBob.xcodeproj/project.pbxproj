@@ -24,6 +24,7 @@
 		CFE351251FB9BA3800EA8EFB /* sub-buzz-29381-1508166343-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFE351241FB9BA3800EA8EFB /* sub-buzz-29381-1508166343-1.jpg */; };
 		CFE351271FB9BB7B00EA8EFB /* 875575-mkdd_fireball_mario.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFE351261FB9BB7B00EA8EFB /* 875575-mkdd_fireball_mario.jpg */; };
 		CFEE31B51FD00A1200A47C86 /* fallingeggs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFEE31B41FD00A1200A47C86 /* fallingeggs.jpg */; };
+		CFEE31B81FD0182E00A47C86 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEE31B71FD0182E00A47C86 /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		CFE351241FB9BA3800EA8EFB /* sub-buzz-29381-1508166343-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sub-buzz-29381-1508166343-1.jpg"; sourceTree = "<group>"; };
 		CFE351261FB9BB7B00EA8EFB /* 875575-mkdd_fireball_mario.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "875575-mkdd_fireball_mario.jpg"; sourceTree = "<group>"; };
 		CFEE31B41FD00A1200A47C86 /* fallingeggs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fallingeggs.jpg; sourceTree = "<group>"; };
+		CFEE31B61FD0182E00A47C86 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		CFEE31B71FD0182E00A47C86 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				CFE350F51FB9A60900EA8EFB /* ViewController.h */,
 				CFE350F61FB9A60900EA8EFB /* ViewController.m */,
 				CFE350F81FB9A60900EA8EFB /* Main.storyboard */,
+				CFEE31B61FD0182E00A47C86 /* SettingsViewController.h */,
+				CFEE31B71FD0182E00A47C86 /* SettingsViewController.m */,
 				CF67D3D31FCF2BE5005868F3 /* MenuViewController.h */,
 				CF67D3D41FCF2BE5005868F3 /* MenuViewController.m */,
 				CFE350FB1FB9A60900EA8EFB /* Assets.xcassets */,
@@ -312,6 +317,7 @@
 			files = (
 				CFE350F71FB9A60900EA8EFB /* ViewController.m in Sources */,
 				CFE350F41FB9A60900EA8EFB /* AppDelegate.m in Sources */,
+				CFEE31B81FD0182E00A47C86 /* SettingsViewController.m in Sources */,
 				CFE350F11FB9A60900EA8EFB /* main.m in Sources */,
 				CF67D3D51FCF2BE5005868F3 /* MenuViewController.m in Sources */,
 			);

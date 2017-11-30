@@ -26,15 +26,23 @@
 @property (weak, nonatomic) IBOutlet UIImageView *egg2;
 @property (weak, nonatomic) IBOutlet UIImageView *egg3;
 @property (weak, nonatomic) IBOutlet UIImageView *egg4;
+@property (weak, nonatomic) IBOutlet UIImageView *bottomBorder;
+@property (weak, nonatomic) IBOutlet UIImageView *leftBorder;
+@property (weak, nonatomic) IBOutlet UIImageView *rightBorder;
+@property (weak, nonatomic) IBOutlet UILabel *endgameScore;
+@property (weak, nonatomic) IBOutlet UIButton *endgameQuit;
 
 @property (strong ,nonatomic) UITouch *touch;
 @property (strong, nonatomic) NSTimer *fireballMovementTimer;
 @property (strong, nonatomic) NSTimer *fistattackMovementTimer;
 @property (strong, nonatomic) NSTimer *bunnyMovementTimer;
 @property (strong, nonatomic) NSTimer *eggMovementTimer;
+@property (weak, nonatomic) IBOutlet UILabel *gameover;
 
 - (IBAction)StartGame:(UIButton *)sender;
 - (IBAction)AttackButton:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *endgameReplay;
+- (IBAction)endgameReplayc:(UIButton *)sender;
 
 -(void)fistattackMovement;
 -(void)bunnyPosition;

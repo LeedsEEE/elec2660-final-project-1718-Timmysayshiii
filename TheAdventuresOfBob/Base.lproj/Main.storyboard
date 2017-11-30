@@ -89,6 +89,48 @@
                                 <frame key="frameInset" minX="376" minY="67" width="47" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NQt-04-vvY">
+                                <frame key="frameInset" minY="359" width="667" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HHP-gg-4XI">
+                                <frame key="frameInset" width="12" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gzQ-ke-Qbc">
+                                <frame key="frameInset" minX="655" width="12" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Over!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xT-w4-Rvm">
+                                <frame key="frameInset" minX="287" minY="136" width="99" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Score =" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Erd-C0-UCS">
+                                <frame key="frameInset" minX="287" minY="169" width="99" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqQ-eG-FiD">
+                                <frame key="frameInset" minX="288" minY="198" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Replay Game"/>
+                                <connections>
+                                    <action selector="endgameReplayc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gXj-hB-amk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIs-Y8-FQT">
+                                <frame key="frameInset" minX="318" minY="224" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Quit"/>
+                                <connections>
+                                    <segue destination="rYn-qk-7cJ" kind="show" id="6NN-xc-t7T"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -110,11 +152,18 @@
                         <outlet property="Score" destination="0Ls-B7-1e9" id="jy2-Sp-yQd"/>
                         <outlet property="Settingsbutton" destination="Whc-P8-KnQ" id="lFE-hv-ZmC"/>
                         <outlet property="StartGameX" destination="13H-cJ-fxN" id="xhW-1L-WvF"/>
+                        <outlet property="bottomBorder" destination="NQt-04-vvY" id="3rH-QA-fDa"/>
                         <outlet property="egg1" destination="UXd-yY-8tl" id="2uw-eD-tgK"/>
                         <outlet property="egg2" destination="HOf-LP-OAA" id="rVJ-Al-bAL"/>
                         <outlet property="egg3" destination="GGV-TD-x9k" id="osB-KE-3Lt"/>
                         <outlet property="egg4" destination="evW-Br-PMi" id="geN-5t-qTJ"/>
+                        <outlet property="endgameQuit" destination="pIs-Y8-FQT" id="tUv-Pk-exb"/>
+                        <outlet property="endgameReplay" destination="EqQ-eG-FiD" id="cKc-Gx-F6A"/>
+                        <outlet property="endgameScore" destination="Erd-C0-UCS" id="GIT-hE-DPk"/>
+                        <outlet property="gameover" destination="3xT-w4-Rvm" id="vxK-Kb-YRJ"/>
                         <outlet property="instructionsbutton" destination="uN6-Cg-8Hx" id="1lR-9t-Rx6"/>
+                        <outlet property="leftBorder" destination="HHP-gg-4XI" id="IqX-S7-7IM"/>
+                        <outlet property="rightBorder" destination="gzQ-ke-Qbc" id="lJ4-1R-OpO"/>
                         <outlet property="startgamebutton" destination="13H-cJ-fxN" id="FC9-mO-baK"/>
                     </connections>
                 </viewController>
@@ -122,10 +171,10 @@
             </objects>
             <point key="canvasLocation" x="53.523238380809602" y="-60"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="XwV-M3-Eb7">
             <objects>
-                <viewController id="ygB-DK-ean" sceneMemberID="viewController">
+                <viewController id="ygB-DK-ean" customClass="SettingsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4YO-gn-SbM"/>
                         <viewControllerLayoutGuide type="bottom" id="Hya-er-NfH"/>
@@ -381,6 +430,22 @@
                                 <frame key="frameInset" minX="79" minY="234" width="43" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fallingeggs.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="jm4-cO-P7e">
+                                <frame key="frameInset" minX="52" minY="63" width="50" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fallingeggs.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7aU-09-X8i">
+                                <frame key="frameInset" minX="213" minY="104" width="48" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fallingeggs.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Un2-nw-KH7">
+                                <frame key="frameInset" minX="516" minY="86" width="49" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fallingeggs.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9N3-mX-zfG">
+                                <frame key="frameInset" minX="367" minY="55" width="49" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -400,11 +465,15 @@
                         <outlet property="Healthlabel" destination="zXO-PE-1a9" id="1MU-Gp-Zne"/>
                         <outlet property="RoadmanShaq" destination="gjt-4p-b8d" id="ED4-2t-qmB"/>
                         <outlet property="Score" destination="Nmr-EU-hyg" id="hpD-0y-qc5"/>
+                        <outlet property="egg1" destination="jm4-cO-P7e" id="xU4-UE-MCH"/>
+                        <outlet property="egg2" destination="7aU-09-X8i" id="Y5Z-Nc-yjO"/>
+                        <outlet property="egg3" destination="9N3-mX-zfG" id="gdV-D9-tD4"/>
+                        <outlet property="egg4" destination="Un2-nw-KH7" id="n5E-Ta-DCa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zBF-cF-fq2" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="54" y="-58"/>
+            <point key="canvasLocation" x="53.523238380809602" y="-58.399999999999999"/>
         </scene>
     </scenes>
     <resources>
@@ -417,6 +486,6 @@
         <image name="sub-buzz-29381-1508166343-1.jpg" width="683" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1gP-oV-axU"/>
+        <segue reference="6NN-xc-t7T"/>
     </inferredMetricsTieBreakers>
 </document>
