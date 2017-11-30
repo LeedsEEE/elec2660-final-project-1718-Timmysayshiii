@@ -239,8 +239,10 @@ int score;
     self.endgameQuit.hidden = false;
     self.endgameScore.hidden = false;
     self.endgameReplay.hidden = false;
-    // Waits for roughly 7 seconds before the game will initilise replay
-    [self performSelector:@selector(ReplayGame) withObject:nil afterDelay:7];
+    
+    // Waits for a second before the game will initilise replay
+    
+    [self performSelector:@selector(ReplayGame) withObject:nil afterDelay:1];
 }
 
 -(void)ReplayGame {

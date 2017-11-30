@@ -446,6 +446,42 @@
                                 <frame key="frameInset" minX="367" minY="55" width="49" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpC-DC-h9R">
+                                <frame key="frameInset" minX="321" minY="262" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Quit"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTc-bL-2d6">
+                                <frame key="frameInset" minX="291" minY="234" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Replay Game"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Over!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFi-lf-jRS">
+                                <frame key="frameInset" minX="291" minY="177" width="91" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Score = " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eg6-R2-CGK">
+                                <frame key="frameInset" minX="291" minY="206" width="103" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e4y-Cf-d6F">
+                                <frame key="frameInset" minY="359" width="667" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rCk-aR-yKi">
+                                <frame key="frameInset" width="13" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="his-Po-98H">
+                                <frame key="frameInset" minX="655" width="12" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -465,10 +501,17 @@
                         <outlet property="Healthlabel" destination="zXO-PE-1a9" id="1MU-Gp-Zne"/>
                         <outlet property="RoadmanShaq" destination="gjt-4p-b8d" id="ED4-2t-qmB"/>
                         <outlet property="Score" destination="Nmr-EU-hyg" id="hpD-0y-qc5"/>
+                        <outlet property="bottomBorder" destination="e4y-Cf-d6F" id="i1h-7k-gil"/>
                         <outlet property="egg1" destination="jm4-cO-P7e" id="xU4-UE-MCH"/>
                         <outlet property="egg2" destination="7aU-09-X8i" id="Y5Z-Nc-yjO"/>
                         <outlet property="egg3" destination="9N3-mX-zfG" id="gdV-D9-tD4"/>
                         <outlet property="egg4" destination="Un2-nw-KH7" id="n5E-Ta-DCa"/>
+                        <outlet property="endgameQuit" destination="UpC-DC-h9R" id="Bwc-uZ-i7P"/>
+                        <outlet property="endgameReplay" destination="FTc-bL-2d6" id="BkR-9y-7Dh"/>
+                        <outlet property="endgameScore" destination="eg6-R2-CGK" id="SNG-dy-fJa"/>
+                        <outlet property="gameover" destination="TFi-lf-jRS" id="O6h-DU-55S"/>
+                        <outlet property="leftBorder" destination="rCk-aR-yKi" id="YvU-hZ-0Dn"/>
+                        <outlet property="rightBorder" destination="his-Po-98H" id="hWe-zh-dD4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zBF-cF-fq2" sceneMemberID="firstResponder"/>
