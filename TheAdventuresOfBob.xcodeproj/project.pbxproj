@@ -23,6 +23,7 @@
 		CFE351231FB9AD8000EA8EFB /* stock-vector-cartoon-fairy-tale-landscape-candy-land-illustration-for-game-design-285700961.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFE351221FB9AD8000EA8EFB /* stock-vector-cartoon-fairy-tale-landscape-candy-land-illustration-for-game-design-285700961.jpg */; };
 		CFE351251FB9BA3800EA8EFB /* sub-buzz-29381-1508166343-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFE351241FB9BA3800EA8EFB /* sub-buzz-29381-1508166343-1.jpg */; };
 		CFE351271FB9BB7B00EA8EFB /* 875575-mkdd_fireball_mario.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFE351261FB9BB7B00EA8EFB /* 875575-mkdd_fireball_mario.jpg */; };
+		CFEE31B51FD00A1200A47C86 /* fallingeggs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFEE31B41FD00A1200A47C86 /* fallingeggs.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		CFE351221FB9AD8000EA8EFB /* stock-vector-cartoon-fairy-tale-landscape-candy-land-illustration-for-game-design-285700961.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "stock-vector-cartoon-fairy-tale-landscape-candy-land-illustration-for-game-design-285700961.jpg"; sourceTree = "<group>"; };
 		CFE351241FB9BA3800EA8EFB /* sub-buzz-29381-1508166343-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sub-buzz-29381-1508166343-1.jpg"; sourceTree = "<group>"; };
 		CFE351261FB9BB7B00EA8EFB /* 875575-mkdd_fireball_mario.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "875575-mkdd_fireball_mario.jpg"; sourceTree = "<group>"; };
+		CFEE31B41FD00A1200A47C86 /* fallingeggs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fallingeggs.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				CFE350F01FB9A60900EA8EFB /* main.m */,
+				CFEE31B41FD00A1200A47C86 /* fallingeggs.jpg */,
 				CF67D3D61FCF2EC9005868F3 /* maxresdefault.jpg */,
 				CFC462471FC2E760009C4A77 /* stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.jpg */,
 				CF8870571FC31CB900AEFB94 /* cyborg_bunny_by_crowsrock-d50l4tg.png */,
@@ -274,6 +277,7 @@
 			files = (
 				CFE351251FB9BA3800EA8EFB /* sub-buzz-29381-1508166343-1.jpg in Resources */,
 				CFE351231FB9AD8000EA8EFB /* stock-vector-cartoon-fairy-tale-landscape-candy-land-illustration-for-game-design-285700961.jpg in Resources */,
+				CFEE31B51FD00A1200A47C86 /* fallingeggs.jpg in Resources */,
 				CFE350FF1FB9A60900EA8EFB /* LaunchScreen.storyboard in Resources */,
 				CFE350FC1FB9A60900EA8EFB /* Assets.xcassets in Resources */,
 				CFE351271FB9BB7B00EA8EFB /* 875575-mkdd_fireball_mario.jpg in Resources */,

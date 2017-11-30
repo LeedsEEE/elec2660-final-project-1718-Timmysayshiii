@@ -22,11 +22,16 @@
 @property (weak, nonatomic) IBOutlet UIButton *Settingsbutton;
 @property (weak, nonatomic) IBOutlet UIButton *instructionsbutton;
 @property (weak, nonatomic) IBOutlet UIButton *startgamebutton;
+@property (weak, nonatomic) IBOutlet UIImageView *egg1;
+@property (weak, nonatomic) IBOutlet UIImageView *egg2;
+@property (weak, nonatomic) IBOutlet UIImageView *egg3;
+@property (weak, nonatomic) IBOutlet UIImageView *egg4;
 
 @property (strong ,nonatomic) UITouch *touch;
 @property (strong, nonatomic) NSTimer *fireballMovementTimer;
 @property (strong, nonatomic) NSTimer *fistattackMovementTimer;
 @property (strong, nonatomic) NSTimer *bunnyMovementTimer;
+@property (strong, nonatomic) NSTimer *eggMovementTimer;
 
 - (IBAction)StartGame:(UIButton *)sender;
 - (IBAction)AttackButton:(UIButton *)sender;
@@ -35,6 +40,7 @@
 -(void)bunnyPosition;
 -(void)bunnyMovementTimerx;
 -(void)bunnyMovement;
+-(void)eggMovement;
 -(void)GameOver;
 -(void)ReplayGame;
 @end

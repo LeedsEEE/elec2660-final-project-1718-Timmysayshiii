@@ -73,6 +73,22 @@
                                 <frame key="frameInset" minX="79" minY="234" width="43" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fallingeggs.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="GGV-TD-x9k">
+                                <frame key="frameInset" minX="243" minY="39" width="46" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fallingeggs.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="UXd-yY-8tl">
+                                <frame key="frameInset" minX="565" minY="39" width="46" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fallingeggs.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="evW-Br-PMi">
+                                <frame key="frameInset" minX="68" minY="79" width="47" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fallingeggs.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="HOf-LP-OAA">
+                                <frame key="frameInset" minX="376" minY="67" width="47" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -94,13 +110,17 @@
                         <outlet property="Score" destination="0Ls-B7-1e9" id="jy2-Sp-yQd"/>
                         <outlet property="Settingsbutton" destination="Whc-P8-KnQ" id="lFE-hv-ZmC"/>
                         <outlet property="StartGameX" destination="13H-cJ-fxN" id="xhW-1L-WvF"/>
+                        <outlet property="egg1" destination="UXd-yY-8tl" id="2uw-eD-tgK"/>
+                        <outlet property="egg2" destination="HOf-LP-OAA" id="rVJ-Al-bAL"/>
+                        <outlet property="egg3" destination="GGV-TD-x9k" id="osB-KE-3Lt"/>
+                        <outlet property="egg4" destination="evW-Br-PMi" id="geN-5t-qTJ"/>
                         <outlet property="instructionsbutton" destination="uN6-Cg-8Hx" id="1lR-9t-Rx6"/>
                         <outlet property="startgamebutton" destination="13H-cJ-fxN" id="FC9-mO-baK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="55" y="-58"/>
+            <point key="canvasLocation" x="53.523238380809602" y="-60"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="XwV-M3-Eb7">
@@ -390,6 +410,7 @@
     <resources>
         <image name="875575-mkdd_fireball_mario.jpg" width="640" height="640"/>
         <image name="cyborg_bunny_by_crowsrock-d50l4tg.png" width="900" height="900"/>
+        <image name="fallingeggs.jpg" width="556" height="626"/>
         <image name="fist_outline_lineart_clip_art_18637.jpg" width="600" height="425"/>
         <image name="maxresdefault.jpg" width="1920" height="1080"/>
         <image name="stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.jpg" width="450" height="279"/>

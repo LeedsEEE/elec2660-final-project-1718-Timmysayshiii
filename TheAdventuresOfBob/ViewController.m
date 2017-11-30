@@ -45,9 +45,11 @@ int score;
     self.BorgBunnySprite.center = CGPointMake(770, 350);
     self.FistAttack.center = CGPointMake(self.RoadmanShaq.center.x, self.RoadmanShaq.center.y);
     self.Fireball.center = CGPointMake(self.BorgBunnySprite.center.x, self.BorgBunnySprite.center.y);
-    
-   [self bunnyPosition];
-    
+    self.egg1.center = CGPointMake(200, -20);
+   
+    [self bunnyPosition];
+   
+    self.eggMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(eggMovement) userInfo:nil repeats:YES];
     
 }
 
@@ -86,7 +88,7 @@ int score;
     self.FistAttack.hidden = false;
     self.FistAttack.center = CGPointMake(self.RoadmanShaq.center.x, self.RoadmanShaq.center.y);
     
-    self.fistattackMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.001 target:self selector:@selector(fistattackMovement) userInfo:nil repeats:YES];
+    self.fistattackMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.0*1 target:self selector:@selector(fistattackMovement) userInfo:nil repeats:YES];
 }
 
 // ENDED HERE
@@ -94,7 +96,7 @@ int score;
 -(void)fistattackMovement {
   
     self.FistAttack.hidden = NO;
-    self.FistAttack.center = CGPointMake(self.FistAttack.center.x + 1, self.FistAttack.center.y);
+    self.FistAttack.center = CGPointMake(self.FistAttack.center.x + 10, self.FistAttack.center.y);
     //int width = (int)self.view.frame.size.width;
     
     /*[UIView animateWithDuration:0.4 animations:^{
@@ -182,6 +184,15 @@ int score;
     if (self.HealthBar == 0) {
         [self GameOver];
     }
+}
+
+-(void)eggMovement {
+    self.egg1.center = CGPointMake(self.egg1.center.x, self.egg1.center.y +3);
+    self.egg2.center = CGPointMake(self.egg2.center.x, self.egg2.center.y +3);
+    self.egg3.center = CGPointMake(self.egg3.center.x, self.egg3.center.y +3);
+    self.egg4.center = CGPointMake(self.egg4.center.x, self.egg4.center.y +3);
+    
+    
 }
 
 -(void)GameOver {
