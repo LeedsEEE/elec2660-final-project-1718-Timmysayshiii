@@ -152,20 +152,18 @@ int score;
     enemyPosition = arc4random() % 249;
     bunnyPosition = enemyPosition +20;*/
     
-    // Sets the position for the enemy sprite
-    self.BorgBunnySprite.center = CGPointMake(770, 350);
     
     //Sets the speed that the bunny will attack
     randomSpeed = arc4random() % 3;
     switch (randomSpeed) {
         case 0:
-            bunnySpeed = 0.003;
+            bunnySpeed = 0.3;
             break;
         case 1:
-            bunnySpeed = 0.002;
+            bunnySpeed = 0.2;
             break;
         case 2:
-            bunnySpeed = 0.001;
+            bunnySpeed = 0.1;
         default:
             break;
     }
