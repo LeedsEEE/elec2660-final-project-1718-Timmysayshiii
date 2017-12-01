@@ -43,6 +43,8 @@ int score;
     self.endgameReplay.hidden = true;
     // Set the original value for score/health and using a string to display this.
     
+    score = 0;
+    
     self.Score.text = [NSString stringWithFormat:@"Score:   %d", score];
     self.HealthBar.progress = 1;
     
@@ -69,11 +71,19 @@ int score;
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark Code regarding starting games.
 
 - (IBAction)StartGame:(UIButton *)sender {
     
 }
 
+- (IBAction)endgameReplayc:(UIButton *)sender {
+    // Waits for a second before the game will initilise replay
+    
+    [self performSelector:@selector(ReplayGame) withObject:nil afterDelay:1];
+}
+
+#pragma mark Code regarding the users movements
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
@@ -91,6 +101,8 @@ int score;
     self.RoadmanShaq.center = CGPointMake(point.x, self.RoadmanShaq.center.y);
 }
 
+#pragma mark Code regarding the users attack
+
 // Method for the attack button to launch a projectile attack.
 
 - (IBAction)AttackButton:(UIButton *)sender {
@@ -99,11 +111,6 @@ int score;
     self.FistAttack.center = CGPointMake(self.RoadmanShaq.center.x, self.RoadmanShaq.center.y);
     
     self.fistattackMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.0*1 target:self selector:@selector(fistattackMovement) userInfo:nil repeats:YES];
-}
-
-// ENDED HERE
-
-- (IBAction)endgameReplayc:(UIButton *)sender {
 }
 
 -(void)fistattackMovement {
@@ -121,7 +128,7 @@ int score;
     
     // If the two sprites collide, the user will gain score
     if (CGRectIntersectsRect(self.FistAttack.frame, self.BorgBunnySprite.frame)) {
-        score = score + 1;
+        score = score + 2;
         self.Score.text = [NSString stringWithFormat:@"Score:   %d", score];
         
         // Stops the movement of the projectile
@@ -136,6 +143,8 @@ int score;
         [self bunnyPosition];
     }
 }
+
+#pragma mark Code regarding enemy
 
 -(void)bunnyMovementTimerx {
     // Creating random speeds for the bunny to move at
@@ -152,7 +161,7 @@ int score;
     enemyPosition = arc4random() % 249;
     bunnyPosition = enemyPosition +20;*/
     
-    
+  
     //Sets the speed that the bunny will attack
     randomSpeed = arc4random() % 3;
     switch (randomSpeed) {
@@ -197,6 +206,8 @@ int score;
     }
 }
 
+#pragma mark Falling egg code
+
 -(void)eggMovement {
     self.egg1.center = CGPointMake(self.egg1.center.x, self.egg1.center.y +3);
     self.egg2.center = CGPointMake(self.egg2.center.x, self.egg2.center.y +3);
@@ -205,17 +216,43 @@ int score;
     
     if (CGRectIntersectsRect(self.egg1.frame, self.bottomBorder.frame)){
         self.egg1.center = CGPointMake(200, -20);
+        score = score +1;
+        self.Score.text = [NSString stringWithFormat:@"Score:   %d", score];
     }
     if (CGRectIntersectsRect(self.egg2.frame, self.bottomBorder.frame)){
         self.egg2.center = CGPointMake(300, -20);
+        score = score +1;
+        self.Score.text = [NSString stringWithFormat:@"Score:   %d", score];
     }
     if (CGRectIntersectsRect(self.egg3.frame, self.bottomBorder.frame)){
         self.egg3.center = CGPointMake(400, -20);
+        score = score +1;
+        self.Score.text = [NSString stringWithFormat:@"Score:   %d", score];
     }
     if (CGRectIntersectsRect(self.egg4.frame, self.bottomBorder.frame)){
         self.egg4.center = CGPointMake(500, -20);
+        score = score +1;
+        self.Score.text = [NSString stringWithFormat:@"Score:   %d", score];
+    }
+    if (CGRectIntersectsRect(self.egg1.frame, self.RoadmanShaq.frame)){
+        self.egg1.center = CGPointMake(200, -20);
+        self.HealthBar.progress = self.HealthBar.progress - 0.1;
+    }
+    if (CGRectIntersectsRect(self.egg2.frame, self.RoadmanShaq.frame)){
+        self.egg2.center = CGPointMake(300, -20);
+        self.HealthBar.progress = self.HealthBar.progress - 0.1;
+    }
+    if (CGRectIntersectsRect(self.egg3.frame, self.RoadmanShaq.frame)){
+        self.egg3.center = CGPointMake(400, -20);
+        self.HealthBar.progress = self.HealthBar.progress - 0.1;
+    }
+    if (CGRectIntersectsRect(self.egg4.frame, self.RoadmanShaq.frame)){
+        self.egg4.center = CGPointMake(500, -20);
+        self.HealthBar.progress = self.HealthBar.progress - 0.1;
     }
 }
+
+#pragma mark Game Over Code
 
 -(void)GameOver {
     // stops the movement for projectiles and enemies
@@ -239,10 +276,10 @@ int score;
     self.endgameReplay.hidden = false;
     
     self.endgameScore.text = [NSString stringWithFormat:@"Your Score = %d", score];
-    // Waits for a second before the game will initilise replay
-    
-    [self performSelector:@selector(ReplayGame) withObject:nil afterDelay:1];
+  
 }
+
+#pragma mark Replay Game Code
 
 -(void)ReplayGame {
     // Restarts the game code
