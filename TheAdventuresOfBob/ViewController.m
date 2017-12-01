@@ -77,11 +77,12 @@ int score;
     
 }
 
-/*- (IBAction)endgameReplayc:(UIButton *)sender {
+- (IBAction)endgameReplayc:(UIButton *)sender {
     // Waits for a second before the game will initilise replay
     
-    [self performSelector:@selector(ReplayGame) withObject:nil afterDelay:1];
-}*/
+    //[self performSelector:@selector(ReplayGame) withObject:nil afterDelay:1];
+    [self ReplayGame];
+}
 
 #pragma mark Code regarding the users movements
 
@@ -167,13 +168,13 @@ int score;
     randomSpeed = arc4random() % 3;
     switch (randomSpeed) {
         case 0:
-            bunnySpeed = 0.3;
+            bunnySpeed = 0.03;
             break;
         case 1:
-            bunnySpeed = 0.2;
+            bunnySpeed = 0.02;
             break;
         case 2:
-            bunnySpeed = 0.1;
+            bunnySpeed = 0.01;
         default:
             break;
     }
@@ -297,7 +298,7 @@ int score;
     
     // Waits for a second before the game will initilise replay
     
-    [self performSelector:@selector(ReplayGame) withObject:nil afterDelay:1];
+    //[self performSelector:@selector(ReplayGame) withObject:nil afterDelay:1];
 }
 
 #pragma mark Replay Game Code
@@ -356,13 +357,6 @@ int score;
  Fist Attack Pickture
  http://all-free-download.com/free-vector/download/fist-outline-lineart-clip-art_18637.html
  
- Fireball Picture
- https://www.giantbomb.com/fireball/3055-120/
- 
- Roadman Shaq
- https://img.buzzfeed.com/buzzfeed-static/static/2017-10/16/11/asset/buzzfeed-prod-fastlane-01/sub-buzz-29381-1508166343-1.jpg?downsize=715:*&output-format=auto&output-quality=auto
- (Copy paste as the star within the link interupts)
- 
  Evil Bunny
  https://img00.deviantart.net/4733/i/2012/141/d/5/cyborg_bunny_by_crowsrock-d50l4tg.png
  
@@ -377,4 +371,7 @@ int score;
  
  Instructions stage
  https://www.artstation.com/artwork/0knXw
+ 
+ Carlos The Stickman
+ http://mugen.wikia.com/wiki/Carlos_The_Stickman
 */

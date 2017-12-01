@@ -25,6 +25,8 @@
 		CFE351271FB9BB7B00EA8EFB /* 875575-mkdd_fireball_mario.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFE351261FB9BB7B00EA8EFB /* 875575-mkdd_fireball_mario.jpg */; };
 		CFEE31B51FD00A1200A47C86 /* fallingeggs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFEE31B41FD00A1200A47C86 /* fallingeggs.jpg */; };
 		CFEE31B81FD0182E00A47C86 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEE31B71FD0182E00A47C86 /* SettingsViewController.m */; };
+		CFF7FF191FD18EBD00C92928 /* ColourfulBackgroundColour2.png in Resources */ = {isa = PBXBuildFile; fileRef = CFF7FF181FD18EBD00C92928 /* ColourfulBackgroundColour2.png */; };
+		CFF7FF1B1FD193E500C92928 /* stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.gif in Resources */ = {isa = PBXBuildFile; fileRef = CFF7FF1A1FD193E500C92928 /* stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		CFEE31B41FD00A1200A47C86 /* fallingeggs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fallingeggs.jpg; sourceTree = "<group>"; };
 		CFEE31B61FD0182E00A47C86 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		CFEE31B71FD0182E00A47C86 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		CFF7FF181FD18EBD00C92928 /* ColourfulBackgroundColour2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColourfulBackgroundColour2.png; sourceTree = "<group>"; };
+		CFF7FF1A1FD193E500C92928 /* stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.gif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,8 @@
 			children = (
 				CFE350F01FB9A60900EA8EFB /* main.m */,
 				CFEE31B41FD00A1200A47C86 /* fallingeggs.jpg */,
+				CFF7FF1A1FD193E500C92928 /* stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.gif */,
+				CFF7FF181FD18EBD00C92928 /* ColourfulBackgroundColour2.png */,
 				CF67D3D61FCF2EC9005868F3 /* maxresdefault.jpg */,
 				CFC462471FC2E760009C4A77 /* stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.jpg */,
 				CF8870571FC31CB900AEFB94 /* cyborg_bunny_by_crowsrock-d50l4tg.png */,
@@ -282,6 +288,7 @@
 			files = (
 				CFE351251FB9BA3800EA8EFB /* sub-buzz-29381-1508166343-1.jpg in Resources */,
 				CFE351231FB9AD8000EA8EFB /* stock-vector-cartoon-fairy-tale-landscape-candy-land-illustration-for-game-design-285700961.jpg in Resources */,
+				CFF7FF191FD18EBD00C92928 /* ColourfulBackgroundColour2.png in Resources */,
 				CFEE31B51FD00A1200A47C86 /* fallingeggs.jpg in Resources */,
 				CFE350FF1FB9A60900EA8EFB /* LaunchScreen.storyboard in Resources */,
 				CFE350FC1FB9A60900EA8EFB /* Assets.xcassets in Resources */,
@@ -291,6 +298,7 @@
 				CF67D3D71FCF2EC9005868F3 /* maxresdefault.jpg in Resources */,
 				CFE350FA1FB9A60900EA8EFB /* Main.storyboard in Resources */,
 				CF8870581FC31CB900AEFB94 /* cyborg_bunny_by_crowsrock-d50l4tg.png in Resources */,
+				CFF7FF1B1FD193E500C92928 /* stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
