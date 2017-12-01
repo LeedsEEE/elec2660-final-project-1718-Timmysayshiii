@@ -17,7 +17,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *StartGameX;
 @property (weak, nonatomic) IBOutlet UILabel *Healthlabel;
 @property (weak, nonatomic) IBOutlet UIImageView *BorgBunnySprite;
-@property (weak, nonatomic) IBOutlet UIImageView *Fireball;
 @property (weak, nonatomic) IBOutlet UIImageView *FistAttack;
 @property (weak, nonatomic) IBOutlet UIButton *Settingsbutton;
 @property (weak, nonatomic) IBOutlet UIButton *instructionsbutton;
@@ -33,7 +32,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *endgameQuit;
 
 @property (strong ,nonatomic) UITouch *touch;
-@property (strong, nonatomic) NSTimer *fireballMovementTimer;
 @property (strong, nonatomic) NSTimer *fistattackMovementTimer;
 @property (strong, nonatomic) NSTimer *bunnyMovementTimer;
 @property (strong, nonatomic) NSTimer *eggMovementTimer;

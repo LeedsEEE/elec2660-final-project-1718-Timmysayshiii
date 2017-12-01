@@ -65,10 +65,6 @@
                                 <frame key="frameInset" minX="582" minY="213" width="79" height="119"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="875575-mkdd_fireball_mario.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5CT-G9-pPC">
-                                <frame key="frameInset" minX="530" minY="256" width="43" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fist_outline_lineart_clip_art_18637.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1fZ-9F-lxh">
                                 <frame key="frameInset" minX="79" minY="234" width="43" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -141,7 +137,6 @@
                     <connections>
                         <outlet property="AttackbuttonX" destination="y8v-kz-P6R" id="1Aw-ci-u36"/>
                         <outlet property="BorgBunnySprite" destination="v1h-q4-8FT" id="YPf-EJ-jDy"/>
-                        <outlet property="Fireball" destination="5CT-G9-pPC" id="svf-9H-SAw"/>
                         <outlet property="FistAttack" destination="1fZ-9F-lxh" id="wub-ap-dot"/>
                         <outlet property="HealthBar" destination="zuf-Gh-d28" id="l7s-Rf-gXA"/>
                         <outlet property="Healthlabel" destination="kfh-B6-vbq" id="Wlu-ZL-ClH"/>
@@ -471,6 +466,6 @@
         <image name="sub-buzz-29381-1508166343-1.jpg" width="683" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bvx-W9-KT7"/>
+        <segue reference="1gP-oV-axU"/>
     </inferredMetricsTieBreakers>
 </document>
