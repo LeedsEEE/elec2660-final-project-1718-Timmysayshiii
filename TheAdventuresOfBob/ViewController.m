@@ -197,12 +197,12 @@ int score;
     
     
     // If the user still has health left, the sprite will relocate for another attack and game will still be active
-    if (self.HealthBar > 0) {
+    if (self.HealthBar.progress > 0) {
         [self bunnyPosition];
     }
     
     // If the user has no health, the game will be over
-    if (self.HealthBar == 0) {
+    if (self.HealthBar.progress == 0) {
         [self GameOver];
     }
     }
@@ -239,18 +239,34 @@ int score;
     if (CGRectIntersectsRect(self.egg1.frame, self.RoadmanShaq.frame)){
         self.egg1.center = CGPointMake(200, -20);
         self.HealthBar.progress = self.HealthBar.progress - 0.1;
+        if (self.HealthBar.progress == 0) {
+            [self GameOver];
+        }
+
     }
     if (CGRectIntersectsRect(self.egg2.frame, self.RoadmanShaq.frame)){
         self.egg2.center = CGPointMake(300, -20);
         self.HealthBar.progress = self.HealthBar.progress - 0.1;
+        if (self.HealthBar.progress == 0) {
+            [self GameOver];
+        }
+
     }
     if (CGRectIntersectsRect(self.egg3.frame, self.RoadmanShaq.frame)){
         self.egg3.center = CGPointMake(400, -20);
         self.HealthBar.progress = self.HealthBar.progress - 0.1;
+        if (self.HealthBar.progress == 0) {
+            [self GameOver];
+        }
+
     }
     if (CGRectIntersectsRect(self.egg4.frame, self.RoadmanShaq.frame)){
         self.egg4.center = CGPointMake(500, -20);
         self.HealthBar.progress = self.HealthBar.progress - 0.1;
+        if (self.HealthBar.progress == 0) {
+            [self GameOver];
+        }
+
     }
 }
 
@@ -278,7 +294,6 @@ int score;
     self.endgameReplay.hidden = false;
     
     self.endgameScore.text = [NSString stringWithFormat:@"Your Score = %d", score];
-  
 }
 
 #pragma mark Replay Game Code
