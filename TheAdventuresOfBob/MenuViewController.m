@@ -7,8 +7,13 @@
 //
 
 #import "MenuViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface MenuViewController ()
+
+{
+    AVAudioPlayer *MenuMusic;
+}
 
 @end
 
@@ -17,7 +22,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-}
+        
+        // Construct URL to sound file
+        NSString *path = [NSString stringWithFormat:@"%@/FILENAME.mp3", [[NSBundle mainBundle] resourcePath]];
+        NSURL *soundUrl = [NSURL fileURLWithPath:path];
+        
+        // Create audio player object and initialize with URL to sound
+        MenuMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    
+    [MenuMusic play];
+    }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

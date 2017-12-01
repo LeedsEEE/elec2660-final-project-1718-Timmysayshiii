@@ -34,6 +34,8 @@
 		CFF7FF251FD1A38B00C92928 /* sewer.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFF7FF1D1FD1A22800C92928 /* sewer.ttf */; };
 		CFF7FF271FD1A57F00C92928 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFF7FF261FD1A57F00C92928 /* Default-568h@2x.png */; };
 		CFF7FF291FD1B9C700C92928 /* b0e53331516629.565449774c2d4.png in Resources */ = {isa = PBXBuildFile; fileRef = CFF7FF281FD1B9C700C92928 /* b0e53331516629.565449774c2d4.png */; };
+		CFF7FF2C1FD1DD0200C92928 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF7FF2B1FD1DD0200C92928 /* AVFoundation.framework */; };
+		CFF7FF2E1FD1DD4000C92928 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF7FF2D1FD1DD4000C92928 /* AVKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		CFF7FF201FD1A23E00C92928 /* ASMAN.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = ASMAN.TTF; sourceTree = "<group>"; };
 		CFF7FF261FD1A57F00C92928 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CFF7FF281FD1B9C700C92928 /* b0e53331516629.565449774c2d4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b0e53331516629.565449774c2d4.png; sourceTree = "<group>"; };
+		CFF7FF2B1FD1DD0200C92928 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CFF7FF2D1FD1DD4000C92928 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF7FF2E1FD1DD4000C92928 /* AVKit.framework in Frameworks */,
+				CFF7FF2C1FD1DD0200C92928 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +132,7 @@
 				CFE351081FB9A60900EA8EFB /* TheAdventuresOfBobTests */,
 				CFE351131FB9A60900EA8EFB /* TheAdventuresOfBobUITests */,
 				CFE350ED1FB9A60900EA8EFB /* Products */,
+				CFF7FF2A1FD1DD0200C92928 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,6 +206,15 @@
 				CFE351161FB9A60900EA8EFB /* Info.plist */,
 			);
 			path = TheAdventuresOfBobUITests;
+			sourceTree = "<group>";
+		};
+		CFF7FF2A1FD1DD0200C92928 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFF7FF2D1FD1DD4000C92928 /* AVKit.framework */,
+				CFF7FF2B1FD1DD0200C92928 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
