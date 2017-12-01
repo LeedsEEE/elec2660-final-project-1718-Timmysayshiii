@@ -33,6 +33,7 @@
 		CFF7FF241FD1A38900C92928 /* SIXTY.TTF in Resources */ = {isa = PBXBuildFile; fileRef = CFF7FF1F1FD1A23900C92928 /* SIXTY.TTF */; };
 		CFF7FF251FD1A38B00C92928 /* sewer.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFF7FF1D1FD1A22800C92928 /* sewer.ttf */; };
 		CFF7FF271FD1A57F00C92928 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFF7FF261FD1A57F00C92928 /* Default-568h@2x.png */; };
+		CFF7FF291FD1B9C700C92928 /* b0e53331516629.565449774c2d4.png in Resources */ = {isa = PBXBuildFile; fileRef = CFF7FF281FD1B9C700C92928 /* b0e53331516629.565449774c2d4.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		CFF7FF1F1FD1A23900C92928 /* SIXTY.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SIXTY.TTF; sourceTree = "<group>"; };
 		CFF7FF201FD1A23E00C92928 /* ASMAN.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = ASMAN.TTF; sourceTree = "<group>"; };
 		CFF7FF261FD1A57F00C92928 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		CFF7FF281FD1B9C700C92928 /* b0e53331516629.565449774c2d4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b0e53331516629.565449774c2d4.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				CFF7FF1D1FD1A22800C92928 /* sewer.ttf */,
 				CFEE31B41FD00A1200A47C86 /* fallingeggs.jpg */,
 				CFF7FF1A1FD193E500C92928 /* stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.gif */,
+				CFF7FF281FD1B9C700C92928 /* b0e53331516629.565449774c2d4.png */,
 				CFF7FF181FD18EBD00C92928 /* ColourfulBackgroundColour2.png */,
 				CF67D3D61FCF2EC9005868F3 /* maxresdefault.jpg */,
 				CFC462471FC2E760009C4A77 /* stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.jpg */,
@@ -304,6 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF7FF291FD1B9C700C92928 /* b0e53331516629.565449774c2d4.png in Resources */,
 				CFE351251FB9BA3800EA8EFB /* sub-buzz-29381-1508166343-1.jpg in Resources */,
 				CFE351231FB9AD8000EA8EFB /* stock-vector-cartoon-fairy-tale-landscape-candy-land-illustration-for-game-design-285700961.jpg in Resources */,
 				CFF7FF211FD1A37800C92928 /* leadcoat.ttf in Resources */,

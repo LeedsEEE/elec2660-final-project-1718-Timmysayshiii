@@ -31,6 +31,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *rightBorder;
 @property (weak, nonatomic) IBOutlet UILabel *endgameScore;
 @property (weak, nonatomic) IBOutlet UIButton *endgameQuit;
+@property (weak, nonatomic) IBOutlet UILabel *congratsName;
 
 @property (strong ,nonatomic) UITouch *touch;
 @property (strong, nonatomic) NSTimer *fireballMovementTimer;
