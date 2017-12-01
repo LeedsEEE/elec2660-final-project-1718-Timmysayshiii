@@ -77,11 +77,11 @@ int score;
     
 }
 
-- (IBAction)endgameReplayc:(UIButton *)sender {
+/*- (IBAction)endgameReplayc:(UIButton *)sender {
     // Waits for a second before the game will initilise replay
     
     [self performSelector:@selector(ReplayGame) withObject:nil afterDelay:1];
-}
+}*/
 
 #pragma mark Code regarding the users movements
 
@@ -294,6 +294,10 @@ int score;
     self.endgameReplay.hidden = false;
     
     self.endgameScore.text = [NSString stringWithFormat:@"Your Score = %d", score];
+    
+    // Waits for a second before the game will initilise replay
+    
+    [self performSelector:@selector(ReplayGame) withObject:nil afterDelay:1];
 }
 
 #pragma mark Replay Game Code
@@ -319,6 +323,7 @@ int score;
     self.endgameScore.hidden = true;
     self.endgameReplay.hidden = true;
     // Set the original value for score/health and using a string to display this.
+    score = 0;
     
     self.Score.text = [NSString stringWithFormat:@"Score:   %d", score];
     self.HealthBar.progress = 1;
