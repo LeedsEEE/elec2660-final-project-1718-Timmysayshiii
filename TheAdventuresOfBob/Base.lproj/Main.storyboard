@@ -213,6 +213,20 @@
                     <view key="view" contentMode="scaleToFill" id="Jgj-h7-vgV">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e02-ky-7sO">
+                                <frame key="frameInset" minX="20" minY="317" width="80" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.17583604250000001" green="0.17266175189999999" blue="0.17750702709999999" alpha="0.65083858939999994" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="1" green="0.19421109710000001" blue="0.17207960820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rYn-qk-7cJ" kind="show" id="y5L-x9-gy5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -469,6 +483,6 @@
         <image name="sub-buzz-29381-1508166343-1.jpg" width="683" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1gP-oV-axU"/>
+        <segue reference="bvx-W9-KT7"/>
     </inferredMetricsTieBreakers>
 </document>

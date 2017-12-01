@@ -32,6 +32,7 @@
 		CFF7FF231FD1A38700C92928 /* ASMAN.TTF in Resources */ = {isa = PBXBuildFile; fileRef = CFF7FF201FD1A23E00C92928 /* ASMAN.TTF */; };
 		CFF7FF241FD1A38900C92928 /* SIXTY.TTF in Resources */ = {isa = PBXBuildFile; fileRef = CFF7FF1F1FD1A23900C92928 /* SIXTY.TTF */; };
 		CFF7FF251FD1A38B00C92928 /* sewer.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFF7FF1D1FD1A22800C92928 /* sewer.ttf */; };
+		CFF7FF271FD1A57F00C92928 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFF7FF261FD1A57F00C92928 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		CFF7FF1E1FD1A22D00C92928 /* fast99.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fast99.ttf; sourceTree = "<group>"; };
 		CFF7FF1F1FD1A23900C92928 /* SIXTY.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SIXTY.TTF; sourceTree = "<group>"; };
 		CFF7FF201FD1A23E00C92928 /* ASMAN.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = ASMAN.TTF; sourceTree = "<group>"; };
+		CFF7FF261FD1A57F00C92928 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		CFE350E31FB9A60800EA8EFB = {
 			isa = PBXGroup;
 			children = (
+				CFF7FF261FD1A57F00C92928 /* Default-568h@2x.png */,
 				CFE350EE1FB9A60900EA8EFB /* TheAdventuresOfBob */,
 				CFE351081FB9A60900EA8EFB /* TheAdventuresOfBobTests */,
 				CFE351131FB9A60900EA8EFB /* TheAdventuresOfBobUITests */,
@@ -313,6 +316,7 @@
 				CFE350FF1FB9A60900EA8EFB /* LaunchScreen.storyboard in Resources */,
 				CFE350FC1FB9A60900EA8EFB /* Assets.xcassets in Resources */,
 				CFE351271FB9BB7B00EA8EFB /* 875575-mkdd_fireball_mario.jpg in Resources */,
+				CFF7FF271FD1A57F00C92928 /* Default-568h@2x.png in Resources */,
 				CFC462481FC2E760009C4A77 /* stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.jpg in Resources */,
 				CFC4624A1FC2E768009C4A77 /* fist_outline_lineart_clip_art_18637.jpg in Resources */,
 				CF67D3D71FCF2EC9005868F3 /* maxresdefault.jpg in Resources */,
