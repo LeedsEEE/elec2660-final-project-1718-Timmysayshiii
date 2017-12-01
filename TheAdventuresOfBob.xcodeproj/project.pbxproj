@@ -77,6 +77,11 @@
 		CFEE31B71FD0182E00A47C86 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		CFF7FF181FD18EBD00C92928 /* ColourfulBackgroundColour2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColourfulBackgroundColour2.png; sourceTree = "<group>"; };
 		CFF7FF1A1FD193E500C92928 /* stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.gif"; sourceTree = "<group>"; };
+		CFF7FF1C1FD1A22300C92928 /* leadcoat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = leadcoat.ttf; sourceTree = "<group>"; };
+		CFF7FF1D1FD1A22800C92928 /* sewer.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sewer.ttf; sourceTree = "<group>"; };
+		CFF7FF1E1FD1A22D00C92928 /* fast99.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = fast99.ttf; sourceTree = "<group>"; };
+		CFF7FF1F1FD1A23900C92928 /* SIXTY.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SIXTY.TTF; sourceTree = "<group>"; };
+		CFF7FF201FD1A23E00C92928 /* ASMAN.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = ASMAN.TTF; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +153,11 @@
 			isa = PBXGroup;
 			children = (
 				CFE350F01FB9A60900EA8EFB /* main.m */,
+				CFF7FF1C1FD1A22300C92928 /* leadcoat.ttf */,
+				CFF7FF1E1FD1A22D00C92928 /* fast99.ttf */,
+				CFF7FF201FD1A23E00C92928 /* ASMAN.TTF */,
+				CFF7FF1F1FD1A23900C92928 /* SIXTY.TTF */,
+				CFF7FF1D1FD1A22800C92928 /* sewer.ttf */,
 				CFEE31B41FD00A1200A47C86 /* fallingeggs.jpg */,
 				CFF7FF1A1FD193E500C92928 /* stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.gif */,
 				CFF7FF181FD18EBD00C92928 /* ColourfulBackgroundColour2.png */,

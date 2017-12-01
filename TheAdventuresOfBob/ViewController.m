@@ -53,6 +53,7 @@ int score;
     self.RoadmanShaq.center = CGPointMake(50, 350);
     self.BorgBunnySprite.center = CGPointMake(770, 350);
     self.FistAttack.center = CGPointMake(self.RoadmanShaq.center.x, self.RoadmanShaq.center.y);
+    self.Fireball.center = CGPointMake(self.BorgBunnySprite.center.x, self.BorgBunnySprite.center.y);
     self.egg1.center = CGPointMake(200, -20);
     self.egg2.center = CGPointMake(300, -20);
     self.egg3.center = CGPointMake(400, -20);
@@ -333,6 +334,7 @@ int score;
     self.RoadmanShaq.center = CGPointMake(50, 350);
     self.BorgBunnySprite.center = CGPointMake(770, 350);
     self.FistAttack.center = CGPointMake(self.RoadmanShaq.center.x, self.RoadmanShaq.center.y);
+    self.Fireball.center = CGPointMake(self.BorgBunnySprite.center.x, self.BorgBunnySprite.center.y);
     self.egg1.center = CGPointMake(200, -20);
     self.egg2.center = CGPointMake(300, -20);
     self.egg3.center = CGPointMake(400, -20);
@@ -355,6 +357,10 @@ int score;
  Fist Attack Pickture
  http://all-free-download.com/free-vector/download/fist-outline-lineart-clip-art_18637.html
  
+ Fireball Picture
+ https://www.giantbomb.com/fireball/3055-120/
+ 
+ 
  Evil Bunny
  https://img00.deviantart.net/4733/i/2012/141/d/5/cyborg_bunny_by_crowsrock-d50l4tg.png
  
@@ -370,6 +376,19 @@ int score;
  Instructions stage
  https://www.artstation.com/artwork/0knXw
  
- Carlos The Stickman
- http://mugen.wikia.com/wiki/Carlos_The_Stickman
+ Font - Sixty
+ https://www.dafont.com/change_display.php?author=592&page=1&fpp_old=20&ref=%2Fttf.d592&dsort=pop&fpp_default=20&text=Score%3A+++++74.+++++Health%3A+++++100&fpp=20&psize=m&sort=pop
+ 
+ Font - Lead Coat
+ https://www.dafont.com/lead-coat.font?text=Score%3A+++++74.+++++Health%3A+++++100
+ 
+ Font - Sewer Sys
+ https://www.dafont.com/sewer-sys.font?text=Score%3A+++++74.+++++Health%3A+++++100
+ 
+ Font - Fast 99
+ https://www.dafont.com/fast-99.font?text=Score%3A+++++74.+++++Health%3A+++++100
+ 
+ Font - Asman
+ https://www.dafont.com/asman.font?text=Score%3A+++++74.+++++Health%3A+++++100
+ 
 */
