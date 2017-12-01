@@ -110,7 +110,7 @@ int score;
     self.FistAttack.hidden = false;
     self.FistAttack.center = CGPointMake(self.RoadmanShaq.center.x, self.RoadmanShaq.center.y);
     
-    self.fistattackMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.0*1 target:self selector:@selector(fistattackMovement) userInfo:nil repeats:YES];
+    self.fistattackMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(fistattackMovement) userInfo:nil repeats:YES];
 }
 
 -(void)fistattackMovement {
@@ -161,6 +161,7 @@ int score;
     enemyPosition = arc4random() % 249;
     bunnyPosition = enemyPosition +20;*/
     
+    self.BorgBunnySprite.center = CGPointMake(770, 350);
   
     //Sets the speed that the bunny will attack
     randomSpeed = arc4random() % 3;
@@ -193,7 +194,7 @@ int score;
     if (CGRectIntersectsRect(self.BorgBunnySprite.frame, self.RoadmanShaq.frame)) {
         self.HealthBar.progress = self.HealthBar.progress - 0.2;
         [self.bunnyMovementTimer invalidate];
-    }
+    
     
     // If the user still has health left, the sprite will relocate for another attack and game will still be active
     if (self.HealthBar > 0) {
@@ -203,6 +204,7 @@ int score;
     // If the user has no health, the game will be over
     if (self.HealthBar == 0) {
         [self GameOver];
+    }
     }
 }
 
