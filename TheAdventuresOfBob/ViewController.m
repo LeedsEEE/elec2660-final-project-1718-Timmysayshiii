@@ -40,6 +40,7 @@ int score;
     if ((self.placeholderSwitchState2 = @"On")) {
         NSLog(@"On");
         [MenuMusic play];
+    }
     
     // Displays the elements needed for the game when we press start. In turn the menu will be hidden.
     
@@ -82,7 +83,7 @@ int score;
     self.eggMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(eggMovement) userInfo:nil repeats:YES];
     
 }
-}
+
 
 
 - (void)didReceiveMemoryWarning {
