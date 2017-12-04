@@ -198,7 +198,7 @@
                                     <color key="titleColor" red="1" green="0.19421109710000001" blue="0.17207960820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rYn-qk-7cJ" kind="show" id="1gP-oV-axU"/>
+                                    <segue destination="rYn-qk-7cJ" kind="show" identifier="musicStateSwitchVal" id="1gP-oV-axU"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music State:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwt-Ew-rk1">
@@ -551,7 +551,7 @@
         <image name="sub-buzz-29381-1508166343-1.jpg" width="683" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aen-qZ-6bh"/>
+        <segue reference="RtT-gh-6lO"/>
         <segue reference="1gP-oV-axU"/>
     </inferredMetricsTieBreakers>
 </document>

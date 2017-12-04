@@ -10,4 +10,6 @@
 
 @interface MenuViewController : UIViewController
 
+@property (strong, nonatomic) NSString *musicStatetoPass;
+
 @end
