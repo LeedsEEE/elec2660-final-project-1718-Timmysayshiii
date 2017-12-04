@@ -7,8 +7,13 @@
 //
 
 #import "ViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface ViewController ()
+
+{
+    AVAudioPlayer *MenuMusic;
+}
 
 @end
 
@@ -23,6 +28,18 @@ int score;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // Do any additional setup after loading the view.
+    
+    // Construct URL to sound file
+    NSString *path = [NSString stringWithFormat:@"%@/FILENAME.mp3", [[NSBundle mainBundle] resourcePath]];
+    NSURL *soundUrl = [NSURL fileURLWithPath:path];
+    
+    // Create audio player object and initialize with URL to sound
+    MenuMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    if ((self.placeholderSwitchState2 = @"On")) {
+        NSLog(@"On");
+        [MenuMusic play];
     
     // Displays the elements needed for the game when we press start. In turn the menu will be hidden.
     
@@ -64,6 +81,7 @@ int score;
    
     self.eggMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(eggMovement) userInfo:nil repeats:YES];
     
+}
 }
 
 

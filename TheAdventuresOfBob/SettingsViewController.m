@@ -7,8 +7,9 @@
 //
 
 #import "SettingsViewController.h"
+#import <AVFoundation/AVFoundation.h>
 #import "MenuViewController.h"
-
+#import "ViewController.h"
 @interface SettingsViewController ()
 
 @end
@@ -32,8 +33,15 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"musicStateSwitchVal"]){
         MenuViewController *Controller = (MenuViewController *)segue.destinationViewController;
-        Controller.musicStatetoPass;
+        Controller.placeholderSwitchState= _musicStatetoPass;
     }
+    
+    if ([segue.identifier isEqualToString:@"PlayerNamePassOver"]){
+        ViewController *Controller = (ViewController *)segue.destinationViewController;
+        Controller.placeholderSwitchState2= _musicStatetoPass;
+    }
+
+  
 
 }
 
@@ -58,17 +66,14 @@
 }
 
 - (IBAction)musicState:(UISwitch *)sender {
-    int musicVal;
     if (sender.on) {
         self.musicState.text = [NSString stringWithFormat:@"Music State: ON"];
-        musicVal = 1;
-        self.musicStatetoPass = [NSString stringWithFormat:@" %d", musicVal]; ;
+        self.musicStatetoPass = [NSString stringWithFormat:@"On"]; ;
     }
     
     else {
         self.musicState.text = [NSString stringWithFormat:@"Music State: OFF"];
-        musicVal = 0;
-        self.musicStatetoPass = [NSString stringWithFormat:@" %d", musicVal];
+        self.musicStatetoPass = [NSString stringWithFormat:@"Off"];
     }
 }
 @end

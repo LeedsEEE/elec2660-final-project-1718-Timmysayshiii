@@ -45,6 +45,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *endgameReplay;
 - (IBAction)endgameReplayc:(UIButton *)sender;
 
+@property (strong, nonatomic) NSString *placeholderSwitchState2;
+
 -(void)fistattackMovement;
 -(void)bunnyPosition;
 -(void)bunnyMovementTimerx;

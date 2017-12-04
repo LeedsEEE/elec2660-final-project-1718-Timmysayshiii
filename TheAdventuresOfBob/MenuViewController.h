@@ -11,5 +11,7 @@
 @interface MenuViewController : UIViewController
 
 @property (strong, nonatomic) NSString *musicStatetoPass;
+@property (strong, nonatomic) NSString *placeholderSwitchState;
+@property (weak, nonatomic) IBOutlet UILabel *SwitchStateLabel;
 
 @end

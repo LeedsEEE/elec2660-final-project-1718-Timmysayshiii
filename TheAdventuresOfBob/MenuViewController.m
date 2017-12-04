@@ -22,16 +22,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-        
+    self.SwitchStateLabel.hidden = true;
         // Construct URL to sound file
         NSString *path = [NSString stringWithFormat:@"%@/FILENAME.mp3", [[NSBundle mainBundle] resourcePath]];
         NSURL *soundUrl = [NSURL fileURLWithPath:path];
         
         // Create audio player object and initialize with URL to sound
         MenuMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
-    //if (musicStatetoPass == 1) {
+    if ((self.placeholderSwitchState = @"On")) {
+        NSLog(@"On");
     [MenuMusic play];
-    //}
+    
+}
 }
 
 
