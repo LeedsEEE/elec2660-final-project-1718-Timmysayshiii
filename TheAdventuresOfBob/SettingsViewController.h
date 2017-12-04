@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface SettingsViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *enterName;
+@property (weak, nonatomic) IBOutlet UITableView *highScoreTable;
+
+- (IBAction)musicState:(UISwitch *)sender;
+- (IBAction)MassiveButton:(UIControl *)sender;
+
 
 @end

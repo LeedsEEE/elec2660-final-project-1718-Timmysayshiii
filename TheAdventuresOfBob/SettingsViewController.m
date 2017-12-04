@@ -34,4 +34,25 @@
 }
 */
 
+- (IBAction)MassiveButton:(UIControl *)sender {
+    // Allows keyboard to be removed after we click background. UIView is changed to UIControl. Create IBAction and set event to touchupinside.
+    
+    NSLog(@"Background Pressed");
+    if ([self.enterName isFirstResponder]) {
+        [self.enterName resignFirstResponder];
+    }
+}
+
+
+#pragma mark Text Field Delegate Method
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    
+    return YES;
+    // Removes keyboard from view when we press return
+}
+
+- (IBAction)musicState:(UISwitch *)sender {
+}
 @end

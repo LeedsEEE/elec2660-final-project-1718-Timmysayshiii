@@ -187,7 +187,7 @@ int score;
 }
 
 -(void)bunnyMovement {
-    self.BorgBunnySprite.center = CGPointMake(self.BorgBunnySprite.center.x - 10, self.BorgBunnySprite.center.y);
+    self.BorgBunnySprite.center = CGPointMake(self.BorgBunnySprite.center.x - 1, self.BorgBunnySprite.center.y);
     /*[UIView animateWithDuration:0.4 animations:^{
         self.BorgBunnySprite.center = CGPointMake(self.BorgBunnySprite.center.x+10, self.BorgBunnySprite.center.y);} completion:^(BOOL finished){
         }];*/
@@ -401,6 +401,12 @@ int score;
  
  Reference for using sounds
  https://codewithchris.com/avaudioplayer-tutorial/
+ 
+ Reference for highscore table 
+ http://forum.cocos2d-objc.org/t/cocos2d-highscore-table/10527
+ 
+ Reference for touch control
+ https://stackoverflow.com/questions/26478879/how-to-create-a-d-pad-with-buttons-in-single-view-application-on-xcode
  
  
  

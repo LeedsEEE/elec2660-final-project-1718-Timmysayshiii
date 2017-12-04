@@ -180,14 +180,15 @@
                         <viewControllerLayoutGuide type="top" id="4YO-gn-SbM"/>
                         <viewControllerLayoutGuide type="bottom" id="Hya-er-NfH"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5O9-cf-pvm">
+                    <view key="view" contentMode="scaleToFill" id="5O9-cf-pvm" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ColourfulBackgroundColour2.png" translatesAutoresizingMaskIntoConstraints="NO" id="CNd-1R-Ygu"/>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fG2-dw-zqF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4I-qj-Yvn">
+                                <state key="normal" backgroundImage="ColourfulBackgroundColour2.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fG2-dw-zqF">
                                 <frame key="frameInset" minX="293" minY="329" width="80" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.17583604250000001" green="0.17266175189999999" blue="0.17750702709999999" alpha="0.65083858939999994" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Back">
@@ -226,23 +227,32 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ybd-Wd-DcD">
                                 <frame key="frameInset" minX="324" minY="172" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="musicState:" destination="ygB-DK-ean" eventType="valueChanged" id="6yI-QU-aG3"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="CNd-1R-Ygu" firstAttribute="top" secondItem="5O9-cf-pvm" secondAttribute="top" id="KpG-pa-2as"/>
-                            <constraint firstItem="CNd-1R-Ygu" firstAttribute="leading" secondItem="5O9-cf-pvm" secondAttribute="leading" id="PHr-Yg-LI8"/>
-                            <constraint firstAttribute="trailing" secondItem="CNd-1R-Ygu" secondAttribute="trailing" id="ibg-Iu-ppc"/>
-                            <constraint firstItem="CNd-1R-Ygu" firstAttribute="bottom" secondItem="Hya-er-NfH" secondAttribute="top" id="vOP-Xu-ncG"/>
+                            <constraint firstAttribute="trailing" secondItem="F4I-qj-Yvn" secondAttribute="trailing" id="FKu-fO-b0N"/>
+                            <constraint firstItem="F4I-qj-Yvn" firstAttribute="top" secondItem="5O9-cf-pvm" secondAttribute="topMargin" constant="-10" id="OYb-7a-Dry"/>
+                            <constraint firstItem="F4I-qj-Yvn" firstAttribute="leading" secondItem="5O9-cf-pvm" secondAttribute="leading" id="THT-kO-6GT"/>
+                            <constraint firstItem="F4I-qj-Yvn" firstAttribute="bottom" secondItem="Hya-er-NfH" secondAttribute="top" id="g9H-a3-2EJ"/>
+                            <constraint firstItem="F4I-qj-Yvn" firstAttribute="centerX" secondItem="fG2-dw-zqF" secondAttribute="centerX" id="gzd-ha-N2y"/>
                         </constraints>
+                        <connections>
+                            <action selector="MassiveButton:" destination="ygB-DK-ean" eventType="valueChanged" id="NGG-un-cZe"/>
+                        </connections>
                     </view>
                     <connections>
+                        <outlet property="enterName" destination="JGc-Qn-RKC" id="Jzc-tI-YBO"/>
+                        <outlet property="highScoreTable" destination="jPP-fe-eM1" id="1hR-sc-VPa"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="PlayerNamePassOver" id="dXo-xc-AWv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M9F-eg-JkR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32" y="1170"/>
+            <point key="canvasLocation" x="53.523238380809602" y="1120.8"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="15o-q0-9by">
