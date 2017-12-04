@@ -11,6 +11,8 @@
 @interface SettingsViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *enterName;
 @property (weak, nonatomic) IBOutlet UITableView *highScoreTable;
+@property (weak, nonatomic) IBOutlet UILabel *musicState;
+@property (strong, nonatomic) NSString *musicStatetoPass;
 
 - (IBAction)musicState:(UISwitch *)sender;
 - (IBAction)MassiveButton:(UIControl *)sender;

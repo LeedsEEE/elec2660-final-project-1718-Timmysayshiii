@@ -29,9 +29,10 @@
         
         // Create audio player object and initialize with URL to sound
         MenuMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
-    
+    //if (musicStatetoPass == 1) {
     [MenuMusic play];
-    }
+    //}
+}
 
 
 - (void)didReceiveMemoryWarning {
