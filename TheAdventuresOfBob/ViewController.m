@@ -41,6 +41,7 @@ int score;
     self.endgameQuit.hidden = true;
     self.endgameScore.hidden = true;
     self.endgameReplay.hidden = true;
+    self.congratsName.hidden = true;
     // Set the original value for score/health and using a string to display this.
     
     score = 0;
@@ -207,6 +208,10 @@ int score;
         [self GameOver];
     }
     }
+    
+    if (CGRectIntersectsRect(self.BorgBunnySprite.frame, self.leftBorder.frame)){
+        [self bunnyPosition];
+    }
 }
 
 #pragma mark Falling egg code
@@ -293,7 +298,7 @@ int score;
     self.endgameQuit.hidden = false;
     self.endgameScore.hidden = false;
     self.endgameReplay.hidden = false;
-    
+    self.congratsName.hidden = false;
     self.endgameScore.text = [NSString stringWithFormat:@"Your Score = %d", score];
     
     // Waits for a second before the game will initilise replay
