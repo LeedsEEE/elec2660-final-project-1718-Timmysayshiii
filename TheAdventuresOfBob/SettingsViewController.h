@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *musicState;
 @property (strong, nonatomic) NSString *musicStatetoPass;
 
+@property (strong, nonatomic) NSString *placeholderSwitchState3;
+
 - (IBAction)musicState:(UISwitch *)sender;
 - (IBAction)MassiveButton:(UIControl *)sender;
 

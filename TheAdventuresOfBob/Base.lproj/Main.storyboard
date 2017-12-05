@@ -253,6 +253,7 @@
                         <outlet property="highScoreTable" destination="jPP-fe-eM1" id="1hR-sc-VPa"/>
                         <outlet property="musicState" destination="wwt-Ew-rk1" id="p3G-VS-i3K"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="PlayerNamePassOver" id="dXo-xc-AWv"/>
+                        <segue destination="HFC-Zc-YxI" kind="show" identifier="PassOverSettings" id="55O-b0-z7D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M9F-eg-JkR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -559,7 +560,8 @@
         <image name="sub-buzz-29381-1508166343-1.jpg" width="683" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="RtT-gh-6lO"/>
         <segue reference="1gP-oV-axU"/>
+        <segue reference="RtT-gh-6lO"/>
+        <segue reference="55O-b0-z7D"/>
     </inferredMetricsTieBreakers>
 </document>

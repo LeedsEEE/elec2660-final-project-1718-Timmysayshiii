@@ -24,7 +24,7 @@
     // Do any additional setup after loading the view.
     self.SwitchStateLabel.hidden = true;
         // Construct URL to sound file
-        NSString *path = [NSString stringWithFormat:@"%@/FILENAME.mp3", [[NSBundle mainBundle] resourcePath]];
+        NSString *path = [NSString stringWithFormat:@"%@/melodyloops-adrenaline.mp3", [[NSBundle mainBundle] resourcePath]];
         NSURL *soundUrl = [NSURL fileURLWithPath:path];
         
         // Create audio player object and initialize with URL to sound

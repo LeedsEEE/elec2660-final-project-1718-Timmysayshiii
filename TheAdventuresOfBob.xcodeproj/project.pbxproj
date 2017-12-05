@@ -25,6 +25,7 @@
 		CFE351271FB9BB7B00EA8EFB /* 875575-mkdd_fireball_mario.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFE351261FB9BB7B00EA8EFB /* 875575-mkdd_fireball_mario.jpg */; };
 		CFEE31B51FD00A1200A47C86 /* fallingeggs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFEE31B41FD00A1200A47C86 /* fallingeggs.jpg */; };
 		CFEE31B81FD0182E00A47C86 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEE31B71FD0182E00A47C86 /* SettingsViewController.m */; };
+		CFF471871FD69F4D002317E9 /* melodyloops-adrenaline.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CFF471861FD69F4D002317E9 /* melodyloops-adrenaline.mp3 */; };
 		CFF7FF191FD18EBD00C92928 /* ColourfulBackgroundColour2.png in Resources */ = {isa = PBXBuildFile; fileRef = CFF7FF181FD18EBD00C92928 /* ColourfulBackgroundColour2.png */; };
 		CFF7FF1B1FD193E500C92928 /* stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.gif in Resources */ = {isa = PBXBuildFile; fileRef = CFF7FF1A1FD193E500C92928 /* stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.gif */; };
 		CFF7FF211FD1A37800C92928 /* leadcoat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFF7FF1C1FD1A22300C92928 /* leadcoat.ttf */; };
@@ -84,6 +85,7 @@
 		CFEE31B41FD00A1200A47C86 /* fallingeggs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fallingeggs.jpg; sourceTree = "<group>"; };
 		CFEE31B61FD0182E00A47C86 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		CFEE31B71FD0182E00A47C86 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		CFF471861FD69F4D002317E9 /* melodyloops-adrenaline.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "melodyloops-adrenaline.mp3"; sourceTree = "<group>"; };
 		CFF7FF181FD18EBD00C92928 /* ColourfulBackgroundColour2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColourfulBackgroundColour2.png; sourceTree = "<group>"; };
 		CFF7FF1A1FD193E500C92928 /* stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "stock-vector-a-high-quality-horizontal-seamless-background-of-landscape-with-deep-forest-555408847.gif"; sourceTree = "<group>"; };
 		CFF7FF1C1FD1A22300C92928 /* leadcoat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = leadcoat.ttf; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				CFE350F01FB9A60900EA8EFB /* main.m */,
+				CFF471861FD69F4D002317E9 /* melodyloops-adrenaline.mp3 */,
 				CFF7FF1C1FD1A22300C92928 /* leadcoat.ttf */,
 				CFF7FF1E1FD1A22D00C92928 /* fast99.ttf */,
 				CFF7FF201FD1A23E00C92928 /* ASMAN.TTF */,
@@ -331,6 +334,7 @@
 				CFF7FF231FD1A38700C92928 /* ASMAN.TTF in Resources */,
 				CFF7FF241FD1A38900C92928 /* SIXTY.TTF in Resources */,
 				CFF7FF251FD1A38B00C92928 /* sewer.ttf in Resources */,
+				CFF471871FD69F4D002317E9 /* melodyloops-adrenaline.mp3 in Resources */,
 				CFF7FF191FD18EBD00C92928 /* ColourfulBackgroundColour2.png in Resources */,
 				CFEE31B51FD00A1200A47C86 /* fallingeggs.jpg in Resources */,
 				CFE350FF1FB9A60900EA8EFB /* LaunchScreen.storyboard in Resources */,

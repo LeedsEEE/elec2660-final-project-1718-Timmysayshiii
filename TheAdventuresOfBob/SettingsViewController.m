@@ -37,13 +37,19 @@
     }
     
     if ([segue.identifier isEqualToString:@"PlayerNamePassOver"]){
-        ViewController *Controller = (ViewController *)segue.destinationViewController;
-        Controller.placeholderSwitchState2= _musicStatetoPass;
+        ViewController *Controller2 = (ViewController *)segue.destinationViewController;
+        Controller2.placeholderSwitchState2= _musicStatetoPass;
+    }
+    
+    if ([segue.identifier isEqualToString:@"PassOverSettings"]){
+        SettingsViewController *Controller3 = (SettingsViewController *)segue.destinationViewController;
+        Controller3.placeholderSwitchState3= _musicStatetoPass;
     }
 
   
 
 }
+
 
 
 - (IBAction)MassiveButton:(UIControl *)sender {

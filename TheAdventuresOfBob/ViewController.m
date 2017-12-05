@@ -32,7 +32,7 @@ int score;
     // Do any additional setup after loading the view.
     
     // Construct URL to sound file
-    NSString *path = [NSString stringWithFormat:@"%@/FILENAME.mp3", [[NSBundle mainBundle] resourcePath]];
+    NSString *path = [NSString stringWithFormat:@"%@/melodyloops-adrenaline.mp3", [[NSBundle mainBundle] resourcePath]];
     NSURL *soundUrl = [NSURL fileURLWithPath:path];
     
     // Create audio player object and initialize with URL to sound
@@ -426,6 +426,9 @@ int score;
  
  Reference for touch control
  https://stackoverflow.com/questions/26478879/how-to-create-a-d-pad-with-buttons-in-single-view-application-on-xcode
+ 
+ Reference for Free Background Music
+ https://www.melodyloops.com/music/free/
  
  
  
