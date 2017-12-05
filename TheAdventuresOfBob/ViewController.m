@@ -323,7 +323,7 @@ int score;
     self.endgameReplay.hidden = false;
     self.congratsName.hidden = false;
     self.endgameScore.text = [NSString stringWithFormat:@"Your Score = %d", score];
-    
+    [MenuMusic stop];
     // Waits for a second before the game will initilise replay
     
     //[self performSelector:@selector(ReplayGame) withObject:nil afterDelay:1];

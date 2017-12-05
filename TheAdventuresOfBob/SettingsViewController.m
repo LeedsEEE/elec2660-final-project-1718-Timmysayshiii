@@ -94,12 +94,12 @@
 
 - (IBAction)musicState:(UISwitch *)sender {
     if (sender.on) {
-        self.musicState.text = [NSString stringWithFormat:@"Music State: ON"];
-        self.musicStatetoPass = [NSString stringWithFormat:@"On"]; ;
+        self.musicState.text = [NSString stringWithFormat:@"Music State: On"];
+        self.musicStatetoPass = [NSString stringWithFormat:@"On"];
     }
     
     else {
-        self.musicState.text = [NSString stringWithFormat:@"Music State: OFF"];
+        self.musicState.text = [NSString stringWithFormat:@"Music State: Off"];
         self.musicStatetoPass = [NSString stringWithFormat:@"Off"];
     }
 }
