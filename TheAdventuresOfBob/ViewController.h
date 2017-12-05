@@ -44,6 +44,7 @@
 - (IBAction)AttackButton:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UIButton *endgameReplay;
 - (IBAction)endgameReplayc:(UIButton *)sender;
+- (IBAction)endgameQuit:(UIButton *)sender;
 
 @property (strong, nonatomic) NSString *placeholderSwitchState2;
 

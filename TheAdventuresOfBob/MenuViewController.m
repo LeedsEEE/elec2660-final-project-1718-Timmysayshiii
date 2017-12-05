@@ -52,4 +52,15 @@
 }
 */
 
+- (IBAction)StartGamePressed:(UIButton *)sender {
+    [MenuMusic stop];
+}
+
+- (IBAction)InstructionsPrssed:(UIButton *)sender {
+     [MenuMusic stop];
+}
+
+- (IBAction)SettingsPressed:(UIButton *)sender {
+     [MenuMusic stop];
+}
 @end

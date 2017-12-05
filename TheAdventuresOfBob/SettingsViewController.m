@@ -11,12 +11,29 @@
 #import "MenuViewController.h"
 #import "ViewController.h"
 @interface SettingsViewController ()
-
+{
+    AVAudioPlayer *MenuMusic;
+}
 @end
 
 @implementation SettingsViewController
 
 - (void)viewDidLoad {
+    
+    // Construct URL to sound file
+    NSString *path = [NSString stringWithFormat:@"%@/melodyloops-adrenaline.mp3", [[NSBundle mainBundle] resourcePath]];
+    NSURL *soundUrl = [NSURL fileURLWithPath:path];
+    
+    // Create audio player object and initialize with URL to sound
+    MenuMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    if ((self.musicStatetoPass = @"On")) {
+        NSLog(@"On");
+        [MenuMusic play];
+    }
+    else {
+        [MenuMusic stop];
+    }
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
@@ -59,6 +76,10 @@
     if ([self.enterName isFirstResponder]) {
         [self.enterName resignFirstResponder];
     }
+}
+
+- (IBAction)BackButtonPressed:(UIButton *)sender {
+     [MenuMusic stop];
 }
 
 

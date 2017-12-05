@@ -104,6 +104,10 @@ int score;
     [self ReplayGame];
 }
 
+- (IBAction)endgameQuit:(UIButton *)sender {
+    [MenuMusic stop];
+}
+
 #pragma mark Code regarding the users movements
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

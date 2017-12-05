@@ -14,4 +14,8 @@
 @property (strong, nonatomic) NSString *placeholderSwitchState;
 @property (weak, nonatomic) IBOutlet UILabel *SwitchStateLabel;
 
+- (IBAction)StartGamePressed:(UIButton *)sender;
+- (IBAction)InstructionsPrssed:(UIButton *)sender;
+- (IBAction)SettingsPressed:(UIButton *)sender;
+
 @end
