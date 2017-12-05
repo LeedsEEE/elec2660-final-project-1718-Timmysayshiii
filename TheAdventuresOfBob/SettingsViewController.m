@@ -10,13 +10,14 @@
 #import <AVFoundation/AVFoundation.h>
 #import "MenuViewController.h"
 #import "ViewController.h"
+#import "InstructionsViewController.h"
 @interface SettingsViewController ()
 {
     AVAudioPlayer *MenuMusic;
 }
 @end
 
-@implementation SettingsViewController
+@implementation SettingsViewController 
 
 - (void)viewDidLoad {
     
@@ -57,12 +58,12 @@
         ViewController *Controller2 = (ViewController *)segue.destinationViewController;
         Controller2.placeholderSwitchState2= _musicStatetoPass;
     }
+   
     
     if ([segue.identifier isEqualToString:@"PassOverSettings"]){
-        SettingsViewController *Controller3 = (SettingsViewController *)segue.destinationViewController;
-        Controller3.placeholderSwitchState3= _musicStatetoPass;
+        InstructionsViewController *Controller4 = (InstructionsViewController *)segue.destinationViewController;
+        Controller4.placeholderSwitchState4= _musicStatetoPass;
     }
-
   
 
 }
@@ -88,17 +89,23 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
     
+    if ([self.enterName isFirstResponder]) {
+        [self.enterName resignFirstResponder];
+    }
+    
     return YES;
     // Removes keyboard from view when we press return
 }
 
 - (IBAction)musicState:(UISwitch *)sender {
     if (sender.on) {
+        [MenuMusic play];
         self.musicState.text = [NSString stringWithFormat:@"Music State: On"];
         self.musicStatetoPass = [NSString stringWithFormat:@"On"];
     }
     
     else {
+        [MenuMusic stop];
         self.musicState.text = [NSString stringWithFormat:@"Music State: Off"];
         self.musicStatetoPass = [NSString stringWithFormat:@"Off"];
     }

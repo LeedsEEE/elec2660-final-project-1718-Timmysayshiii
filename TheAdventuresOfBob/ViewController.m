@@ -98,11 +98,53 @@ int score;
 }
 
 - (IBAction)endgameReplayc:(UIButton *)sender {
+    // Restarts the game code
+    
+    // Displays the elements needed for the game when we press start. In turn the menu will be hidden.
+    
+    self.FistAttack.hidden = true;
+    self.HealthBar.hidden = false;
+    self.Score.hidden = false;
+    self.Healthlabel.hidden = false;
+    self.BorgBunnySprite.hidden = false;
+    self.RoadmanShaq.hidden = false;
+    self.AttackbuttonX.hidden = false;
+    self.egg1.hidden = false;
+    self.egg2.hidden = false;
+    self.egg3.hidden = false;
+    self.egg4.hidden = false;
+    self.gameover.hidden = true;
+    self.endgameQuit.hidden = true;
+    self.endgameScore.hidden = true;
+    self.endgameReplay.hidden = true;
+    // Set the original value for score/health and using a string to display this.
+    score = 0;
+    
+    self.Score.text = [NSString stringWithFormat:@"Score:   %d", score];
+    self.HealthBar.progress = 1;
+    
+    // Setting the original positions for the sprites for when the game will load.
+    
+    self.RoadmanShaq.center = CGPointMake(50, 350);
+    self.BorgBunnySprite.center = CGPointMake(770, 350);
+    self.FistAttack.center = CGPointMake(self.RoadmanShaq.center.x, self.RoadmanShaq.center.y);
+    self.Fireball.center = CGPointMake(self.BorgBunnySprite.center.x, self.BorgBunnySprite.center.y);
+    self.egg1.center = CGPointMake(200, -20);
+    self.egg2.center = CGPointMake(300, -20);
+    self.egg3.center = CGPointMake(400, -20);
+    self.egg4.center = CGPointMake(500, -20);
+    
+    [self bunnyPosition];
+    
+    self.eggMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(eggMovement) userInfo:nil repeats:YES];
+    
+}
     // Waits for a second before the game will initilise replay
     
     //[self performSelector:@selector(ReplayGame) withObject:nil afterDelay:1];
-    [self ReplayGame];
-}
+    //[self ReplayGame];
+
+
 
 - (IBAction)endgameQuit:(UIButton *)sender {
     [MenuMusic stop];
@@ -323,6 +365,7 @@ int score;
     self.endgameReplay.hidden = false;
     self.congratsName.hidden = false;
     self.endgameScore.text = [NSString stringWithFormat:@"Your Score = %d", score];
+    self.congratsName.text = [NSString stringWithFormat:@"Congratulations %@",];
     [MenuMusic stop];
     // Waits for a second before the game will initilise replay
     
@@ -331,7 +374,7 @@ int score;
 
 #pragma mark Replay Game Code
 
--(void)ReplayGame {
+/*-(void)ReplayGame {
     // Restarts the game code
     
     // Displays the elements needed for the game when we press start. In turn the menu will be hidden.
@@ -372,7 +415,7 @@ int score;
     
     self.eggMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(eggMovement) userInfo:nil repeats:YES];
     
-}
+}*/
 
 @end
 

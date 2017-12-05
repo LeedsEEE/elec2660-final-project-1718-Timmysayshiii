@@ -31,6 +31,7 @@
         MenuMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
     if ((self.placeholderSwitchState = @"On")) {
         NSLog(@"On");
+        NSLog(@" %@" , _placeholderSwitchState);
     [MenuMusic play];
     
 }
