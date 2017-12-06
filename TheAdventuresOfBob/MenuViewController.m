@@ -8,7 +8,7 @@
 
 #import "MenuViewController.h"
 #import <AVFoundation/AVFoundation.h>
-
+#import "SettingsViewController.h"
 @interface MenuViewController ()
 
 {
@@ -36,7 +36,7 @@
        [MenuMusic play];
     }
     
-    if ((self.placeholderSwitchState = @"Off")) {
+   else if ((self.placeholderSwitchState = @"Off")) {
         NSLog(@"The switch state recieved in menu is %@" , self.placeholderSwitchState);
         [MenuMusic stop];
     }
