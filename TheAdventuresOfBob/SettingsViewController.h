@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface SettingsViewController : UIViewController <UITextFieldDelegate>
+
 @property (weak, nonatomic) IBOutlet UITextField *enterName;
 @property (weak, nonatomic) IBOutlet UITableView *highScoreTable;
 @property (weak, nonatomic) IBOutlet UILabel *musicState;
 @property (strong, nonatomic) NSString *musicStatetoPass;
 
+@property (strong, nonatomic) NSString *placeholderSwitchState2;
 @property (strong, nonatomic) NSString *setName;
 
 - (IBAction)musicState:(UISwitch *)sender;

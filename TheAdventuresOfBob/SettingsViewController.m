@@ -11,6 +11,8 @@
 #import "MenuViewController.h"
 #import "ViewController.h"
 #import "InstructionsViewController.h"
+
+
 @interface SettingsViewController ()
 {
     AVAudioPlayer *MenuMusic;
@@ -60,7 +62,7 @@
    else if ([segue.identifier isEqualToString:@"PlayerNamePassOver"]){
         ViewController *Controller2 = (ViewController *)segue.destinationViewController;
         Controller2.placeholderSwitchState2= _musicStatetoPass;
-       Controller2.playerName= self.setName;
+        Controller2.playerName= self.setName;
     }
     
    else if ([segue.identifier isEqualToString:@"PassOverSettings"]){

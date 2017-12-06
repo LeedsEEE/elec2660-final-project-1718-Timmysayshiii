@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A5D964E1FD8235A00AE2A37 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEE31B71FD0182E00A47C86 /* SettingsViewController.m */; };
 		CF67D3D51FCF2BE5005868F3 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF67D3D41FCF2BE5005868F3 /* MenuViewController.m */; };
 		CF67D3D71FCF2EC9005868F3 /* maxresdefault.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF67D3D61FCF2EC9005868F3 /* maxresdefault.jpg */; };
 		CF8870581FC31CB900AEFB94 /* cyborg_bunny_by_crowsrock-d50l4tg.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8870571FC31CB900AEFB94 /* cyborg_bunny_by_crowsrock-d50l4tg.png */; };
@@ -24,7 +25,6 @@
 		CFE351251FB9BA3800EA8EFB /* sub-buzz-29381-1508166343-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFE351241FB9BA3800EA8EFB /* sub-buzz-29381-1508166343-1.jpg */; };
 		CFE351271FB9BB7B00EA8EFB /* 875575-mkdd_fireball_mario.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFE351261FB9BB7B00EA8EFB /* 875575-mkdd_fireball_mario.jpg */; };
 		CFEE31B51FD00A1200A47C86 /* fallingeggs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFEE31B41FD00A1200A47C86 /* fallingeggs.jpg */; };
-		CFEE31B81FD0182E00A47C86 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEE31B71FD0182E00A47C86 /* SettingsViewController.m */; };
 		CFF471871FD69F4D002317E9 /* melodyloops-adrenaline.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CFF471861FD69F4D002317E9 /* melodyloops-adrenaline.mp3 */; };
 		CFF4718A1FD6A2BA002317E9 /* InstructionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF471891FD6A2BA002317E9 /* InstructionsViewController.m */; };
 		CFF7FF191FD18EBD00C92928 /* ColourfulBackgroundColour2.png in Resources */ = {isa = PBXBuildFile; fileRef = CFF7FF181FD18EBD00C92928 /* ColourfulBackgroundColour2.png */; };
@@ -378,8 +378,8 @@
 			files = (
 				CFE350F71FB9A60900EA8EFB /* ViewController.m in Sources */,
 				CFE350F41FB9A60900EA8EFB /* AppDelegate.m in Sources */,
-				CFEE31B81FD0182E00A47C86 /* SettingsViewController.m in Sources */,
 				CFE350F11FB9A60900EA8EFB /* main.m in Sources */,
+				0A5D964E1FD8235A00AE2A37 /* SettingsViewController.m in Sources */,
 				CF67D3D51FCF2BE5005868F3 /* MenuViewController.m in Sources */,
 				CFF4718A1FD6A2BA002317E9 /* InstructionsViewController.m in Sources */,
 			);
