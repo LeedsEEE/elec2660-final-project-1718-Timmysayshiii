@@ -64,13 +64,9 @@
         InstructionsViewController *Controller4 = (InstructionsViewController *)segue.destinationViewController;
         Controller4.placeholderSwitchState4= _musicStatetoPass;
     }
-  
-
 }
 
-
-
-- (IBAction)MassiveButton:(UIControl *)sender {
+- (IBAction)RemoveKeyboard:(UIControl *)sender {
     // Allows keyboard to be removed after we click background. UIView is changed to UIControl. Create IBAction and set event to touchupinside.
     
     NSLog(@"Background Pressed");

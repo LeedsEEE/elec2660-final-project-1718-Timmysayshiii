@@ -16,8 +16,7 @@
 
 
 - (IBAction)musicState:(UISwitch *)sender;
-- (IBAction)MassiveButton:(UIControl *)sender;
 - (IBAction)BackButtonPressed:(UIButton *)sender;
-
+- (IBAction)RemoveKeyboard:(UIControl *)sender;
 
 @end
