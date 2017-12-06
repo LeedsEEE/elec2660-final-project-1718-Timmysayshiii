@@ -18,11 +18,13 @@
 @end
 
 @implementation MenuViewController
+@synthesize placeholderSwitchState;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.SwitchStateLabel.hidden = true;
+    NSLog(@"Value passed down to menu is %@",self.placeholderSwitchState);
         // Construct URL to sound file
         NSString *path = [NSString stringWithFormat:@"%@/melodyloops-adrenaline.mp3", [[NSBundle mainBundle] resourcePath]];
         NSURL *soundUrl = [NSURL fileURLWithPath:path];
@@ -30,11 +32,16 @@
         // Create audio player object and initialize with URL to sound
         MenuMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
     if ((self.placeholderSwitchState = @"On")) {
-        NSLog(@"On");
-        NSLog(@" %@" , _placeholderSwitchState);
-    [MenuMusic play];
+       NSLog(@"The switch state recieved in menu is %@" , self.placeholderSwitchState);
+       [MenuMusic play];
+    }
     
-}
+    if ((self.placeholderSwitchState = @"Off")) {
+        NSLog(@"The switch state recieved in menu is %@" , self.placeholderSwitchState);
+        [MenuMusic stop];
+    }
+
+ 
 }
 
 

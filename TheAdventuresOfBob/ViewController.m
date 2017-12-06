@@ -11,8 +11,6 @@
 
 @interface ViewController ()
 
-
-
 {
     AVAudioPlayer *MenuMusic;
 }
@@ -487,6 +485,8 @@ int score;
  
  Negative Random Generator
  https://stackoverflow.com/questions/27066668/arc4random-positive-negative-numbers
+ 
+ 
  
  
  

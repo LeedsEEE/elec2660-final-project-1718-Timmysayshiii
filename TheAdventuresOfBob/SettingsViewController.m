@@ -31,12 +31,12 @@
     
     // Create audio player object and initialize with URL to sound
     MenuMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
-    if ((self.musicStatetoPass = @"On")) {
-        NSLog(@"On");
+    if ([self.musicStatetoPass isEqualToString:@"On"]) {
+        NSLog(@"Music in settings is On");
         [MenuMusic play];
     }
     else {
-        NSLog(@"Off");
+        NSLog(@"Music in settings is Off");
         [MenuMusic stop];
     }
     
@@ -57,17 +57,20 @@
     if ([segue.identifier isEqualToString:@"musicStateSwitchVal"]){
         MenuViewController *Controller = (MenuViewController *)segue.destinationViewController;
         Controller.placeholderSwitchState= _musicStatetoPass;
+        NSLog(@"The state being sent to menu is %@",self.musicStatetoPass);
     }
     
    else if ([segue.identifier isEqualToString:@"PlayerNamePassOver"]){
         ViewController *Controller2 = (ViewController *)segue.destinationViewController;
         Controller2.placeholderSwitchState2= _musicStatetoPass;
         Controller2.playerName= self.setName;
+       NSLog(@"The name being set in game is %@", setName);
     }
     
    else if ([segue.identifier isEqualToString:@"PassOverSettings"]){
         InstructionsViewController *Controller4 = (InstructionsViewController *)segue.destinationViewController;
         Controller4.placeholderSwitchState4= _musicStatetoPass;
+       NSLog(@"The music state being passed to instructions is %@", self.musicStatetoPass);
     }
     
   // else if ([segue.identifier isEqualToString:@"PlayerNamePassOver"]){
@@ -105,7 +108,7 @@
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
     self.setName = self.enterName.text;
-        NSLog(@" %@", self.setName);
+        NSLog(@"The name is now set as %@", self.setName);
     return YES;
 }
 
@@ -114,12 +117,15 @@
         [MenuMusic play];
         self.musicState.text = [NSString stringWithFormat:@"Music State: On"];
         self.musicStatetoPass = [NSString stringWithFormat:@"On"];
+        NSLog(@"The music state is now %@", self.musicStatetoPass);
     }
     
     else {
         [MenuMusic stop];
         self.musicState.text = [NSString stringWithFormat:@"Music State: Off"];
         self.musicStatetoPass = [NSString stringWithFormat:@"Off"];
+        NSLog(@"The music state is now %@", self.musicStatetoPass);
+
     }
 }
 @end

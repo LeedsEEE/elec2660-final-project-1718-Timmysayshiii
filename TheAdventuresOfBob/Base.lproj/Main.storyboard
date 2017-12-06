@@ -214,7 +214,7 @@
                                 </state>
                                 <connections>
                                     <action selector="BackButtonPressed:" destination="ygB-DK-ean" eventType="touchUpInside" id="n1O-vg-Waz"/>
-                                    <segue destination="rYn-qk-7cJ" kind="show" identifier="musicStateSwitchVal" id="1gP-oV-axU"/>
+                                    <segue destination="rYn-qk-7cJ" kind="show" identifier="backButton" id="1gP-oV-axU"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCv-Pt-8uX">
@@ -250,11 +250,12 @@
                         <outlet property="musicState" destination="wwt-Ew-rk1" id="p3G-VS-i3K"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="PlayerNamePassOver" id="dXo-xc-AWv"/>
                         <segue destination="HFC-Zc-YxI" kind="show" identifier="PassOverSettings" id="55O-b0-z7D"/>
+                        <segue destination="rYn-qk-7cJ" kind="show" identifier="musicStateSwitchVal" id="rqI-dh-wSd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M9F-eg-JkR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-189" y="1068"/>
+            <point key="canvasLocation" x="-222" y="1062"/>
         </scene>
         <!--Instructions View Controller-->
         <scene sceneID="15o-q0-9by">
@@ -566,7 +567,7 @@
         <image name="sub-buzz-29381-1508166343-1.jpg" width="683" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bvx-W9-KT7"/>
+        <segue reference="1gP-oV-axU"/>
         <segue reference="55O-b0-z7D"/>
         <segue reference="aen-qZ-6bh"/>
     </inferredMetricsTieBreakers>
