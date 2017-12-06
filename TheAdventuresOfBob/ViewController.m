@@ -105,7 +105,7 @@ int score;
 
 - (IBAction)endgameReplayc:(UIButton *)sender {
     // Restarts the game code
-    
+    /*
     // Displays the elements needed for the game when we press start. In turn the menu will be hidden.
     
     self.FistAttack.hidden = true;
@@ -142,14 +142,13 @@ int score;
     
     [self bunnyPosition];
     
-    self.eggMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(eggMovement) userInfo:nil repeats:YES];
-    
-}
+    self.eggMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(eggMovement) userInfo:nil repeats:YES];*/
+
     // Waits for a second before the game will initilise replay
     
-    //[self performSelector:@selector(ReplayGame) withObject:nil afterDelay:1];
-    //[self ReplayGame];
-
+    [self performSelector:@selector(ReplayGame) withObject:nil afterDelay:1];
+    [self ReplayGame];
+}
 
 
 - (IBAction)endgameQuit:(UIButton *)sender {
