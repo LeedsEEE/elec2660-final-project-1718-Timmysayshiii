@@ -75,7 +75,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fallingeggs.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="GGV-TD-x9k">
-                                <rect key="frame" x="243" y="39" width="46" height="51"/>
+                                <rect key="frame" x="243" y="-50" width="46" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fallingeggs.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="UXd-yY-8tl">
@@ -456,7 +456,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fallingeggs.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="jm4-cO-P7e">
-                                <rect key="frame" x="52" y="63" width="50" height="49"/>
+                                <rect key="frame" x="15" y="63" width="50" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fallingeggs.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7aU-09-X8i">
@@ -464,7 +464,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fallingeggs.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Un2-nw-KH7">
-                                <rect key="frame" x="516" y="86" width="49" height="55"/>
+                                <rect key="frame" x="615" y="86" width="49" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fallingeggs.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9N3-mX-zfG">
@@ -566,8 +566,7 @@
         <image name="sub-buzz-29381-1508166343-1.jpg" width="683" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dXo-xc-AWv"/>
-        <segue reference="1gP-oV-axU"/>
+        <segue reference="bvx-W9-KT7"/>
         <segue reference="55O-b0-z7D"/>
         <segue reference="aen-qZ-6bh"/>
     </inferredMetricsTieBreakers>

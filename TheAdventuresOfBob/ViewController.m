@@ -288,62 +288,65 @@ int score;
 #pragma mark Falling egg code
 
 -(void)eggMovement {
+    NSInteger PosX;
+    NSInteger PosY;
+    
+    PosX = (arc4random() %600)+15;
+    NSLog(@"Position X is %ld", PosX);
+    PosY = (int)arc4random_uniform(50)-150;
+    NSLog(@"Position Y is %ld", PosY);
     self.egg1.center = CGPointMake(self.egg1.center.x, self.egg1.center.y +3);
     self.egg2.center = CGPointMake(self.egg2.center.x, self.egg2.center.y +3);
     self.egg3.center = CGPointMake(self.egg3.center.x, self.egg3.center.y +3);
     self.egg4.center = CGPointMake(self.egg4.center.x, self.egg4.center.y +3);
     
     if (CGRectIntersectsRect(self.egg1.frame, self.bottomBorder.frame)){
-        self.egg1.center = CGPointMake(200, -20);
+        self.egg1.center = CGPointMake(PosX, PosY);
         score = score +1;
         self.Score.text = [NSString stringWithFormat:@"Score:   %d", score];
     }
     if (CGRectIntersectsRect(self.egg2.frame, self.bottomBorder.frame)){
-        self.egg2.center = CGPointMake(300, -20);
+        self.egg2.center = CGPointMake(PosX, PosY);
         score = score +1;
         self.Score.text = [NSString stringWithFormat:@"Score:   %d", score];
     }
     if (CGRectIntersectsRect(self.egg3.frame, self.bottomBorder.frame)){
-        self.egg3.center = CGPointMake(400, -20);
+        self.egg3.center = CGPointMake(PosX, PosY);
         score = score +1;
         self.Score.text = [NSString stringWithFormat:@"Score:   %d", score];
     }
     if (CGRectIntersectsRect(self.egg4.frame, self.bottomBorder.frame)){
-        self.egg4.center = CGPointMake(500, -20);
+        self.egg4.center = CGPointMake(PosX, PosY);
         score = score +1;
         self.Score.text = [NSString stringWithFormat:@"Score:   %d", score];
     }
     if (CGRectIntersectsRect(self.egg1.frame, self.RoadmanShaq.frame)){
-        self.egg1.center = CGPointMake(200, -20);
+        self.egg1.center = CGPointMake(PosX, PosY);
         self.HealthBar.progress = self.HealthBar.progress - 0.1;
         if (self.HealthBar.progress == 0) {
             [self GameOver];
         }
-
     }
     if (CGRectIntersectsRect(self.egg2.frame, self.RoadmanShaq.frame)){
-        self.egg2.center = CGPointMake(300, -20);
+        self.egg2.center = CGPointMake(PosX, PosY);
         self.HealthBar.progress = self.HealthBar.progress - 0.1;
         if (self.HealthBar.progress == 0) {
             [self GameOver];
         }
-
     }
     if (CGRectIntersectsRect(self.egg3.frame, self.RoadmanShaq.frame)){
-        self.egg3.center = CGPointMake(400, -20);
+        self.egg3.center = CGPointMake(PosX, PosY);
         self.HealthBar.progress = self.HealthBar.progress - 0.1;
         if (self.HealthBar.progress == 0) {
             [self GameOver];
         }
-
     }
     if (CGRectIntersectsRect(self.egg4.frame, self.RoadmanShaq.frame)){
-        self.egg4.center = CGPointMake(500, -20);
+        self.egg4.center = CGPointMake(PosX, PosY);
         self.HealthBar.progress = self.HealthBar.progress - 0.1;
         if (self.HealthBar.progress == 0) {
             [self GameOver];
         }
-
     }
 }
 
@@ -482,6 +485,9 @@ int score;
  
  Reference for Free Background Music
  https://www.melodyloops.com/music/free/
+ 
+ Negative Random Generator
+ https://stackoverflow.com/questions/27066668/arc4random-positive-negative-numbers
  
  
  
