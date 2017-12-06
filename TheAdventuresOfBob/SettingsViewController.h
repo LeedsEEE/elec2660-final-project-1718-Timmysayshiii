@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *musicState;
 @property (strong, nonatomic) NSString *musicStatetoPass;
 
+@property (strong, nonatomic) NSString *setName;
 
 - (IBAction)musicState:(UISwitch *)sender;
 - (IBAction)BackButtonPressed:(UIButton *)sender;

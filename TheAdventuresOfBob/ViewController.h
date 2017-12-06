@@ -47,6 +47,7 @@
 - (IBAction)endgameQuit:(UIButton *)sender;
 
 @property (strong, nonatomic) NSString *placeholderSwitchState2;
+@property (strong, nonatomic) NSString *playerName;
 
 -(void)fistattackMovement;
 -(void)bunnyPosition;

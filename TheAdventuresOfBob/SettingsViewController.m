@@ -17,7 +17,9 @@
 }
 @end
 
-@implementation SettingsViewController 
+@implementation SettingsViewController
+
+@synthesize setName;
 
 - (void)viewDidLoad {
     
@@ -32,6 +34,7 @@
         [MenuMusic play];
     }
     else {
+        NSLog(@"Off");
         [MenuMusic stop];
     }
     
@@ -54,16 +57,21 @@
         Controller.placeholderSwitchState= _musicStatetoPass;
     }
     
-    if ([segue.identifier isEqualToString:@"PlayerNamePassOver"]){
+   else if ([segue.identifier isEqualToString:@"PlayerNamePassOver"]){
         ViewController *Controller2 = (ViewController *)segue.destinationViewController;
         Controller2.placeholderSwitchState2= _musicStatetoPass;
+       Controller2.playerName= self.setName;
     }
-   
     
-    if ([segue.identifier isEqualToString:@"PassOverSettings"]){
+   else if ([segue.identifier isEqualToString:@"PassOverSettings"]){
         InstructionsViewController *Controller4 = (InstructionsViewController *)segue.destinationViewController;
         Controller4.placeholderSwitchState4= _musicStatetoPass;
     }
+    
+  // else if ([segue.identifier isEqualToString:@"PlayerNamePassOver"]){
+       // ViewController *Controller5 = (ViewController *)segue.destinationViewController;
+        //Controller5.playerName= self.setName;
+   // }
 }
 
 - (IBAction)RemoveKeyboard:(UIControl *)sender {
@@ -91,6 +99,12 @@
     
     return YES;
     // Removes keyboard from view when we press return
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
+    self.setName = self.enterName.text;
+        NSLog(@" %@", self.setName);
+    return YES;
 }
 
 - (IBAction)musicState:(UISwitch *)sender {

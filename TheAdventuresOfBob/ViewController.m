@@ -11,6 +11,8 @@
 
 @interface ViewController ()
 
+
+
 {
     AVAudioPlayer *MenuMusic;
 }
@@ -24,10 +26,14 @@ int score;
 
 @implementation ViewController
 
+@synthesize playerName;
+
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSLog(@"%@", self.playerName);
     
     // Do any additional setup after loading the view.
     
@@ -365,7 +371,7 @@ int score;
     self.endgameReplay.hidden = false;
     self.congratsName.hidden = false;
     self.endgameScore.text = [NSString stringWithFormat:@"Your Score = %d", score];
-    //self.congratsName.text = [NSString stringWithFormat:@"Congratulations %@",];
+    self.congratsName.text = [NSString stringWithFormat:@"Congratulations %@", self.playerName];
     [MenuMusic stop];
     // Waits for a second before the game will initilise replay
     

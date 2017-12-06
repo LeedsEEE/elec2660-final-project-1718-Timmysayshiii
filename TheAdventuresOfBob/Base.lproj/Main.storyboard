@@ -254,7 +254,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M9F-eg-JkR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.523238380809602" y="1120.8"/>
+            <point key="canvasLocation" x="-189" y="1068"/>
         </scene>
         <!--Instructions View Controller-->
         <scene sceneID="15o-q0-9by">
@@ -566,8 +566,9 @@
         <image name="sub-buzz-29381-1508166343-1.jpg" width="683" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="dXo-xc-AWv"/>
         <segue reference="1gP-oV-axU"/>
         <segue reference="55O-b0-z7D"/>
-        <segue reference="RtT-gh-6lO"/>
+        <segue reference="aen-qZ-6bh"/>
     </inferredMetricsTieBreakers>
 </document>
