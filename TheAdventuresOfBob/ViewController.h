@@ -46,6 +46,13 @@
 - (IBAction)endgameReplayc:(UIButton *)sender;
 - (IBAction)endgameQuit:(UIButton *)sender;
 
+- (IBAction)userMoveLeft:(UIButton *)sender;
+- (IBAction)userStopLeft:(UIButton *)sender;
+- (IBAction)userMoveRight:(UIButton *)sender;
+- (IBAction)userStopRight:(UIButton *)sender;
+@property (strong, nonatomic) NSTimer *leftTimer;
+@property (strong, nonatomic) NSTimer *rightTimer;
+
 @property (strong, nonatomic) NSString *placeholderSwitchState2;
 @property (strong, nonatomic) NSString *playerName;
 
@@ -56,5 +63,7 @@
 -(void)eggMovement;
 -(void)GameOver;
 -(void)ReplayGame;
+-(void)userRight;
+-(void)userLeft;
 @end
 

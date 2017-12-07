@@ -54,10 +54,11 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"musicStateSwitchVal"]){
+    if ([segue.identifier isEqualToString:@"backButton"]){
         MenuViewController *Controller = (MenuViewController *)segue.destinationViewController;
-        Controller.placeholderSwitchState= _musicStatetoPass;
+        Controller.placeholderSwitchState= self.musicStatetoPass;
         NSLog(@"The state being sent to menu is %@",self.musicStatetoPass);
+        NSLog(@"The state being sent to menu is %@",Controller.placeholderSwitchState);
     }
     
    else if ([segue.identifier isEqualToString:@"PlayerNamePassOver"]){
@@ -108,7 +109,7 @@
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
     self.setName = self.enterName.text;
-        NSLog(@"The name is now set as %@", self.setName);
+        NSLog(@"The name is now set as %@", self.enterName);
     return YES;
 }
 

@@ -518,6 +518,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVl-lC-60f">
+                                <rect key="frame" x="0.0" y="0.0" width="332" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="userMoveLeft:" destination="7fy-NQ-R0J" eventType="touchDown" id="TgQ-Qs-GyM"/>
+                                    <action selector="userStopLeft:" destination="7fy-NQ-R0J" eventType="touchUpInside" id="exa-JS-co3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rM-xy-J8y">
+                                <rect key="frame" x="331" y="0.0" width="336" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="userMoveRight:" destination="7fy-NQ-R0J" eventType="touchDown" id="AS5-Ac-MWG"/>
+                                    <action selector="userStopRight:" destination="7fy-NQ-R0J" eventType="touchUpInside" id="F4t-2t-D35"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -567,7 +583,7 @@
         <image name="sub-buzz-29381-1508166343-1.jpg" width="683" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rqI-dh-wSd"/>
+        <segue reference="bvx-W9-KT7"/>
         <segue reference="55O-b0-z7D"/>
         <segue reference="RtT-gh-6lO"/>
     </inferredMetricsTieBreakers>

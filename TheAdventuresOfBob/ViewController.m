@@ -153,7 +153,43 @@ int score;
     [MenuMusic stop];
 }
 
+
 #pragma mark Code regarding the users movements
+
+-(void)userLeft {
+    self.RoadmanShaq.center = CGPointMake(self.RoadmanShaq.center.x - 5, self.RoadmanShaq.center.y);
+}
+
+-(void)userRight {
+        self.RoadmanShaq.center = CGPointMake(self.RoadmanShaq.center.x + 5, self.RoadmanShaq.center.y);
+}
+
+- (IBAction)userMoveLeft:(UIButton *)sender {
+    self.leftTimer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(userLeft) userInfo:nil repeats:YES];
+    if (self.leftTimer == nil) {
+        self.leftTimer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(userLeft) userInfo:nil repeats:YES];
+        
+    }
+    
+}
+
+- (IBAction)userStopLeft:(UIButton *)sender {
+    [self.leftTimer invalidate];
+    self.leftTimer = nil;
+}
+
+- (IBAction)userMoveRight:(UIButton *)sender {
+    self.rightTimer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(userRight) userInfo:nil repeats:YES];
+    if (self.rightTimer == nil) {
+        self.rightTimer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(userRight) userInfo:nil repeats:YES];
+        
+    }
+}
+
+- (IBAction)userStopRight:(UIButton *)sender {
+    [self.rightTimer invalidate];
+    self.rightTimer = nil;
+}
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
@@ -163,13 +199,13 @@ int score;
 
 // Implementing the method of touchesMoved to move my sprite in the direction we tap the screen.
 
--(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+/*-(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     self.touch= [touches anyObject];
     // Can implement If statements for better control
     
     CGPoint point = [self.touch locationInView:self.view];
     self.RoadmanShaq.center = CGPointMake(point.x, self.RoadmanShaq.center.y);
-}
+}*/
 
 #pragma mark Code regarding the users attack
 
