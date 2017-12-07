@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
-
+#import "DataShared.h"
 @interface ViewController ()
 
 {
@@ -30,9 +30,10 @@ int score;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    NSLog(@"%@", self.playerName);
-    
+    DataShared *data = [DataShared sharedInstance];
+    self.playerName = [[DataShared sharedInstance] userName];
+    NSLog(@"Name set in game = %@", self.playerName);
+
     // Do any additional setup after loading the view.
     
     // Construct URL to sound file
@@ -386,6 +387,8 @@ int score;
 #pragma mark Game Over Code
 
 -(void)GameOver {
+    NSLog(@"Name set in game = %@", self.playerName);
+    
     // stops the movement for projectiles and enemies
     [self.bunnyMovementTimer invalidate];
     [self.fistattackMovementTimer invalidate];
@@ -408,6 +411,8 @@ int score;
     self.congratsName.hidden = false;
     self.endgameScore.text = [NSString stringWithFormat:@"Your Score = %d", score];
     self.congratsName.text = [NSString stringWithFormat:@"Congratulations %@", self.playerName];
+    [[DataShared sharedInstance] setHighscoreVal:score];
+    NSLog(@" Shared score is %d", [[DataShared sharedInstance]highscoreVal]);
     [MenuMusic stop];
     // Waits for a second before the game will initilise replay
     
@@ -522,6 +527,8 @@ int score;
  Negative Random Generator
  https://stackoverflow.com/questions/27066668/arc4random-positive-negative-numbers
  
+ Reference for touch control
+ https://www.youtube.com/watch?v=F40uTsVd3lo
  
  
  

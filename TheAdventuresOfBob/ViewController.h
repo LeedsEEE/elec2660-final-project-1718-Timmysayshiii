@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DataShared.h"
 
 @interface ViewController : UIViewController
 

@@ -9,6 +9,7 @@
 #import "MenuViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "SettingsViewController.h"
+#import "DataShared.h"
 @interface MenuViewController ()
 
 {
@@ -23,6 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    DataShared *data = [DataShared sharedInstance];
+
     self.SwitchStateLabel.hidden = true;
     NSLog(@"Value passed down to menu is %@",self.placeholderSwitchState);
         // Construct URL to sound file
@@ -41,7 +44,6 @@
         [MenuMusic stop];
     }
 
- 
 }
 
 

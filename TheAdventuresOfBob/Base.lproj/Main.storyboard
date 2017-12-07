@@ -238,6 +238,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Highscore:                       " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsN-Rw-wYP">
+                                <rect key="frame" x="20" y="247" width="89" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="highscore set by = value is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Pd-zd-bUm">
+                                <rect key="frame" x="171" y="246" width="203" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoS-mc-Kjl">
+                                <rect key="frame" x="254" y="126" width="66" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Confirm">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveName:" destination="ygB-DK-ean" eventType="touchUpInside" id="Cck-tA-Vt0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.12650752139032373" green="0.98145721447319223" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
@@ -246,6 +270,7 @@
                     </view>
                     <connections>
                         <outlet property="enterName" destination="wTo-sV-BDT" id="j6l-ll-BDC"/>
+                        <outlet property="highScoreSetbyValue" destination="3Pd-zd-bUm" id="h74-uW-o4e"/>
                         <outlet property="highScoreTable" destination="jPP-fe-eM1" id="1hR-sc-VPa"/>
                         <outlet property="musicState" destination="wwt-Ew-rk1" id="p3G-VS-i3K"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="PlayerNamePassOver" id="dXo-xc-AWv"/>
@@ -585,7 +610,8 @@
         <image name="sub-buzz-29381-1508166343-1.jpg" width="683" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bvx-W9-KT7"/>
+        <segue reference="dXo-xc-AWv"/>
+        <segue reference="1gP-oV-axU"/>
         <segue reference="55O-b0-z7D"/>
         <segue reference="aen-qZ-6bh"/>
     </inferredMetricsTieBreakers>

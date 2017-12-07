@@ -11,7 +11,7 @@
 #import "MenuViewController.h"
 #import "ViewController.h"
 #import "InstructionsViewController.h"
-
+#import "DataShared.h"
 
 @interface SettingsViewController ()
 {
@@ -24,6 +24,10 @@
 @synthesize setName;
 
 - (void)viewDidLoad {
+    DataShared *data = [DataShared sharedInstance];
+    
+    NSString *stringKey = [[NSUserDefaults standardUserDefaults] stringForKey:@"ourTextKey"];
+    self.recentGamePlayerName = stringKey;
     
     // Construct URL to sound file
     NSString *path = [NSString stringWithFormat:@"%@/melodyloops-adrenaline.mp3", [[NSBundle mainBundle] resourcePath]];
@@ -40,6 +44,19 @@
         [MenuMusic stop];
     }
     
+    self.recentGamePlayerName = [[DataShared sharedInstance] userName];
+    self.recentGamePlayerScore = [[DataShared sharedInstance] highscoreVal];
+    NSLog(@"Recent Game Name = %@", self.recentGamePlayerName);
+    NSLog(@"Recent game score = %d", self.recentGamePlayerScore);
+    
+    if (self.recentGamePlayerScore > self.highsoreGamePlayerScore) {
+        self.highsoreGamePlayerScore = self.recentGamePlayerScore;
+        self.highscoreGamePlayerName = self.recentGamePlayerName;
+        NSLog(@"Highscore Game Name = %@", self.highscoreGamePlayerName);
+        NSLog(@"Highscore Game Score = %d", self.highsoreGamePlayerScore);
+            self.highScoreSetbyValue.text = [NSString stringWithFormat:@" %@ = %d", self.highscoreGamePlayerName ,self.highsoreGamePlayerScore];
+    }
+
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
@@ -53,31 +70,40 @@
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+/*- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"backButton"]){
         MenuViewController *Controller = (MenuViewController *)segue.destinationViewController;
         Controller.placeholderSwitchState= self.musicStatetoPass;
-        NSLog(@"The state being sent to menu is %@",self.musicStatetoPass);
-        NSLog(@"The state being sent to menu is %@",Controller.placeholderSwitchState);
+        NSLog(@"Music state menu = %@",self.musicStatetoPass);
+        NSLog(@"Music state sent menu = %@",Controller.placeholderSwitchState);
     }
     
-   else if ([segue.identifier isEqualToString:@"PlayerNamePassOver"]){
+   if ([segue.identifier isEqualToString:@"PlayerNamePassOver"]){
         ViewController *Controller2 = (ViewController *)segue.destinationViewController;
         Controller2.placeholderSwitchState2= _musicStatetoPass;
-        Controller2.playerName= self.setName;
-       NSLog(@"The name being set in game is %@", setName);
+       self.emptyName = self.setName;
+       NSLog(@"%@",self.emptyName);
+        Controller2.playerName= self.emptyName;
+       NSLog(@"Name set in game = %@", Controller2.playerName);
     }
     
-   else if ([segue.identifier isEqualToString:@"PassOverSettings"]){
+   if ([segue.identifier isEqualToString:@"PassOverSettings"]){
         InstructionsViewController *Controller4 = (InstructionsViewController *)segue.destinationViewController;
         Controller4.placeholderSwitchState4= _musicStatetoPass;
-       NSLog(@"The music state being passed to instructions is %@", self.musicStatetoPass);
+       NSLog(@"Music state passed to instructions = %@", self.musicStatetoPass);
     }
     
   // else if ([segue.identifier isEqualToString:@"PlayerNamePassOver"]){
        // ViewController *Controller5 = (ViewController *)segue.destinationViewController;
         //Controller5.playerName= self.setName;
    // }
+}*/
+
+- (IBAction)saveName:(UIButton *)sender {
+    self.setName = self.enterName.text;
+            [[DataShared sharedInstance] setUserName: setName];
+    NSLog(@"Name set button pressed = %@", self.setName);
+    NSLog(@"Shared name set = %@", [[DataShared sharedInstance] userName]);
 }
 
 - (IBAction)RemoveKeyboard:(UIControl *)sender {
@@ -107,26 +133,23 @@
     // Removes keyboard from view when we press return
 }
 
-- (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
-    self.setName = self.enterName.text;
-        NSLog(@"The name is now set as %@", self.enterName);
-    return YES;
-}
-
 - (IBAction)musicState:(UISwitch *)sender {
     if (sender.on) {
         [MenuMusic play];
-        self.musicState.text = [NSString stringWithFormat:@"Music State: On"];
+        /*self.musicState.text = [NSString stringWithFormat:@"Music State: On"];
         self.musicStatetoPass = [NSString stringWithFormat:@"On"];
-        NSLog(@"The music state is now %@", self.musicStatetoPass);
+        NSLog(@"Music state button is %@", self.musicStatetoPass);*/
+        [[DataShared sharedInstance] setStateOfMusic:@"On"];
+        NSLog(@"State of button = %@", [[DataShared sharedInstance] StateOfMusic]);
     }
     
     else {
         [MenuMusic stop];
-        self.musicState.text = [NSString stringWithFormat:@"Music State: Off"];
+        /*self.musicState.text = [NSString stringWithFormat:@"Music State: Off"];
         self.musicStatetoPass = [NSString stringWithFormat:@"Off"];
-        NSLog(@"The music state is now %@", self.musicStatetoPass);
-
+        NSLog(@"Music state button is %@", self.musicStatetoPass);*/
+                [[DataShared sharedInstance] setStateOfMusic:@"Off"];
+                NSLog(@"State of button = %@", [[DataShared sharedInstance] StateOfMusic]);
     }
 }
 @end

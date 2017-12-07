@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A5D964E1FD8235A00AE2A37 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFEE31B71FD0182E00A47C86 /* SettingsViewController.m */; };
+		0A5D96551FD9992B00AE2A37 /* DataShared.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5D96541FD9992B00AE2A37 /* DataShared.m */; };
 		CF67D3D51FCF2BE5005868F3 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF67D3D41FCF2BE5005868F3 /* MenuViewController.m */; };
 		CF67D3D71FCF2EC9005868F3 /* maxresdefault.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF67D3D61FCF2EC9005868F3 /* maxresdefault.jpg */; };
 		CF8870581FC31CB900AEFB94 /* cyborg_bunny_by_crowsrock-d50l4tg.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8870571FC31CB900AEFB94 /* cyborg_bunny_by_crowsrock-d50l4tg.png */; };
@@ -58,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A5D96531FD9992B00AE2A37 /* DataShared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataShared.h; sourceTree = "<group>"; };
+		0A5D96541FD9992B00AE2A37 /* DataShared.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataShared.m; sourceTree = "<group>"; };
 		CF67D3D31FCF2BE5005868F3 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		CF67D3D41FCF2BE5005868F3 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		CF67D3D61FCF2EC9005868F3 /* maxresdefault.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = maxresdefault.jpg; sourceTree = "<group>"; };
@@ -165,6 +168,8 @@
 				CF67D3D31FCF2BE5005868F3 /* MenuViewController.h */,
 				CF67D3D41FCF2BE5005868F3 /* MenuViewController.m */,
 				CFE350F81FB9A60900EA8EFB /* Main.storyboard */,
+				0A5D96531FD9992B00AE2A37 /* DataShared.h */,
+				0A5D96541FD9992B00AE2A37 /* DataShared.m */,
 				CFE350FB1FB9A60900EA8EFB /* Assets.xcassets */,
 				CFE350FD1FB9A60900EA8EFB /* LaunchScreen.storyboard */,
 				CFE351001FB9A60900EA8EFB /* Info.plist */,
@@ -376,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A5D96551FD9992B00AE2A37 /* DataShared.m in Sources */,
 				CFE350F71FB9A60900EA8EFB /* ViewController.m in Sources */,
 				CFE350F41FB9A60900EA8EFB /* AppDelegate.m in Sources */,
 				CFE350F11FB9A60900EA8EFB /* main.m in Sources */,

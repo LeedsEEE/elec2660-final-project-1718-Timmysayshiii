@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DataShared.h"
 
 @interface InstructionsViewController : UIViewController
 @property (strong, nonatomic) NSString *placeholderSwitchState4;

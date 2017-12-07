@@ -7,19 +7,28 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DataShared.h"
 
 @interface SettingsViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *enterName;
 @property (weak, nonatomic) IBOutlet UITableView *highScoreTable;
 @property (weak, nonatomic) IBOutlet UILabel *musicState;
-@property (strong, nonatomic) NSString *musicStatetoPass;
+@property (weak, nonatomic) NSString *highscoreSetbyValueX;
+@property (weak, nonatomic) IBOutlet UILabel *highScoreSetbyValue;
 
+@property (strong, nonatomic) NSString *musicStatetoPass;
 @property (strong, nonatomic) NSString *placeholderSwitchState2;
 @property (strong, nonatomic) NSString *setName;
+@property (strong, nonatomic) NSString *emptyName;
+@property (strong, nonatomic) NSString *recentGamePlayerName;
+@property int recentGamePlayerScore;
+@property (strong, nonatomic) NSString *highscoreGamePlayerName;
+@property int highsoreGamePlayerScore;
 
 - (IBAction)musicState:(UISwitch *)sender;
 - (IBAction)BackButtonPressed:(UIButton *)sender;
 - (IBAction)RemoveKeyboard:(UIControl *)sender;
+- (IBAction)saveName:(UIButton *)sender;
 
 @end
