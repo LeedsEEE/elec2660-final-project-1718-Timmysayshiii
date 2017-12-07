@@ -498,6 +498,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="332" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
+                                    <action selector="userDragStopLeft:" destination="7fy-NQ-R0J" eventType="touchDragExit" id="ufE-CP-X8B"/>
                                     <action selector="userMoveLeft:" destination="7fy-NQ-R0J" eventType="touchDown" id="TgQ-Qs-GyM"/>
                                     <action selector="userStopLeft:" destination="7fy-NQ-R0J" eventType="touchUpInside" id="exa-JS-co3"/>
                                 </connections>
@@ -506,6 +507,7 @@
                                 <rect key="frame" x="331" y="0.0" width="336" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
+                                    <action selector="userDragStopRight:" destination="7fy-NQ-R0J" eventType="touchDragExit" id="UcB-tb-Y3K"/>
                                     <action selector="userMoveRight:" destination="7fy-NQ-R0J" eventType="touchDown" id="AS5-Ac-MWG"/>
                                     <action selector="userStopRight:" destination="7fy-NQ-R0J" eventType="touchUpInside" id="F4t-2t-D35"/>
                                 </connections>

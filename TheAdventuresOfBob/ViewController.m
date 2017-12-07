@@ -188,7 +188,17 @@ int score;
 
 - (IBAction)userStopRight:(UIButton *)sender {
     [self.rightTimer invalidate];
-    self.rightTimer = nil;
+     self.rightTimer = nil;
+}
+
+- (IBAction)userDragStopLeft:(UIButton *)sender {
+    [self.leftTimer invalidate];
+     self.leftTimer = nil;
+}
+
+- (IBAction)userDragStopRight:(UIButton *)sender {
+    [self.rightTimer invalidate];
+     self.rightTimer = nil;
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -220,7 +230,6 @@ int score;
 }
 
 -(void)fistattackMovement {
-  
     self.FistAttack.hidden = NO;
     self.FistAttack.center = CGPointMake(self.FistAttack.center.x + 10, self.FistAttack.center.y);
     //int width = (int)self.view.frame.size.width;
@@ -254,8 +263,6 @@ int score;
 
 -(void)bunnyMovementTimerx {
     // Creating random speeds for the bunny to move at
-    
-    
     self.bunnyMovementTimer = [NSTimer scheduledTimerWithTimeInterval:bunnySpeed target:self selector:@selector(bunnyMovement) userInfo:nil repeats:YES];
 }
 
@@ -283,11 +290,9 @@ int score;
         default:
             break;
     }
-    
     // Sets how quick new attacks will occur
     Chanceofattack = arc4random() % 5;
     [self performSelector:@selector(bunnyMovementTimerx) withObject:nil afterDelay:Chanceofattack];
-    
 }
 
 -(void)bunnyMovement {
@@ -295,24 +300,19 @@ int score;
     /*[UIView animateWithDuration:0.4 animations:^{
         self.BorgBunnySprite.center = CGPointMake(self.BorgBunnySprite.center.x+10, self.BorgBunnySprite.center.y);} completion:^(BOOL finished){
         }];*/
-    
     // If a collision between the two sprites occur, health will be deducted.
     if (CGRectIntersectsRect(self.BorgBunnySprite.frame, self.RoadmanShaq.frame)) {
         self.HealthBar.progress = self.HealthBar.progress - 0.2;
         [self.bunnyMovementTimer invalidate];
-    
-    
     // If the user still has health left, the sprite will relocate for another attack and game will still be active
     if (self.HealthBar.progress > 0) {
         [self bunnyPosition];
     }
-    
     // If the user has no health, the game will be over
     if (self.HealthBar.progress == 0) {
         [self GameOver];
     }
     }
-    
     if (CGRectIntersectsRect(self.BorgBunnySprite.frame, self.leftBorder.frame)){
         [self bunnyPosition];
     }

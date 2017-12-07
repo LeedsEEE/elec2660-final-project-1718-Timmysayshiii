@@ -50,6 +50,8 @@
 - (IBAction)userStopLeft:(UIButton *)sender;
 - (IBAction)userMoveRight:(UIButton *)sender;
 - (IBAction)userStopRight:(UIButton *)sender;
+- (IBAction)userDragStopLeft:(UIButton *)sender;
+- (IBAction)userDragStopRight:(UIButton *)sender;
 @property (strong, nonatomic) NSTimer *leftTimer;
 @property (strong, nonatomic) NSTimer *rightTimer;
 
