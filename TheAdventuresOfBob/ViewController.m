@@ -485,7 +485,7 @@ int score;
  https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/b0e53331516629.565449774c2d4.png
  
  Fist Attack Pickture
- http://all-free-download.com/free-vector/download/fist-outline-lineart-clip-art_18637.html
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5zAPPNnj_LlVi2YeVQOetsMrCmputmhjAu3z6cY8IxCZkb6EKJw
  
  Fireball Picture
  https://www.giantbomb.com/fireball/3055-120/
