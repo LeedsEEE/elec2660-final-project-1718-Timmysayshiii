@@ -76,13 +76,13 @@ int score;
     // Setting the original positions for the sprites for when the game will load.
     
     self.RoadmanShaq.center = CGPointMake(50, 350);
-    self.BorgBunnySprite.center = CGPointMake(770, 350);
+    self.BorgBunnySprite.center = CGPointMake(785, 350);
     self.FistAttack.center = CGPointMake(self.RoadmanShaq.center.x, self.RoadmanShaq.center.y);
     self.Fireball.center = CGPointMake(self.BorgBunnySprite.center.x, self.BorgBunnySprite.center.y);
-    self.egg1.center = CGPointMake(200, -20);
-    self.egg2.center = CGPointMake(300, -20);
-    self.egg3.center = CGPointMake(400, -20);
-    self.egg4.center = CGPointMake(500, -20);
+    self.egg1.center = CGPointMake(100, -20);
+    self.egg2.center = CGPointMake(300, -40);
+    self.egg3.center = CGPointMake(500, -60);
+    self.egg4.center = CGPointMake(200, -80);
    
     [self bunnyPosition];
    
@@ -258,6 +258,12 @@ int score;
         //Stops the bunny from moving and then recenters for another attack
         [self.bunnyMovementTimer invalidate];
         [self bunnyPosition];
+    }
+    
+    if (CGRectIntersectsRect(self.FistAttack.frame, self.rightBorder.frame)) {
+        [self.fistattackMovementTimer invalidate];
+        self.FistAttack.center = CGPointMake(self.RoadmanShaq.center.x, self.RoadmanShaq.center.y);
+        self.FistAttack.hidden = true;
     }
 }
 
@@ -451,7 +457,7 @@ int score;
     // Setting the original positions for the sprites for when the game will load.
     
     self.RoadmanShaq.center = CGPointMake(50, 350);
-    self.BorgBunnySprite.center = CGPointMake(770, 350);
+    self.BorgBunnySprite.center = CGPointMake(785, 350);
     self.FistAttack.center = CGPointMake(self.RoadmanShaq.center.x, self.RoadmanShaq.center.y);
     self.Fireball.center = CGPointMake(self.BorgBunnySprite.center.x, self.BorgBunnySprite.center.y);
     self.egg1.center = CGPointMake(200, -20);

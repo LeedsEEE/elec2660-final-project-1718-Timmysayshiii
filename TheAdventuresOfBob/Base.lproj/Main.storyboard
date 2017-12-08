@@ -534,7 +534,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpC-DC-h9R">
-                                <rect key="frame" x="204" y="262" width="298" height="30"/>
+                                <rect key="frame" x="0.0" y="262" width="667" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Fast99" family="Fast 99" pointSize="25"/>
                                 <state key="normal" title="Quit">
@@ -545,7 +545,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTc-bL-2d6">
-                                <rect key="frame" x="204" y="234" width="298" height="30"/>
+                                <rect key="frame" x="0.0" y="234" width="667" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Fast99" family="Fast 99" pointSize="24"/>
                                 <state key="normal" title="Replay Game">
@@ -553,21 +553,21 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Over!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFi-lf-jRS">
-                                <rect key="frame" x="204" y="154" width="298" height="21"/>
+                                <rect key="frame" x="0.0" y="154" width="667" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Fast99" family="Fast 99" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Congratulations " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fF-wu-xDH">
-                                <rect key="frame" x="204" y="183" width="298" height="21"/>
+                                <rect key="frame" x="0.0" y="183" width="667" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Fast99" family="Fast 99" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Score = " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eg6-R2-CGK">
-                                <rect key="frame" x="204" y="212" width="298" height="21"/>
+                                <rect key="frame" x="0.0" y="212" width="667" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Fast99" family="Fast 99" pointSize="28"/>
                                 <nil key="textColor"/>
@@ -622,8 +622,8 @@
         <image name="sub-buzz-29381-1508166343-1.jpg" width="683" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1gP-oV-axU"/>
-        <segue reference="a9G-qd-Sh8"/>
+        <segue reference="bvx-W9-KT7"/>
+        <segue reference="55O-b0-z7D"/>
         <segue reference="RtT-gh-6lO"/>
     </inferredMetricsTieBreakers>
 </document>
