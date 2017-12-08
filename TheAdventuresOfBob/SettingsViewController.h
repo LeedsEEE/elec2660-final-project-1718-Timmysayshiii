@@ -22,9 +22,9 @@
 @property (strong, nonatomic) NSString *setName;
 @property (strong, nonatomic) NSString *emptyName;
 @property (strong, nonatomic) NSString *recentGamePlayerName;
-@property int recentGamePlayerScore;
+@property NSInteger recentGamePlayerScore;
 @property (strong, nonatomic) NSString *highscoreGamePlayerName;
-@property int highsoreGamePlayerScore;
+@property NSInteger highsoreGamePlayerScore;
 
 - (IBAction)musicState:(UISwitch *)sender;
 - (IBAction)BackButtonPressed:(UIButton *)sender;

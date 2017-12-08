@@ -26,9 +26,6 @@
 - (void)viewDidLoad {
     DataShared *data = [DataShared sharedInstance];
     
-    NSString *stringKey = [[NSUserDefaults standardUserDefaults] stringForKey:@"ourTextKey"];
-    self.recentGamePlayerName = stringKey;
-    
     // Construct URL to sound file
     NSString *path = [NSString stringWithFormat:@"%@/melodyloops-adrenaline.mp3", [[NSBundle mainBundle] resourcePath]];
     NSURL *soundUrl = [NSURL fileURLWithPath:path];
@@ -44,18 +41,7 @@
         [MenuMusic stop];
     }
     
-    self.recentGamePlayerName = [[DataShared sharedInstance] userName];
-    self.recentGamePlayerScore = [[DataShared sharedInstance] highscoreVal];
-    NSLog(@"Recent Game Name = %@", self.recentGamePlayerName);
-    NSLog(@"Recent game score = %d", self.recentGamePlayerScore);
-    
-    if (self.recentGamePlayerScore > self.highsoreGamePlayerScore) {
-        self.highsoreGamePlayerScore = self.recentGamePlayerScore;
-        self.highscoreGamePlayerName = self.recentGamePlayerName;
-        NSLog(@"Highscore Game Name = %@", self.highscoreGamePlayerName);
-        NSLog(@"Highscore Game Score = %d", self.highsoreGamePlayerScore);
-            self.highScoreSetbyValue.text = [NSString stringWithFormat:@" %@ = %d", self.highscoreGamePlayerName ,self.highsoreGamePlayerScore];
-    }
+
 
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -64,6 +50,43 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    self.recentGamePlayerName = [[DataShared sharedInstance] userName];
+    self.recentGamePlayerScore = [[DataShared sharedInstance] highscoreVal];
+    NSLog(@"Recent Game Name = %@", self.recentGamePlayerName);
+    NSLog(@"Recent game score = %ld", self.recentGamePlayerScore);
+    
+    if (self.recentGamePlayerScore > self.highsoreGamePlayerScore) {
+        self.highsoreGamePlayerScore = self.recentGamePlayerScore;
+        self.highscoreGamePlayerName = self.recentGamePlayerName;
+        NSLog(@"Highscore Game Name = %@", self.highscoreGamePlayerName);
+        NSLog(@"Highscore Game Score = %ld", self.highsoreGamePlayerScore);
+        self.highScoreSetbyValue.text = [NSString stringWithFormat:@" %@ = %ld", self.highscoreGamePlayerName ,self.highsoreGamePlayerScore];
+        self.highscoreSetbyValueX = self.highScoreSetbyValue.text;
+    }
+    
+    
+    NSString *stringKey = [[NSUserDefaults standardUserDefaults] stringForKey:@"ourTextKey"];
+    self.enterName.text = stringKey;
+    
+    NSInteger strRecentScore = [[NSUserDefaults standardUserDefaults] integerForKey:@"recentScore"];
+    self.recentGamePlayerScore = strRecentScore;
+    
+    NSString *strRecentPlayer = [[NSUserDefaults standardUserDefaults] stringForKey:@"recentName"];
+    self.recentGamePlayerName = strRecentPlayer;
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    NSString *textWithinField = _enterName.text ;
+    [[NSUserDefaults standardUserDefaults]setObject:textWithinField forKey:@"ourTextKey"];
+    
+    NSInteger recentScoreSave = [[DataShared sharedInstance] highscoreVal];
+    [[NSUserDefaults standardUserDefaults]setInteger:recentScoreSave forKey:@"recentScore"];
+    
+    NSString *recentNameSave = [[DataShared sharedInstance] userName];
+    [[NSUserDefaults standardUserDefaults]setObject:recentNameSave forKey:@"recentName"];
 }
 
 

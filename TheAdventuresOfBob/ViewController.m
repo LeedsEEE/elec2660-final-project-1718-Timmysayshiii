@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "DataShared.h"
+#import "SettingsViewController.h"
 @interface ViewController ()
 
 {
@@ -463,6 +464,13 @@ int score;
     self.eggMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(eggMovement) userInfo:nil repeats:YES];
     
 }
+
+-(void)viewWillAppear:(BOOL)animated{
+    NSString *strRecentName = [[NSUserDefaults standardUserDefaults] stringForKey:@"recentName"];
+    
+}
+
+-(void)viewWillDisappear:(BOOL)animated
 
 @end
 
