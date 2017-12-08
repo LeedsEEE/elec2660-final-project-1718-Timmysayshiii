@@ -12,7 +12,6 @@
 @interface SettingsViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *enterName;
-@property (weak, nonatomic) IBOutlet UITableView *highScoreTable;
 @property (weak, nonatomic) IBOutlet UILabel *musicState;
 @property (weak, nonatomic) NSString *highscoreSetbyValueX;
 @property (weak, nonatomic) IBOutlet UILabel *highScoreSetbyValue;
