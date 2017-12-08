@@ -12,6 +12,7 @@
 		0A5D96571FDA90E600AE2A37 /* fallingeggs.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5D96561FDA90E600AE2A37 /* fallingeggs.png */; };
 		0A5D96591FDA92FD00AE2A37 /* fist_outline_lineart_clip_art_18637.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5D96581FDA92FA00AE2A37 /* fist_outline_lineart_clip_art_18637.png */; };
 		0A5D965B1FDA949F00AE2A37 /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5D965A1FDA949D00AE2A37 /* images.png */; };
+		0A5D965D1FDA9D5F00AE2A37 /* Screen Shot 2017-12-08 at 09.48.32.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A5D965C1FDA9D5F00AE2A37 /* Screen Shot 2017-12-08 at 09.48.32.png */; };
 		CF67D3D51FCF2BE5005868F3 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF67D3D41FCF2BE5005868F3 /* MenuViewController.m */; };
 		CF67D3D71FCF2EC9005868F3 /* maxresdefault.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF67D3D61FCF2EC9005868F3 /* maxresdefault.jpg */; };
 		CF8870581FC31CB900AEFB94 /* cyborg_bunny_by_crowsrock-d50l4tg.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8870571FC31CB900AEFB94 /* cyborg_bunny_by_crowsrock-d50l4tg.png */; };
@@ -65,6 +66,7 @@
 		0A5D96561FDA90E600AE2A37 /* fallingeggs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fallingeggs.png; sourceTree = "<group>"; };
 		0A5D96581FDA92FA00AE2A37 /* fist_outline_lineart_clip_art_18637.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fist_outline_lineart_clip_art_18637.png; sourceTree = "<group>"; };
 		0A5D965A1FDA949D00AE2A37 /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images.png; sourceTree = "<group>"; };
+		0A5D965C1FDA9D5F00AE2A37 /* Screen Shot 2017-12-08 at 09.48.32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2017-12-08 at 09.48.32.png"; sourceTree = "<group>"; };
 		CF67D3D31FCF2BE5005868F3 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		CF67D3D41FCF2BE5005868F3 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		CF67D3D61FCF2EC9005868F3 /* maxresdefault.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = maxresdefault.jpg; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			children = (
 				CFE350F01FB9A60900EA8EFB /* main.m */,
 				CFF471861FD69F4D002317E9 /* melodyloops-adrenaline.mp3 */,
+				0A5D965C1FDA9D5F00AE2A37 /* Screen Shot 2017-12-08 at 09.48.32.png */,
 				CFF7FF1C1FD1A22300C92928 /* leadcoat.ttf */,
 				CFF7FF1E1FD1A22D00C92928 /* fast99.ttf */,
 				CFF7FF201FD1A23E00C92928 /* ASMAN.TTF */,
@@ -346,6 +349,7 @@
 				CFF7FF221FD1A38500C92928 /* fast99.ttf in Resources */,
 				0A5D965B1FDA949F00AE2A37 /* images.png in Resources */,
 				CFF7FF231FD1A38700C92928 /* ASMAN.TTF in Resources */,
+				0A5D965D1FDA9D5F00AE2A37 /* Screen Shot 2017-12-08 at 09.48.32.png in Resources */,
 				CFF7FF241FD1A38900C92928 /* SIXTY.TTF in Resources */,
 				CFF7FF251FD1A38B00C92928 /* sewer.ttf in Resources */,
 				CFF471871FD69F4D002317E9 /* melodyloops-adrenaline.mp3 in Resources */,

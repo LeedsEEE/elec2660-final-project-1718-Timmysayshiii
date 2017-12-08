@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="ASMAN.TTF">
+            <string>Asman</string>
+        </array>
         <array key="fast99.ttf">
             <string>Fast99</string>
         </array>
@@ -300,6 +303,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2017-12-08 at 09.48.32.png" translatesAutoresizingMaskIntoConstraints="NO" id="6v5-ov-RnR">
+                                <rect key="frame" x="-107" y="-41" width="871" height="439"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="871" id="Mf1-gv-MJM"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e02-ky-7sO">
                                 <rect key="frame" x="20" y="317" width="80" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -315,6 +324,11 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6v5-ov-RnR" firstAttribute="top" secondItem="Jgj-h7-vgV" secondAttribute="topMargin" constant="-41" id="70y-fJ-6WE"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="6v5-ov-RnR" secondAttribute="bottom" constant="-23" id="Dme-Az-wcx"/>
+                            <constraint firstItem="6v5-ov-RnR" firstAttribute="leading" secondItem="Jgj-h7-vgV" secondAttribute="leading" constant="-107" id="eFz-eQ-Paz"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wx8-iB-2mN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -464,7 +478,7 @@
                                 <rect key="frame" x="20" y="10" width="55" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.3930260894" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Asman" family="Asman" pointSize="21"/>
                                 <color key="textColor" red="1" green="0.21174644479999999" blue="0.1031048535" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="1" green="0.65993173630000002" blue="0.72688806979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -474,7 +488,7 @@
                                 <rect key="frame" x="529" y="10" width="118" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.1710689484" green="0.15795826069999999" blue="0.16354601320000001" alpha="0.65786267200000004" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Asman" family="Asman" pointSize="19"/>
                                 <color key="textColor" red="1" green="0.05800630524" blue="0.21528021980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -507,21 +521,22 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e4y-Cf-d6F">
-                                <rect key="frame" x="0.0" y="359" width="667" height="16"/>
+                                <rect key="frame" x="0.0" y="369" width="667" height="6"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rCk-aR-yKi">
-                                <rect key="frame" x="0.0" y="0.0" width="13" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="6" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="his-Po-98H">
-                                <rect key="frame" x="655" y="0.0" width="12" height="375"/>
+                                <rect key="frame" x="662" y="0.0" width="5" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlD-gT-owN">
                                 <rect key="frame" x="591" y="337" width="56" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.65128996220000002" green="0.63020898680000004" blue="0.65384217919999998" alpha="0.63082951070000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="SewerSys" family="Sewer Sys" pointSize="16"/>
                                 <state key="normal" title="ATTACK">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -613,6 +628,7 @@
     </scenes>
     <resources>
         <image name="875575-mkdd_fireball_mario.jpg" width="640" height="640"/>
+        <image name="Screen Shot 2017-12-08 at 09.48.32.png" width="885" height="450"/>
         <image name="b0e53331516629.565449774c2d4.png" width="1200" height="717"/>
         <image name="cyborg_bunny_by_crowsrock-d50l4tg.png" width="900" height="900"/>
         <image name="fallingeggs.jpg" width="556" height="626"/>
@@ -624,8 +640,8 @@
         <image name="sub-buzz-29381-1508166343-1.jpg" width="683" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bvx-W9-KT7"/>
-        <segue reference="55O-b0-z7D"/>
+        <segue reference="y5L-x9-gy5"/>
+        <segue reference="a9G-qd-Sh8"/>
         <segue reference="RtT-gh-6lO"/>
     </inferredMetricsTieBreakers>
 </document>
