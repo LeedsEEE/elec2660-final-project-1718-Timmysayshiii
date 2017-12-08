@@ -24,13 +24,11 @@
 @synthesize setName;
 
 - (void)viewDidLoad {
-    DataShared *data = [DataShared sharedInstance];
-    
-    // Construct URL to sound file
+    // Set up URL to sound file
     NSString *path = [NSString stringWithFormat:@"%@/melodyloops-adrenaline.mp3", [[NSBundle mainBundle] resourcePath]];
     NSURL *soundUrl = [NSURL fileURLWithPath:path];
     
-    // Create audio player object and initialize with URL to sound
+    // Created an audio player object and initialized with URL to sound
     MenuMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
     if ([self.musicStatetoPass isEqualToString:@"On"]) {
         NSLog(@"Music in settings is On");
@@ -41,8 +39,6 @@
         [MenuMusic stop];
     }
     
-
-
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
@@ -51,7 +47,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+#pragma mark Data Transfer
 -(void)viewWillAppear:(BOOL)animated{
     self.recentGamePlayerName = [[DataShared sharedInstance] userName];
     self.recentGamePlayerScore = [[DataShared sharedInstance] highscoreVal];
@@ -155,7 +151,6 @@
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 /*- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"backButton"]){
         MenuViewController *Controller = (MenuViewController *)segue.destinationViewController;
@@ -185,29 +180,19 @@
    // }
 }*/
 
+// Action which saves the name once the button is pressed
 - (IBAction)saveName:(UIButton *)sender {
     self.setName = self.enterName.text;
-            [[DataShared sharedInstance] setUserName: setName];
+    [[DataShared sharedInstance] setUserName: setName];
     NSLog(@"Name set button pressed = %@", self.setName);
     NSLog(@"Shared name set = %@", [[DataShared sharedInstance] userName]);
-}
-
-- (IBAction)RemoveKeyboard:(UIControl *)sender {
-    // Allows keyboard to be removed after we click background. UIView is changed to UIControl. Create IBAction and set event to touchupinside.
-    
-    NSLog(@"Background Pressed");
-    if ([self.enterName isFirstResponder]) {
-        [self.enterName resignFirstResponder];
-    }
 }
 
 - (IBAction)BackButtonPressed:(UIButton *)sender {
      [MenuMusic stop];
 }
 
-
 #pragma mark Text Field Delegate Method
-
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
     
@@ -219,6 +204,17 @@
     // Removes keyboard from view when we press return
 }
 
+- (IBAction)RemoveKeyboard:(UIControl *)sender {
+    // Allows keyboard to be removed after we click background. UIView is changed to UIControl. Create IBAction and set event to touchupinside.
+    
+    NSLog(@"Background Pressed");
+    if ([self.enterName isFirstResponder]) {
+        [self.enterName resignFirstResponder];
+    }
+}
+
+#pragma mark State of music
+// Set the state for the music within the view.
 - (IBAction)musicState:(UISwitch *)sender {
     if (sender.on) {
         [MenuMusic play];

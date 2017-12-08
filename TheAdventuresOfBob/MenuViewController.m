@@ -23,17 +23,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    DataShared *data = [DataShared sharedInstance];
-
     self.SwitchStateLabel.hidden = true;
     NSLog(@"Value passed down to menu is %@",self.placeholderSwitchState);
-        // Construct URL to sound file
-        NSString *path = [NSString stringWithFormat:@"%@/melodyloops-adrenaline.mp3", [[NSBundle mainBundle] resourcePath]];
-        NSURL *soundUrl = [NSURL fileURLWithPath:path];
+    
+    // Set up URL to sound file
+    NSString *path = [NSString stringWithFormat:@"%@/melodyloops-adrenaline.mp3", [[NSBundle mainBundle] resourcePath]];
+    NSURL *soundUrl = [NSURL fileURLWithPath:path];
         
-        // Create audio player object and initialize with URL to sound
-        MenuMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    // Created an audio player object and initialized with URL to sound
+    MenuMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    
+    //Determines state of music depending on what is being sent.
     if ((self.placeholderSwitchState = @"On")) {
        NSLog(@"The switch state recieved in menu is %@" , self.placeholderSwitchState);
        [MenuMusic play];
@@ -52,16 +52,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
+// Ends the music when i change between views within my game
 - (IBAction)StartGamePressed:(UIButton *)sender {
     [MenuMusic stop];
 }

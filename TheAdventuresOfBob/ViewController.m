@@ -18,6 +18,7 @@
 
 @end
 
+// Declaring integers to be used within code
 int Chanceofattack;
 float bunnySpeed;
 int randomSpeed;
@@ -25,31 +26,31 @@ int score;
 
 @implementation ViewController
 
+// synthesized the playerName to be used within the view
 @synthesize playerName;
 
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    DataShared *data = [DataShared sharedInstance];
+    
+    //Setting a value from my DataShared model with a string in the game view
     self.playerName = [[DataShared sharedInstance] userName];
     NSLog(@"Name set in game = %@", self.playerName);
-
-    // Do any additional setup after loading the view.
     
-    // Construct URL to sound file
+    // Set up a URL to sound file
     NSString *path = [NSString stringWithFormat:@"%@/melodyloops-adrenaline.mp3", [[NSBundle mainBundle] resourcePath]];
     NSURL *soundUrl = [NSURL fileURLWithPath:path];
     
-    // Create audio player object and initialize with URL to sound
+    // Created an audio player object and initialized with URL to sound
     MenuMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:soundUrl error:nil];
+    
     if ((self.placeholderSwitchState2 = @"On")) {
-        NSLog(@"On");
+        NSLog(@"Placeholder switch state is On");
         [MenuMusic play];
     }
     
     // Displays the elements needed for the game when we press start. In turn the menu will be hidden.
-    
     self.FistAttack.hidden = true;
     self.HealthBar.hidden = false;
     self.Score.hidden = false;
@@ -66,15 +67,14 @@ int score;
     self.endgameScore.hidden = true;
     self.endgameReplay.hidden = true;
     self.congratsName.hidden = true;
+    
     // Set the original value for score/health and using a string to display this.
-    
     score = 0;
-    
     self.Score.text = [NSString stringWithFormat:@"Score:   %d", score];
+    NSLog(@"Score in viewDidLoad = %d", score);
     self.HealthBar.progress = 1;
     
     // Setting the original positions for the sprites for when the game will load.
-    
     self.RoadmanShaq.center = CGPointMake(50, 350);
     self.BorgBunnySprite.center = CGPointMake(785, 350);
     self.FistAttack.center = CGPointMake(self.RoadmanShaq.center.x, self.RoadmanShaq.center.y);
@@ -83,24 +83,19 @@ int score;
     self.egg2.center = CGPointMake(300, -40);
     self.egg3.center = CGPointMake(500, -60);
     self.egg4.center = CGPointMake(200, -80);
-   
-    [self bunnyPosition];
-   
-    self.eggMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(eggMovement) userInfo:nil repeats:YES];
     
+    // Starting the methods/timers for my enemy/falling objects
+    [self bunnyPosition];
+    self.eggMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(eggMovement) userInfo:nil repeats:YES];
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-#pragma mark Code regarding starting games.
+#pragma mark Code regarding games navigation.
 
 - (IBAction)StartGame:(UIButton *)sender {
-    
 }
 
 - (IBAction)endgameReplayc:(UIButton *)sender {
@@ -155,94 +150,96 @@ int score;
     [MenuMusic stop];
 }
 
-
 #pragma mark Code regarding the users movements
 
+// Created two void functions to allow the position of the user to move 5 spaces left or right.
 -(void)userLeft {
+    // Sprite would move left 5 pixels if function called.
     self.RoadmanShaq.center = CGPointMake(self.RoadmanShaq.center.x - 5, self.RoadmanShaq.center.y);
+    
+    // If the value of sprites x position is equal to -9 it will set the x position to -10 to stay within bounds.
+    /*if (self.RoadmanShaq.center.x <=-9) {
+        self.RoadmanShaq.center = CGPointMake(-10, self.RoadmanShaq.center.y);
+        NSLog(@"User position x = %f", self.RoadmanShaq.center.x);*/
+    if (CGRectIntersectsRect(self.RoadmanShaq.frame, self.leftBorder.frame)) {
+        self.RoadmanShaq.center = CGPointMake(15, 350);
+    }
 }
 
 -(void)userRight {
-        self.RoadmanShaq.center = CGPointMake(self.RoadmanShaq.center.x + 5, self.RoadmanShaq.center.y);
+    // Sprite would move right 5 pixels if function called.
+    self.RoadmanShaq.center = CGPointMake(self.RoadmanShaq.center.x + 5, self.RoadmanShaq.center.y);
+    
+    // If the value of sprites x position is equal to 775 it will set the x position to 775 to stay within bounds.
+    /*if (self.RoadmanShaq.center.x <=775) {
+        self.RoadmanShaq.center = CGPointMake(775, self.RoadmanShaq.center.y);
+        NSLog(@"User position x = %f", self.RoadmanShaq.center.x);*/
+    if (CGRectIntersectsRect(self.RoadmanShaq.frame, self.rightBorder.frame)) {
+        self.RoadmanShaq.center = CGPointMake(625, 350);
+    }
 }
 
+// Calls up the void function depending on what action we do.
 - (IBAction)userMoveLeft:(UIButton *)sender {
+    // Repeats the fuction in the selector in intervals which I select. This activates when we hold down the button.
     self.leftTimer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(userLeft) userInfo:nil repeats:YES];
     if (self.leftTimer == nil) {
         self.leftTimer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(userLeft) userInfo:nil repeats:YES];
-        
     }
-    
 }
 
+// Stops the timer which stops the user moving. This activates when we user releases his hand, which acts as a touch up inside.
 - (IBAction)userStopLeft:(UIButton *)sender {
     [self.leftTimer invalidate];
     self.leftTimer = nil;
 }
 
+//Stops the timer which stops the user moving. This activates when the user drags off the button.
+- (IBAction)userDragStopLeft:(UIButton *)sender {
+    [self.leftTimer invalidate];
+    self.leftTimer = nil;
+}
+
 - (IBAction)userMoveRight:(UIButton *)sender {
+    // Repeats the fuction in the selector in intervals which I select. This activates when we hold down the button.
     self.rightTimer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(userRight) userInfo:nil repeats:YES];
     if (self.rightTimer == nil) {
         self.rightTimer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(userRight) userInfo:nil repeats:YES];
-        
     }
 }
 
+// Stops the timer which stops the user moving. This activates when we user releases his hand, which acts as a touch up inside.
 - (IBAction)userStopRight:(UIButton *)sender {
     [self.rightTimer invalidate];
      self.rightTimer = nil;
 }
 
-- (IBAction)userDragStopLeft:(UIButton *)sender {
-    [self.leftTimer invalidate];
-     self.leftTimer = nil;
-}
-
+//Stops the timer which stops the user moving. This activates when the user drags off the button.
 - (IBAction)userDragStopRight:(UIButton *)sender {
     [self.rightTimer invalidate];
      self.rightTimer = nil;
 }
-
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    
-    
-}
-
-
-// Implementing the method of touchesMoved to move my sprite in the direction we tap the screen.
-
-/*-(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    self.touch= [touches anyObject];
-    // Can implement If statements for better control
-    
-    CGPoint point = [self.touch locationInView:self.view];
-    self.RoadmanShaq.center = CGPointMake(point.x, self.RoadmanShaq.center.y);
-}*/
 
 #pragma mark Code regarding the users attack
 
 // Method for the attack button to launch a projectile attack.
 
 - (IBAction)AttackButton:(UIButton *)sender {
+    // Cancels the previous attack and resets the position of the attack sprite.
     [self.fistattackMovementTimer invalidate];
     self.FistAttack.hidden = false;
     self.FistAttack.center = CGPointMake(self.RoadmanShaq.center.x, self.RoadmanShaq.center.y);
     
+    // Starts the attack again within the timer which repeats the selector for set interval.
     self.fistattackMovementTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(fistattackMovement) userInfo:nil repeats:YES];
 }
 
+// Code for the attacks movement
 -(void)fistattackMovement {
+    // Makes the attack sprite visable and moves right 10 pixels as code is called up.
     self.FistAttack.hidden = NO;
     self.FistAttack.center = CGPointMake(self.FistAttack.center.x + 10, self.FistAttack.center.y);
-    //int width = (int)self.view.frame.size.width;
-    
-    /*[UIView animateWithDuration:0.4 animations:^{
-       self.FistAttack.center = CGPointMake(self.FistAttack.center.x + 600, self.FistAttack.center.y);
-    }
-    completion:^(BOOL finished){
-        self.FistAttack.hidden = true;
-    }];*/
-    
+
     // If the two sprites collide, the user will gain score
     if (CGRectIntersectsRect(self.FistAttack.frame, self.BorgBunnySprite.frame)) {
         score = score + 2;
@@ -259,7 +256,7 @@ int score;
         [self.bunnyMovementTimer invalidate];
         [self bunnyPosition];
     }
-    
+    // if the attack sprite hits the borders it will stop, hide and then recenter.
     if (CGRectIntersectsRect(self.FistAttack.frame, self.rightBorder.frame)) {
         [self.fistattackMovementTimer invalidate];
         self.FistAttack.center = CGPointMake(self.RoadmanShaq.center.x, self.RoadmanShaq.center.y);
@@ -270,18 +267,12 @@ int score;
 #pragma mark Code regarding enemy
 
 -(void)bunnyMovementTimerx {
-    // Creating random speeds for the bunny to move at
+    // Timer which repeats the bunny movement
     self.bunnyMovementTimer = [NSTimer scheduledTimerWithTimeInterval:bunnySpeed target:self selector:@selector(bunnyMovement) userInfo:nil repeats:YES];
 }
 
 -(void)bunnyPosition {
-    //Randomises a position for the enemy
-    /*NSInteger enemyPosition=0;
-    NSInteger bunnyPosition=0;
-    
-    enemyPosition = arc4random() % 249;
-    bunnyPosition = enemyPosition +20;*/
-    
+    // Resets the bunny position whenever the function is called.
     self.BorgBunnySprite.center = CGPointMake(770, 350);
   
     //Sets the speed that the bunny will attack
@@ -305,14 +296,13 @@ int score;
 
 -(void)bunnyMovement {
     self.BorgBunnySprite.center = CGPointMake(self.BorgBunnySprite.center.x - 1, self.BorgBunnySprite.center.y);
-    /*[UIView animateWithDuration:0.4 animations:^{
-        self.BorgBunnySprite.center = CGPointMake(self.BorgBunnySprite.center.x+10, self.BorgBunnySprite.center.y);} completion:^(BOOL finished){
-        }];*/
+    
     // If a collision between the two sprites occur, health will be deducted.
     if (CGRectIntersectsRect(self.BorgBunnySprite.frame, self.RoadmanShaq.frame)) {
         self.HealthBar.progress = self.HealthBar.progress - 0.2;
         [self.bunnyMovementTimer invalidate];
-    // If the user still has health left, the sprite will relocate for another attack and game will still be active
+    
+        // If the user still has health left, the sprite will relocate for another attack and game will still be active
     if (self.HealthBar.progress > 0) {
         [self bunnyPosition];
     }
@@ -321,6 +311,8 @@ int score;
         [self GameOver];
     }
     }
+    
+    // If the bunny hits the left border, it will resets its position
     if (CGRectIntersectsRect(self.BorgBunnySprite.frame, self.leftBorder.frame)){
         [self bunnyPosition];
     }
@@ -329,6 +321,7 @@ int score;
 #pragma mark Falling egg code
 
 -(void)eggMovement {
+    // Created random values for the eggs to start at
     NSInteger PosX;
     NSInteger PosY;
     
@@ -336,11 +329,14 @@ int score;
     NSLog(@"Position X is %ld", PosX);
     PosY = (int)arc4random_uniform(50)-150;
     NSLog(@"Position Y is %ld", PosY);
+    
+    // Set the speed at which the eggs will drop at
     self.egg1.center = CGPointMake(self.egg1.center.x, self.egg1.center.y +3);
     self.egg2.center = CGPointMake(self.egg2.center.x, self.egg2.center.y +3);
     self.egg3.center = CGPointMake(self.egg3.center.x, self.egg3.center.y +3);
     self.egg4.center = CGPointMake(self.egg4.center.x, self.egg4.center.y +3);
     
+    // if the eggs collide with the bottom border, the egg will recenter and update the score.
     if (CGRectIntersectsRect(self.egg1.frame, self.bottomBorder.frame)){
         self.egg1.center = CGPointMake(PosX, PosY);
         score = score +1;
@@ -361,9 +357,13 @@ int score;
         score = score +1;
         self.Score.text = [NSString stringWithFormat:@"Score:   %d", score];
     }
+    
+    // If the egg collides with the users sprite, the egg will recenter and cause the health to decrease by 0.1.
     if (CGRectIntersectsRect(self.egg1.frame, self.RoadmanShaq.frame)){
         self.egg1.center = CGPointMake(PosX, PosY);
         self.HealthBar.progress = self.HealthBar.progress - 0.1;
+        
+        // Ends the game if the users health is 0
         if (self.HealthBar.progress == 0) {
             [self GameOver];
         }
@@ -392,7 +392,7 @@ int score;
 }
 
 #pragma mark Game Over Code
-
+// Function to be called when game ends.
 -(void)GameOver {
     NSLog(@"Name set in game = %@", self.playerName);
     
@@ -400,6 +400,8 @@ int score;
     [self.bunnyMovementTimer invalidate];
     [self.fistattackMovementTimer invalidate];
     [self.eggMovementTimer invalidate];
+    
+    // Hides all components of the game.
     self.FistAttack.hidden = true;
     self.HealthBar.hidden = true;
     self.Score.hidden = true;
@@ -416,8 +418,14 @@ int score;
     self.endgameScore.hidden = false;
     self.endgameReplay.hidden = false;
     self.congratsName.hidden = false;
+    
+    // Displays the final score in the final view.
     self.endgameScore.text = [NSString stringWithFormat:@"Your Score = %d", score];
+    
+    // Congratulates the user and displays his name which is set in settings
     self.congratsName.text = [NSString stringWithFormat:@"Congratulations %@", self.playerName];
+    
+    // Recieves the value for the highscore from the shared data model.
     [[DataShared sharedInstance] setHighscoreVal:score];
     NSLog(@" Shared score is %d", [[DataShared sharedInstance]highscoreVal]);
     [MenuMusic stop];
