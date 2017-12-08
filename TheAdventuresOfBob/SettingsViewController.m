@@ -57,10 +57,25 @@
     self.recentGamePlayerScore = [[DataShared sharedInstance] highscoreVal];
     NSLog(@"Recent Game Name = %@", self.recentGamePlayerName);
     NSLog(@"Recent game score = %ld", self.recentGamePlayerScore);
+    NSLog(@"Highscore Game Name = %@", self.highscoreGamePlayerName);
+    NSLog(@"Highscore game score = %ld", self.highsoreGamePlayerScore);
     
     if (self.recentGamePlayerScore > self.highsoreGamePlayerScore) {
-        self.highsoreGamePlayerScore = self.recentGamePlayerScore;
-        self.highscoreGamePlayerName = self.recentGamePlayerName;
+        
+        NSInteger strHighScore = [[NSUserDefaults standardUserDefaults] integerForKey:@"highScore"];
+        self.highsoreGamePlayerScore = strHighScore;
+        NSInteger highScoreSave = self.recentGamePlayerScore;
+        [[NSUserDefaults standardUserDefaults]setInteger:highScoreSave forKey:@"highScore"];
+        [[NSUserDefaults standardUserDefaults]synchronize];
+        
+        NSString *strHighPlayer = [[NSUserDefaults standardUserDefaults] stringForKey:@"highName"];
+        self.highscoreGamePlayerName = strHighPlayer;
+        NSString *highNameSave = self.recentGamePlayerName;
+        [[NSUserDefaults standardUserDefaults]setObject:highNameSave forKey:@"highName"];
+        [[NSUserDefaults standardUserDefaults]synchronize];
+        
+        /*self.highsoreGamePlayerScore = self.recentGamePlayerScore;
+        self.highscoreGamePlayerName = self.recentGamePlayerName;*/
         NSLog(@"Highscore Game Name = %@", self.highscoreGamePlayerName);
         NSLog(@"Highscore Game Score = %ld", self.highsoreGamePlayerScore);
         self.highScoreSetbyValue.text = [NSString stringWithFormat:@" %@ = %ld", self.highscoreGamePlayerName ,self.highsoreGamePlayerScore];
@@ -70,12 +85,23 @@
     
     NSString *stringKey = [[NSUserDefaults standardUserDefaults] stringForKey:@"ourTextKey"];
     self.enterName.text = stringKey;
+    NSString *textWithinField = _enterName.text ;
+    [[NSUserDefaults standardUserDefaults]setObject:textWithinField forKey:@"ourTextKey"];
+    [[NSUserDefaults standardUserDefaults]synchronize];
     
     NSInteger strRecentScore = [[NSUserDefaults standardUserDefaults] integerForKey:@"recentScore"];
     self.recentGamePlayerScore = strRecentScore;
+    NSInteger recentScoreSave = [[DataShared sharedInstance] highscoreVal];
+    [[NSUserDefaults standardUserDefaults]setInteger:recentScoreSave forKey:@"recentScore"];
+    [[NSUserDefaults standardUserDefaults]synchronize];
     
     NSString *strRecentPlayer = [[NSUserDefaults standardUserDefaults] stringForKey:@"recentName"];
     self.recentGamePlayerName = strRecentPlayer;
+    NSString *recentNameSave = [[DataShared sharedInstance] userName];
+    [[NSUserDefaults standardUserDefaults]setObject:recentNameSave forKey:@"recentName"];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+    
+
 }
 
 -(void)viewWillDisappear:(BOOL)animated{

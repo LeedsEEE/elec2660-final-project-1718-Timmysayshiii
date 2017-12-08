@@ -465,12 +465,7 @@ int score;
     
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    NSString *strRecentName = [[NSUserDefaults standardUserDefaults] stringForKey:@"recentName"];
-    
-}
 
--(void)viewWillDisappear:(BOOL)animated
 
 @end
 
